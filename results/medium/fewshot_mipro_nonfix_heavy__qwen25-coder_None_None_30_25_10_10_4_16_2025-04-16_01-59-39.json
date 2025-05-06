@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the writer of Slowhand at 70 \u2013 Live at the Royal Albert Hall.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Slowhand_at_70_\u2013_Live_at_the_Royal_Albert_Hall> <http:\/\/dbpedia.org\/property\/writer> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the associated musical artist of Saba (rapper) and professional in .",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Saba_(rapper)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }"
+      },
+      {
+        "question": "Give me the headquarter of Provincial Assembly of Balochistan.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Provincial_Assembly_of_Balochistan> <http:\/\/dbpedia.org\/ontology\/location> ?result . }",
+        "id": 935,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the person born as the birth name of Ayo Makun.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ayo_Makun> <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?result <http:\/\/dbpedia.org\/property\/birthName> ?v1 . }",
+        "id": 36,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the associated musical artist of Saba (rapper).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Saba_(rapper)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 129,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the band member of the band, that is an organisation, of Mark Read (singer).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v0 . ?v0 <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Mark_Read_(singer)> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }",
+        "id": 874,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the predecessor of the parent of Prince Friedrich of Hesse and by Rhine and successor of the child, that is a royalty, of Louis I, Grand Duke of Hesse.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Prince_Friedrich_of_Hesse_and_by_Rhine> <http:\/\/dbpedia.org\/ontology\/parent> ?v2 . <http:\/\/dbpedia.org\/resource\/Louis_I,_Grand_Duke_of_Hesse> <http:\/\/dbpedia.org\/ontology\/child> ?v3 . ?v3 <http:\/\/dbpedia.org\/ontology\/successor> ?result . ?result <http:\/\/dbpedia.org\/ontology\/successor> ?v2 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 826,
+        "subid": 38,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration of James Madison.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/James_Madison> . }",
+        "id": 236,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the professional in Actor.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Actor\"@en . }",
+        "id": 527,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the person born on 1919-06-17?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthDate> \"1919-06-17\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . }",
+        "id": 507,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the military force of the force, that is an event and a military conflict and a societal event, of the native, that is a president and a politician, of Restoration (Spain).",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Restoration_(Spain)> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/dbpedia.org\/ontology\/battle> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/President>. ?v2 <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . }",
+        "id": 645,
+        "subid": 26,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 8,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of Kek\u016ban\u0101o\u02bba.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> \"Kek\u016ban\u0101o\u02bba\"@en . }",
+        "id": 917,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the band, that is an artist and a musical artist, of \u0160ako Polumenta?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/\u0160ako_Polumenta> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }",
+        "id": 987,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Province of Reggio Emilia.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/province> <http:\/\/dbpedia.org\/resource\/Province_of_Reggio_Emilia> . }",
+        "id": 892,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of the spouse of the parent of Louise Mountbatten and parent of George Mountbatten, 2nd Marquess of Milford Haven.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/George_Mountbatten,_2nd_Marquess_of_Milford_Haven> <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v3 <http:\/\/dbpedia.org\/ontology\/spouse> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v1 . <http:\/\/dbpedia.org\/resource\/Louise_Mountbatten> <http:\/\/dbpedia.org\/ontology\/parent> ?v3 . }",
+        "id": 965,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference, that is an office holder and a politician, to James Madison.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"James Madison\"@en . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 236,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      }
+    ],
+    "signature": {
+      "instructions": "You are a knowledgeable assistant specializing in generating SPARQL queries from natural language questions. Your task is to understand the user's intent behind their question and construct an accurate SPARQL query that can be executed against the DBpedia knowledge graph.\n\nFor example, if a user asks, \"Give me the writer of Slowhand at 70 \u2013 Live at the Royal Albert Hall,\" you would respond with:\n```sparql\nSELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Slowhand_at_70_\u2013_Live_at_the_Royal_Albert_Hall> <http:\/\/dbpedia.org\/property\/writer> ?result . }\n```\n\nYour goal is to ensure that the generated SPARQL query accurately reflects the user's question and retrieves the relevant information from DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

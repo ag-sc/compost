@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Imagine you are a data analyst tasked with retrieving critical information from a vast knowledge graph for an important presentation. Your job is to answer specific natural language questions by generating accurate SPARQL queries that will extract the necessary data from DBpedia. For each question provided, convert it into a structured SPARQL query that can effectively retrieve the relevant information. \n\nFor example, if the question is \"Give me the founding year of Eel Pie Publishing,\" your output should be a SPARQL query like: \n`SELECT ?year WHERE { <http:\/\/dbpedia.org\/resource\/Eel_Pie_Publishing> dbo:foundingYear ?year . }`\n\nNow, process the following question and produce the corresponding SPARQL query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

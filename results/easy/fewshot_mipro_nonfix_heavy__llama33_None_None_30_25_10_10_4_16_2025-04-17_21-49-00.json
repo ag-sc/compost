@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the associated musical artist of Filthy Friends.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Filthy_Friends> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the father of Eleonore of Austria, Queen of Poland and child of the father of the child, that is a royalty, of Maria Anna of Bavaria (born 1574).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Eleonore_of_Austria,_Queen_of_Poland> <http:\/\/dbpedia.org\/property\/father> ?result . ?v2 <http:\/\/dbpedia.org\/ontology\/child> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v0 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Maria_Anna_of_Bavaria_(born_1574)>. }"
+      },
+      {
+        "question": "Give me the birth place of the author of El Deafo.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . <http:\/\/dbpedia.org\/resource\/El_Deafo> <http:\/\/dbpedia.org\/property\/author> ?v1 . }",
+        "id": 609,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birth place of the awardee of List of awards and nominations received by Vince Gilligan and birth place of Cece Bell and birth place of Glenn Youngkin.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Cece_Bell> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . <http:\/\/dbpedia.org\/resource\/Glenn_Youngkin> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/List_of_awards_and_nominations_received_by_Vince_Gilligan> . }",
+        "id": 609,
+        "subid": 28,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in Pickett's Charge and party member of the ruling party, that is a political party and an organisation, in Westport, Connecticut.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. <http:\/\/dbpedia.org\/resource\/Westport,_Connecticut> <http:\/\/dbpedia.org\/property\/leaderParty> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/party> ?v0 . <http:\/\/dbpedia.org\/resource\/Pickett's_Charge> <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PoliticalParty>. }",
+        "id": 140,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the reference to Order of the Medjidie.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Order of the Medjidie\"@en . }",
+        "id": 151,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the parent of the father of Dorothea of Lorraine.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/parent> ?result . <http:\/\/dbpedia.org\/resource\/Dorothea_of_Lorraine> <http:\/\/dbpedia.org\/property\/father> ?v0 . }",
+        "id": 633,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the birth place of the author of El Deafo and birth place of the governor, that is a politician, of the birth place, that is a region and an administrative region, of Paulus Powell.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/AdministrativeRegion>. ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v3 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . <http:\/\/dbpedia.org\/resource\/El_Deafo> <http:\/\/dbpedia.org\/property\/author> ?v3 . ?v4 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v0 <http:\/\/dbpedia.org\/property\/governor> ?v4 . <http:\/\/dbpedia.org\/resource\/Paulus_Powell> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v0 . }",
+        "id": 609,
+        "subid": 50,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 8,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as Ackquille Jean Pollard and band member of Uncle Murda.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Uncle_Murda> . ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ackquille Jean Pollard\"@en . }",
+        "id": 628,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the father of Dorothea of Lorraine.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Dorothea_of_Lorraine> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 633,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the native of New York (state).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/New_York_(state)> . }",
+        "id": 585,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the parent of the father, that is a royalty, of Charles I of Hungary and spouse of Charles II of Naples.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Charles_I_of_Hungary> <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?result . <http:\/\/dbpedia.org\/resource\/Charles_II_of_Naples> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }",
+        "id": 905,
+        "subid": 20,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in Singer and professional in .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Singer\"@en . }",
+        "id": 39,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of the birth place of the producer of Storm in a Teacup (film).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Storm_in_a_Teacup_(film)> <http:\/\/dbpedia.org\/ontology\/producer> ?v2 . ?v2 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v0 . }",
+        "id": 295,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the actor of ATL (film) and actor of Shelby Oaks.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Shelby_Oaks> <http:\/\/dbpedia.org\/ontology\/starring> ?result . <http:\/\/dbpedia.org\/resource\/ATL_(film)> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }",
+        "id": 80,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person decedent at the birthplace, that is a country, of Sandro Bertaggia and native of Russian Empire.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Russian_Empire> . <http:\/\/dbpedia.org\/resource\/Sandro_Bertaggia> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . }",
+        "id": 158,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "To generate a SPARQL query from a given natural language question, utilize the Predict module within the FewShotPipeline program. This involves inputting the question into the Predict module, which will then employ one of its predictor options (chainofthought, programofthought, or default) to parse the question and produce a corresponding SPARQL query. The output will be a prediction object containing the generated SPARQL query and any additional reasoning provided by the predictor. Ensure the input question is clear and specific to obtain an accurate SPARQL query for execution on DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

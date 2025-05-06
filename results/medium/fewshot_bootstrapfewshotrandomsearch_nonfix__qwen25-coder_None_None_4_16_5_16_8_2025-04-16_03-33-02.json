@@ -1,0 +1,239 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the child of Stephen V of Hungary.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary> <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the associated musical artist of Cecil Taylor.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Cecil_Taylor> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Who is the child of Abu Ahmad Abdul Hafiz?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Abu_Ahmad_Abdul_Hafiz> <http:\/\/dbpedia.org\/ontology\/child> ?result . }"
+      },
+      {
+        "question": "Give me the domain of Mayor and birth place of Era Ziganshina.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/leaderTitle> \"Mayor\"@en . <http:\/\/dbpedia.org\/resource\/Era_Ziganshina> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 170,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the parent of Carloman of Bavaria and spouse of the father of Charles the Fat.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Charles_the_Fat> <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v0 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Carloman_of_Bavaria> . }",
+        "id": 773,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the award, that is a country, of the reference to Adelbert Cronkhite.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?v0 <http:\/\/dbpedia.org\/property\/awards> ?result . ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Adelbert Cronkhite\"@en . }",
+        "id": 158,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the spouse of the parent, that is a royalty, of the child of Knud, Hereditary Prince of Denmark and child of Alexandrine of Mecklenburg-Schwerin.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Alexandrine_of_Mecklenburg-Schwerin> . ?v1 <http:\/\/dbpedia.org\/ontology\/child> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Knud,_Hereditary_Prince_of_Denmark> . }",
+        "id": 417,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band of the member of B\u00f6hse Onkelz.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/bandMember> ?v1 . <http:\/\/dbpedia.org\/resource\/B\u00f6hse_Onkelz> <http:\/\/dbpedia.org\/ontology\/bandMember> ?v1 . }",
+        "id": 839,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Northern Ireland and entity in the region, that is a country, of Western European Time.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Northern_Ireland> . ?v1 <http:\/\/dbpedia.org\/property\/timeZone> <http:\/\/dbpedia.org\/resource\/Western_European_Time> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?result <http:\/\/dbpedia.org\/ontology\/country> ?v1 . }",
+        "id": 329,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the entity in Province of Reggio Emilia and landmark at elevation of the award of Anna Ishii and entity in Italy.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Anna_Ishii> <http:\/\/dbpedia.org\/property\/awards> ?v3 . ?result <http:\/\/dbpedia.org\/ontology\/province> <http:\/\/dbpedia.org\/resource\/Province_of_Reggio_Emilia> . ?result <http:\/\/dbpedia.org\/ontology\/elevation> ?v3 . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy> . }",
+        "id": 892,
+        "subid": 29,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the professional, that is a musical artist and an artist, in ?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . }",
+        "id": 978,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the entity in the administration, that is Italian and a region and a settlement and an administrative region, of Democratic Party (Italy).",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. ?result <http:\/\/dbpedia.org\/ontology\/province> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/AdministrativeRegion>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?v0 <http:\/\/dbpedia.org\/property\/leaderParty> <http:\/\/dbpedia.org\/resource\/Democratic_Party_(Italy)> . ?v0 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy>. }",
+        "id": 892,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 6,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of the work, that is an office holder, of yes and party of Declan Costello.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/author> \"yes\"@en . <http:\/\/dbpedia.org\/resource\/Declan_Costello> <http:\/\/dbpedia.org\/ontology\/party> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v1 <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 41,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the landmark at elevation of 58 and entity in the profession of Henri Crolla.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Henri_Crolla> <http:\/\/dbpedia.org\/property\/occupation> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/country> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/elevation> \"58\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer> . }",
+        "id": 892,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of the parent of Louise Mountbatten.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . <http:\/\/dbpedia.org\/resource\/Louise_Mountbatten> <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . }",
+        "id": 965,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birth place of the actor of All for Free.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/All_for_Free> <http:\/\/dbpedia.org\/property\/starring> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 987,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

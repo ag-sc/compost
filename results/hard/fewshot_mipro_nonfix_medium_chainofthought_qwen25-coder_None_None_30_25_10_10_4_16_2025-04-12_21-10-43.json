@@ -1,0 +1,237 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the spouse of Princess Victoria Louise of Prussia.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Princess_Victoria_Louise_of_Prussia> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the parent of Henuttawy (19th dynasty).",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Henuttawy_(19th_dynasty)> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth name of Gigi Rice.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Gigi_Rice> <http:\/\/dbpedia.org\/property\/birthName> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth name of Sharon Kao.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Sharon_Kao> <http:\/\/dbpedia.org\/property\/birthName> ?result . }"
+      },
+      {
+        "question": "Give me the child of Nefertari.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Nefertari> <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 701,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the work, that is a software, of the author of Pushd and popd.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/author> ?v0 . <http:\/\/dbpedia.org\/resource\/Pushd_and_popd> <http:\/\/dbpedia.org\/property\/author> ?v0 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Software>. }",
+        "id": 778,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the administration of the reference to George Kilbon Nash.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"George Kilbon Nash\"@en . ?result <http:\/\/dbpedia.org\/property\/governor> ?v1 . }",
+        "id": 767,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the writer of Emotion (Carly Rae Jepsen album).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Emotion_(Carly_Rae_Jepsen_album)> <http:\/\/dbpedia.org\/property\/writer> ?result . }",
+        "id": 48,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the person born in 1958?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthYear> \"1958\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gYear> . }",
+        "id": 959,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of Romano Prodi.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Romano_Prodi> <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 427,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the manager, that is a sports manager, of the team, that is a soccer club and a sports team season, of Leonid Slutsky (football coach).",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/manager> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsTeamSeason>. ?v0 <http:\/\/dbpedia.org\/ontology\/manager> <http:\/\/dbpedia.org\/resource\/Leonid_Slutsky_(football_coach)> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClub>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. }",
+        "id": 666,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the alma mater of Carl L. Nippert and reference to .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\"@en . <http:\/\/dbpedia.org\/resource\/Carl_L._Nippert> <http:\/\/dbpedia.org\/ontology\/almaMater> ?result . }",
+        "id": 767,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native, that is a soccer player and a soccer manager, of Wolverhampton.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Wolverhampton> . }",
+        "id": 356,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the manager of 2013 J\u00fabilo Iwata season.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2013_J\u00fabilo_Iwata_season> <http:\/\/dbpedia.org\/ontology\/manager> ?result . }",
+        "id": 959,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the alma mater of the awardee of Royal Medal.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Royal_Medal> . ?v1 <http:\/\/dbpedia.org\/ontology\/almaMater> ?result . }",
+        "id": 9,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist, that is a group and an organisation, of Queensr\u00ffche.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. <http:\/\/dbpedia.org\/resource\/Queensr\u00ffche> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Group>. }",
+        "id": 44,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      }
+    ],
+    "signature": {
+      "instructions": "To generate an effective SPARQL query based on a user's natural language question, follow these detailed steps:\n\n1. **Understand the Question**: Carefully analyze the user's input to grasp the specific information they are seeking.\n2. **Identify Relevant Entities and Relationships**: Determine which entities (e.g., people, places, organizations) and relationships (e.g., birth name, parent-child) are mentioned in the question.\n3. **Formulate a Reasoning Step**: Explain your thought process for constructing the SPARQL query. This step should outline how you map the user's request to the appropriate entities and relationships within the knowledge graph.\n4. **Construct the SPARQL Query**:\n   - Use the identified entities to create URIs (Uniform Resource Identifiers) that correspond to them in the knowledge graph.\n   - Identify the predicates (e.g., birthName, parent) that link these entities together.\n   - Write a SELECT statement to retrieve the desired information.\n5. **Ensure Accuracy and Completeness**: Double-check your query to ensure it accurately reflects the user's request and can be executed against the knowledge graph.\n\nExample:\n**Question:** Give me the birth name of Narciso Campero.\n- **Reasoning:** The question asks for the birth name of a person named Narciso Campero. To retrieve this information, we need to identify the URI for Narciso Campero and find the associated birthName predicate.\n- **SPARQL Query:** \n  ```sparql\n  SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Narciso_Campero> <http:\/\/dbpedia.org\/property\/birthName> ?result . }\n  ```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

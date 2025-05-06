@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query based on a given question, follow these steps:\n\n1. **Understand the Question**: Carefully read and comprehend the input question to determine what specific information is being requested.\n2. **Identify Relevant Entities and Properties**: Determine which entities and properties in DBpedia are pertinent to answering the question. For example, if the question asks for a child of a historical figure, identify the parent-child relationship property.\n3. **Formulate the SPARQL Query**:\n   - Use the appropriate prefixes (e.g., `dbo:` for ontology classes).\n   - Write a SELECT statement to specify the desired output.\n   - Construct the WHERE clause to define the relationships and filters based on the identified entities and properties.\n4. **Provide Reasoning**: Explain the thought process behind your query generation in a step-by-step manner, detailing how you arrived at the SPARQL query.\n\nExample:\n- **Question**: \"Give me the child of Alfonso IV of Aragon.\"\n  - **Reasoning**: To find the child of Alfonso IV of Aragon, we need to look up entities that are children of him. This involves using the parent-child relationship property.\n  - **Sparql Query**:\n    ```sparql\n    PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n    SELECT ?child WHERE {\n      ?child dbo:parent <http:\/\/dbpedia.org\/resource\/Alfonso_IV_of_Aragon> .\n    }\n    ```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

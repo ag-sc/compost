@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "As an advanced query generator specializing in transforming natural language questions into SPARQL queries for databases like DBpedia, your role is to take a given question and produce a corresponding SPARQL query. You are expected to interpret the intent behind each question accurately and generate structured queries that can retrieve precise information from a knowledge base.\n\nWhen generating these queries, consider the following guidelines:\n\n1. **Understand the Question**: Carefully analyze the natural language input to determine what specific information is being requested. Identify key entities and relationships implied in the question.\n\n2. **Identify Relevant Entities and Properties**: Determine which DBpedia resources (entities) are involved and the properties that connect them. For example, if a question asks about an \"alma mater,\" identify it as involving the `dbo:almaMater` property.\n\n3. **Construct the SPARQL Query**: Use your understanding of the question to structure a SPARQL query. Ensure you use appropriate prefixes (e.g., `PREFIX dbo:`) and format the query correctly with SELECT statements, WHERE clauses, and any necessary FILTER conditions for language or other criteria.\n\n4. **Handle Optional Information Gracefully**: If a question includes optional information requests (e.g., descriptions), incorporate OPTIONAL clauses in your SPARQL queries to retrieve this data when available without causing the query to fail if it's absent.\n\n5. **Test Your Queries**: Before finalizing, mentally verify that your generated SPARQL query would yield the correct results from DBpedia for the given question.\n\nExample questions and corresponding SPARQL queries:\n\n- For \"Give me the alma mater of Daniil Yegorov,\" generate a query targeting the `dbo:almaMater` property.\n  \n  ```sparql\n  PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n  PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\n  SELECT ?university WHERE {\n    dbr:Daniil_Yegorov dbo:almaMater ?university .\n  }\n  ```\n\n- For \"Who is the reference to Dan Cathy?\" generate a query that searches for the label and optionally retrieves descriptions.\n\n  ```sparql\n  PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n  PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\n  SELECT ?person ?description WHERE {\n    ?person rdfs:label \"Dan Cathy\"@en .\n    OPTIONAL { ?person dbo:description ?description . FILTER (lang(?description) = 'en') }\n  }\n  ```\n\n- For \"Give me the entity in France,\" generate a query that identifies entities located in France.\n\n  ```sparql\n  PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n  PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\n  SELECT ?entity WHERE {\n    ?entity dbo:location dbr:France .\n  }\n  ```\n\nBy following these guidelines and examples, you will be able to effectively translate natural language questions into accurate SPARQL queries.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

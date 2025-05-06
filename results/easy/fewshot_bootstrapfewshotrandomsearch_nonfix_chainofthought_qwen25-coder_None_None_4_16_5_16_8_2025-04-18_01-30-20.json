@@ -1,0 +1,255 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who is the child, that is a politician, of Chiang Ching-kuo?",
+        "reasoning": "The question asks for a child who is also a politician of Chiang Ching-kuo. Chiang Ching-kuo was a Chinese politician who served as the President of the People's Republic of China from 1975 to 1982 and was the son of Chiang Kai-shek, another prominent Chinese politician.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Chiang_Ching-kuo> <http:\/\/dbpedia.org\/ontology\/child> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth place of the awardee of the award of Vince Gilligan and birth place of Cece Bell and birth place of the governor, that is a politician, of Virginia.",
+        "reasoning": "The question asks for the birthplaces of three different individuals: Vince Gilligan, Cece Bell, and the governor of Virginia. \n\n1. **Vince Gilligan**: He is an American television writer known for his work on \"Breaking Bad.\" The award mentioned in the question is likely a reference to some form of recognition for his work, but it's not explicitly stated which one.\n\n2. **Cece Bell**: She is an American actress who gained widespread recognition after playing the role of Carrie Mathison in the television series \"House.\"\n\n3. **Governor of Virginia**: As of my last update, the governor of Virginia is Glenn Youngkin. He was inaugurated in January 2021.\n\nTo answer this question accurately, we need to find the birthplaces of these individuals:\n- **Vince Gilligan**: Born in Salt Lake City, Utah.\n- **Cece Bell**: Born in Nashville, Tennessee.\n- **Glenn Youngkin**: Born in Richmond, Virginia.\n\nTherefore, the query should return three different birthplaces.",
+        "sparql_query": "SELECT ?result WHERE { \n  VALUES(?person) { (<http:\/\/dbpedia.org\/resource\/Vince_Gilligan>) (<http:\/\/dbpedia.org\/resource\/Cece_Bell>) (<http:\/\/dbpedia.org\/resource\/Glenn_Youngkin>) }\n  ?person <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result .\n}"
+      },
+      {
+        "question": "Give me the associated musical artist of Stuart Tosh.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Stuart_Tosh> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 78,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the commander in the war, that is a television show and a societal event, of Jean Baptist, Comte d'Arco and successor of Yurii Khmelnytsky and reference to the writer of Always the Love Songs.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Jean_Baptist,_Comte_d'Arco> <http:\/\/dbpedia.org\/ontology\/battle> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v2 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v4 . <http:\/\/dbpedia.org\/resource\/Yurii_Khmelnytsky> <http:\/\/dbpedia.org\/ontology\/successor> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. <http:\/\/dbpedia.org\/resource\/Always_the_Love_Songs> <http:\/\/dbpedia.org\/property\/writer> ?v4 . }",
+        "id": 159,
+        "subid": 44,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the reference to William Bayne?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"William Bayne\"@en . }",
+        "id": 203,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of the awardee of 25 and entity in the birth place of Elena \u017dalinkevi\u010dait\u0117-Petrauskien\u0117.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> ?v2 . ?v3 <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?v3 <http:\/\/dbpedia.org\/property\/awards> \"25\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer> . <http:\/\/dbpedia.org\/resource\/Elena_\u017dalinkevi\u010dait\u0117-Petrauskien\u0117> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v2 . }",
+        "id": 386,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the actor of the movie, that is a work and a film, with Audrey Hepburn and actor of Paradise (2013 film).",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v0 <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. <http:\/\/dbpedia.org\/resource\/Paradise_(2013_film)> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v0 <http:\/\/dbpedia.org\/property\/starring> \"Audrey Hepburn\"@en . }",
+        "id": 87,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the commander in the war, that is a television show and a societal event, of Jean Baptist, Comte d'Arco and reference to the writer of the work of George Ducas.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. <http:\/\/dbpedia.org\/resource\/Jean_Baptist,_Comte_d'Arco> <http:\/\/dbpedia.org\/ontology\/battle> ?v3 . ?v0 <http:\/\/dbpedia.org\/property\/writer> ?v4 . ?v3 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v4 . ?v0 <http:\/\/dbpedia.org\/property\/writer> \"George Ducas\"@en . }",
+        "id": 159,
+        "subid": 50,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the commander, that is a royalty, in Siege of Padua.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Siege_of_Padua> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 68,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the actor of Judgment: The Trial of Julius and Ethel Rosenberg and parent of the child of Allan Arbus.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Judgment:_The_Trial_of_Julius_and_Ethel_Rosenberg> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?result . <http:\/\/dbpedia.org\/resource\/Allan_Arbus> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . }",
+        "id": 816,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as the birth name of the parent of Tisha Sterling and spouse of the actor of 1,000 Dollars a Minute.",
+        "sparql_query": "SELECT ?result WHERE { ?v4 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v1 <http:\/\/dbpedia.org\/property\/birthName> ?v2 . ?result <http:\/\/dbpedia.org\/property\/birthName> ?v2 . ?v1 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Tisha_Sterling> . <http:\/\/dbpedia.org\/resource\/1,000_Dollars_a_Minute> <http:\/\/dbpedia.org\/property\/starring> ?v4 . }",
+        "id": 293,
+        "subid": 51,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 5,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office of Alberto N\u00fa\u00f1ez Feij\u00f3o and tenant of Santiago de Compostela and tenant of Spain.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Santiago_de_Compostela> . <http:\/\/dbpedia.org\/resource\/Alberto_N\u00fa\u00f1ez_Feij\u00f3o> <http:\/\/dbpedia.org\/property\/office> ?result . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Spain> . }",
+        "id": 119,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of the movie, that is a television show, with the person born as Richard Grant Esterhuysen and professional in the alter ego of The Shadow and professional in Actor.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v1 . ?v2 <http:\/\/dbpedia.org\/property\/starring> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Actor\"@en . ?v2 <http:\/\/dbpedia.org\/property\/starring> ?v3 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . ?v3 <http:\/\/dbpedia.org\/property\/birthName> \"Richard Grant Esterhuysen\"@en . }",
+        "id": 103,
+        "subid": 53,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 7,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of the person born, that is a politician, as Roy Leonardo Barreras Montealegre and party of the father of Sof\u00eda Petro.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/party> ?result . ?v3 <http:\/\/dbpedia.org\/property\/birthName> \"Roy Leonardo Barreras Montealegre\"@en . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v3 <http:\/\/dbpedia.org\/ontology\/party> ?result . <http:\/\/dbpedia.org\/resource\/Sof\u00eda_Petro> <http:\/\/dbpedia.org\/property\/father> ?v1 . }",
+        "id": 23,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the parent of Kate Dimbleby.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Kate_Dimbleby> . }",
+        "id": 375,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the father, that is a royalty, of the child, that is a royalty, of Saw Shwe Khet.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Saw_Shwe_Khet> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/dbpedia.org\/property\/father> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 89,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

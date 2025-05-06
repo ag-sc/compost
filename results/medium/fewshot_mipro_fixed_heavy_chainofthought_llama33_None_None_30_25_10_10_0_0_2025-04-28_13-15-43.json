@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To answer this question, we need to find the spouse of Prince Louis of Battenberg, the parent of the child that is a royalty of Prince Louis of Battenberg, and the parent of the person born as Prince George of Battenberg who is a noble. \n\nWe can start by finding the spouse of Prince Louis of Battenberg. Then, we need to find the children of Prince Louis of Battenberg who are royalties. After that, we need to find the person born as Prince George of Battenberg who is a noble and their parent.\n\nWe will use these pieces of information to construct our SPARQL query.\nSparql Query: SELECT ?result WHERE { \n  <http:\/\/dbpedia.org\/resource\/Prince_Louis_of_Battenberg> <http:\/\/dbpedia.org\/ontology\/spouse> ?result .\n  ?v3 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Prince_Louis_of_Battenberg> .\n  ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty> .\n  ?v3 <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n  ?v0 <http:\/\/dbpedia.org\/property\/birthName> \"Prince George of Battenberg\"@en .\n  ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Noble> .\n  ?v0 <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n}",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

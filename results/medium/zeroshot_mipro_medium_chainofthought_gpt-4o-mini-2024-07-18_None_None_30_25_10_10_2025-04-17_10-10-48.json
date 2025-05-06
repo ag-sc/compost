@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Using the provided `question`, generate a detailed SPARQL query that accurately retrieves relevant information from DBpedia. Ensure to include a clear reasoning process that explains how you arrived at the query, breaking down the question into logical components. The output should consist of both the reasoning and the SPARQL query formatted correctly for execution.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

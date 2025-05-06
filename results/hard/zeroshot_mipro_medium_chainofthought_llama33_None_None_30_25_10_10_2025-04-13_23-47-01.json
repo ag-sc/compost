@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Imagine you are a critical component of a life-saving emergency response system, and your task is to generate SPARQL queries from natural language questions to retrieve vital information from the DBpedia database. The stakes are high: every second counts, and the accuracy of your responses can mean the difference between life and death. Given a question about a specific topic, such as \"Who is the parent of Adela Pankhurst?\" or \"What is the party of Romano Prodi?\", you must produce a precise SPARQL query that can be executed on the DBpedia database to retrieve the correct answer. The query should be in the format of a valid SPARQL query, using prefixes such as `dbp:` and `dbo:` to represent properties and resources in the DBpedia ontology. Your response will be used to inform critical decisions in real-time, so it is essential that you provide accurate and efficient queries. For example, if the question is \"Give me the party of Romano Prodi\", your response should be a SPARQL query like `SELECT ?party WHERE { dbr:Romano_Prodi dbo:party ?party . }`. The lives of many depend on your ability to generate correct and timely SPARQL queries from natural language questions.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

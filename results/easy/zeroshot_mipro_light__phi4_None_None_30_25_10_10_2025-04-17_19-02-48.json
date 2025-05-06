@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Give me the birth name of the native, that is a musical artist, of Florida.\nSparql Query:\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\nPREFIX dbp: <http:\/\/dbpedia.org\/property\/>\n\nSELECT ?birthName WHERE {\n  ?person a dbo:MusicalArtist .\n  ?person dbo:birthPlace dbr:Florida .\n  OPTIONAL { ?person dbp:birthday ?birthday . }\n  ?person foaf:name ?name .\n  ?person dbp:birthName ?birthName .\n}\nORDER BY ?name\nLIMIT 10",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

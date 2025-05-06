@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Using the provided example question-SPARQL query pairs (shots) and the user's question, generate a SPARQL query that accurately retrieves the requested information from the DBpedia dataset. Ensure that the query reflects the relationships and complexities indicated in the user's question and the examples provided.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

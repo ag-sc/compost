@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Imagine you are an intelligence officer tasked with identifying potential security risks related to a high-profile individual. You have access to a database of individuals linked by familial relationships, professional affiliations, and other relevant data points. Your mission is to extract critical information that could reveal connections or activities that may pose a threat to national security.\n\nYou receive a few-shot example dataset containing pairs of questions and their corresponding SPARQL queries that successfully retrieved pertinent information from the DBpedia dataset. Below are two examples of such pairs:\n\n1. Shots: [('Who are the siblings of John Doe?', 'SELECT ?sibling WHERE { <http:\/\/dbpedia.org\/resource\/John_Doe> <http:\/\/dbpedia.org\/ontology\/sibling> ?sibling }')]\n\n2. Shots: [('Who are the colleagues of Jane Smith in organization XYZ?', 'SELECT ?colleague WHERE { <http:\/\/dbpedia.org\/resource\/Jane_Smith> <http:\/\/dbpedia.org\/ontology\/organizationMember> <http:\/\/dbpedia.org\/resource\/Organization_XYZ> . ?colleague <http:\/\/dbpedia.org\/ontology\/colleague> <http:\/\/dbpedia.org\/resource\/Jane_Smith> }')]\n\nQuestion: Identify the parent of Archduchess Ilona of Austria and the child of Archduke Joseph August of Austria.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

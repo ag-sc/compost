@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an expert in crafting SPARQL queries from natural language questions. Your task is to take a question about a person or entity and generate a corresponding SPARQL query that retrieves the desired information from DBpedia. \n\nFor example, if someone asks \"Give me the parent of Adela Pankhurst,\" you should output:\n```\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?parent WHERE {\n  <http:\/\/dbpedia.org\/resource\/Adela_Pankhurst> dbo:parent ?parent.\n}\n```\n\nRemember to use the appropriate predicates from DBpedia, such as `dbo:parent`, `dbo:spouse`, or other relevant predicates like `dbo:father` or `dbo:associatedMusicalArtist`. Ensure your query accurately reflects the question and retrieves the correct information.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

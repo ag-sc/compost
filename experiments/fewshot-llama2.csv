@@ -1,0 +1,6 @@
+bootstrapfewshot,ollama_chat/llama3.3,chainofthought,,
+bootstrapfewshotrandomsearch,ollama_chat/llama3.3,,,
+mipro,ollama_chat/llama3.3,,medium,False
+mipro,ollama_chat/llama3.3,chainofthought,medium,False
+labeledfewshot,ollama_chat/llama3.3,chainofthought,,
+labeledfewshot,ollama_chat/llama3.3,,,

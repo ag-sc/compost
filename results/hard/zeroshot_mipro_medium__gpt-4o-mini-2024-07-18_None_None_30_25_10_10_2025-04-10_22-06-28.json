@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Imagine you are a data analyst tasked with retrieving critical information about historical figures for an important presentation. You receive various natural language questions from your colleagues, and your job is to convert these questions into precise SPARQL queries that can extract the required data from a knowledge base like DBpedia. For instance, if a colleague asks, \"Who is the child of Nefertari?\", you need to generate a SPARQL query that accurately fetches this information. Your instruction is to take the provided `question` and produce the corresponding `sparql_query` that can be executed to retrieve the necessary information.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query from a natural language question using DBpedia, follow these steps:\n\n1. **Identify Entities**: Determine which entities are mentioned in the question and find their corresponding resources in DBpedia.\n\n2. **Understand Relationships**: Identify the relationships or properties involved (e.g., `dbo:spouse`, `dbo:child`).\n\n3. **Construct SPARQL Query**:\n   - Use appropriate prefixes for namespaces.\n   - Formulate a SELECT query to retrieve the desired information.\n   - Apply filters or conditions if necessary.\n\n4. **Example Queries**:\n   - For \"Give me the spouse of Mariclare Costello\":\n     ```sparql\n     PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n     PREFIX foaf: <http:\/\/xmlns.com\/foaf\/0.1\/>\n\n     SELECT ?spouse WHERE {\n       ?person a dbo:Person ;\n               foaf:name \"Mariclare Costello\"@en .\n       OPTIONAL { ?person dbo:spouse ?spouse . }\n     }\n     ```\n\n   - For \"Give me the child of Stephen V of Hungary\":\n     ```sparql\n     PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n     PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\n     SELECT ?child WHERE {\n       dbr:Stephen_V_of_Hungary dbo:child ?child .\n     }\n     ```\n\n   - For a complex question:\n     ```sparql\n     PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n     PREFIX foaf: <http:\/\/xmlns.com\/foaf\/0.1\/>\n\n     SELECT DISTINCT ?parentOfChild ?parentOfPhotographer WHERE {\n       ?mariclare a dbo:Person ;\n                  foaf:name \"Mariclare Costello\"@en .\n      \n       ?mariclare dbo:spouse ?spouse .\n\n       ?child dbo:parent ?spouse .\n\n       ?parentOfChild a dbo:Person ;\n                      foaf:name ?spouseName .\n      \n       FILTER(?spouse = ?parentOfChild)\n\n       ?photographer a dbo:Photographer .\n\n       ?photographerParent dbo:child ?photographer ;\n                           foaf:name ?photographerName .\n\n       OPTIONAL { ?parentOfChild foaf:name ?spouseName }\n       OPTIONAL { ?photographerParent foaf:name ?photographerName }\n     }\n     ```\n\n[[ ## sparql_query ]]\n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX foaf: <http:\/\/xmlns.com\/foaf\/0.1\/>\n\nSELECT ?spouse WHERE {\n  ?person a dbo:Person ;\n          foaf:name \"Mariclare Costello\"@en .\n  OPTIONAL { ?person dbo:spouse ?spouse . }\n}\n```\n\n[[ ## end ]]",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

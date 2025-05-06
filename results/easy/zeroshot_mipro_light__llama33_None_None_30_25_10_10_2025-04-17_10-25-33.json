@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given a natural language question about a specific topic or entity, use the Predict module to generate a corresponding SPARQL query that can be executed on DBpedia to retrieve relevant information. The input question should be phrased in a way that allows the predictor to accurately identify the entities and relationships involved, and the output SPARQL query should be structured to retrieve the desired information from DBpedia.\n\nFor example, if the input question is \"What is the birthplace of Albert Einstein?\", the Predict module should generate a SPARQL query like \"SELECT ?birthplace WHERE { dbr:Albert_Einstein dbo:birthPlace ?birthplace }\". The generated SPARQL query can then be executed on DBpedia to retrieve the birthplace of Albert Einstein.\n\nTo achieve this, the Predict module should be able to handle various types of questions and entities, including but not limited to:\n\n* Retrieving information about people, such as their birthplace, occupation, or notable works\n* Retrieving information about locations, such as their population, capital city, or notable landmarks\n* Retrieving information about organizations, such as their founder, headquarters, or mission statement\n\nThe Predict module should also be able to handle questions with varying levels of complexity, including but not limited to:\n\n* Simple questions that require a single triple pattern to answer\n* Complex questions that require multiple triple patterns and joins to answer\n* Questions that involve aggregations or filtering, such as \"What are the top 5 countries by population?\" or \"What are the cities in France with a population over 1 million?\"\n\nBy generating accurate and relevant SPARQL queries based on natural language input, the Predict module can enable users to retrieve valuable information from DBpedia without requiring expertise in SPARQL or semantic web technologies.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

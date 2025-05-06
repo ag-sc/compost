@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query from a given question about entities in DBpedia:\n\n1. **Identify Entities and Relationships**: Parse the question to determine which entities (e.g., Laodice IV, Nysa) and relationships (e.g., spouse, parent) are involved.\n\n2. **Use Standard Prefixes**:\n   - `dbo` for ontology properties.\n   - `dbr` for resources.\n\n3. **Construct the SPARQL Query**:\n   - **PREFIX Clause**: Define necessary prefixes.\n   - **SELECT Clause**: Specify what you want to retrieve (e.g., ?spouse).\n   - **WHERE Clause**: Create patterns using RDF triples to match entities and relationships.\n     - Use `rdfs:label` for specific entity identification.\n\n4. **Example Query Construction**:\n   - For \"Give me the spouse of Laodice IV and parent of Nysa (wife of Pharnaces I of Pontus)\":\n     ```sparql\n     PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n     PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\n     SELECT ?spouse WHERE {\n       ?nysa dbo:parent ?spouse .\n       ?laodiceIV dbo:spouse ?spouse .\n       ?nysa rdfs:label \"Nysa (wife of Pharnaces I of Pontus)\"@en .\n       ?laodiceIV rdfs:label \"Laodice IV\"@en .\n     }\n     ```\n\n5. **Apply to Other Questions**: Adjust entities and relationships for different questions, maintaining the structure.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

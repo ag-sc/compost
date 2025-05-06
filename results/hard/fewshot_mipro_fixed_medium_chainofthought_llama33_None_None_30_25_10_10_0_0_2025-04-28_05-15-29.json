@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate the SPARQL query based on the given shots and question, we need to analyze the patterns in the shots and apply them to the question.\n\nGiven the shots:\n1. ('Give me the native of Johannesburg.', 'SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Johannesburg> . }')\n2. ('Give me the death place, that is a settlement, of Winnie Madikizela-Mandela.', 'SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. <http:\/\/dbpedia.org\/resource\/Winnie_Madikizela-Mandela> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . }')\n3. ('Give me the reference to the author of Blinded by the Light.', 'SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v1 . <http:\/\/dbpedia.org\/resource\/Blinded_by_the_Light> <http:\/\/dbpedia.org\/property\/author> ?v1 . }')\n\nAnd the question:\n'Give me the native of the death place, that is a settlement, of Winnie Madikizela-Mandela.'\n\nWe can break down the question into parts and match them with the patterns in the shots.\n\n- The first part 'Give me the native of' matches the pattern in shot 1.\n- The second part 'the death place, that is a settlement, of Winnie Madikizela-Mandela' matches the pattern in shot 2.\n\nSo, we need to find the death place of Winnie Madikizela-Mandela that is a settlement and then find the native of this settlement.\n\nThe SPARQL query would be:\n```sparql\nSELECT ?result WHERE { \n  ?settlement <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement> .\n  <http:\/\/dbpedia.org\/resource\/Winnie_Madikizela-Mandela> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?settlement .\n  ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?settlement .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

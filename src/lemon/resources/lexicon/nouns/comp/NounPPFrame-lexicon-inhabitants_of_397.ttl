@@ -1,0 +1,64 @@
+@prefix :        <http://localhost:8000/lexicon#> .
+
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix lemon:   <http://localhost:8000/lemon.owl#> .
+
+@base            <http://localhost:8000#> .
+
+:lexicon_en a    lemon:Lexicon ;
+  lemon:language "en" ;
+  lemon:entry    :inhabitants_of_397 ;
+  lemon:entry    :inhabitants_of_397_form_preposition .
+
+:inhabitants_of_397 a       lemon:LexicalEntry ;
+  lexinfo:partOfSpeech lexinfo:noun ;
+  lemon:canonicalForm  :inhabitants_of_397_form ;
+  lemon:otherForm  :inhabitants_of_397_singular ;
+  lemon:otherForm  :inhabitants_of_397_plural ;
+  lemon:sense          :inhabitants_of_397_sense_1 ;
+  lemon:sense          :inhabitants_of_397_sense_2 ;
+  lemon:synBehavior    :inhabitants_of_397_nounpp .
+
+:inhabitants_of_397_form a lemon:Form ;
+  lemon:writtenRep "inhabitants"@en .
+
+:inhabitants_of_397_singular a    lemon:Form ;
+  lemon:writtenRep "inhabitants"@en ;
+  lexinfo:number   lexinfo:singular .
+
+:inhabitants_of_397_plural a   lemon:Form ;
+  lemon:writtenRep "inhabitants"@en ;
+  lexinfo:number    lexinfo:plural .
+
+:inhabitants_of_397_nounpp a        lexinfo:NounPPFrame ;
+  lexinfo:copulativeArg        :arg1-103-103-103-104-104-104-104-104-104-104-102-102-102-102-101-101-101-101-53_inhabitants_of_397 ;
+  lexinfo:prepositionalAdjunct :arg2-103-103-103-104-104-104-104-104-104-104-102-102-102-102-101-101-101-101-53_inhabitants_of_397 .
+
+:inhabitants_of_397_sense_1 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :inhabitants_of_397_sense_1 ;
+  lemon:reference           <http://dbpedia.org/ontology/populationTotal> ;
+  lemon:subjOfProp          :arg2-103-103-103-104-104-104-104-104-104-104-102-102-102-102-101-101-101-101-53_inhabitants_of_397 ;
+  lemon:objOfProp           :arg1-103-103-103-104-104-104-104-104-104-104-102-102-102-102-101-101-101-101-53_inhabitants_of_397 ;
+  lemon:condition           :inhabitants_of_397_sense_1_condition .
+
+:inhabitants_of_397_sense_1_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+
+:inhabitants_of_397_sense_2 a lemon:OntoMap, lemon:LexicalSense ;
+  lemon:ontoMapping         :inhabitants_of_397_sense_2 ;
+  lemon:reference           <http://dbpedia.org/ontology/populationTotal> ;
+  lemon:subjOfProp          :arg2-103-103-103-104-104-104-104-104-104-104-102-102-102-102-101-101-101-101-53_inhabitants_of_397 ;
+  lemon:objOfProp           :arg1-103-103-103-104-104-104-104-104-104-104-102-102-102-102-101-101-101-101-53_inhabitants_of_397 ;
+  lemon:condition           :inhabitants_of_397_sense_2_condition .
+
+:inhabitants_of_397_sense_2_condition a lemon:condition ;
+  lemon:propertyDomain  <http://dbpedia.org/ontology/Country> ;
+  lemon:propertyRange   <http://www.w3.org/2001/XMLSchema#double> .
+
+:arg2-103-103-103-104-104-104-104-104-104-104-102-102-102-102-101-101-101-101-53_inhabitants_of_397 lemon:marker :inhabitants_of_397_form_preposition .
+## Prepositions ##
+:inhabitants_of_397_form_preposition a                  lemon:SynRoleMarker ;
+  lemon:canonicalForm  [ lemon:writtenRep "of"@en ] ;
+  lexinfo:partOfSpeech lexinfo:preposition .
+

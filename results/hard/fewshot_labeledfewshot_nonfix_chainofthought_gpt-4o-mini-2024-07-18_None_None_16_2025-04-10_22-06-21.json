@@ -1,0 +1,273 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "question": "Give me the author of French Algeria.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/French_Algeria> <http:\/\/dbpedia.org\/property\/author> ?result . }",
+        "id": 492,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the person born, that is a musical artist, as Donald Maynard Dokken?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?result <http:\/\/dbpedia.org\/property\/birthName> \"Donald Maynard Dokken\"@en . }",
+        "id": 994,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the person born, that is a beauty queen, as ?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/BeautyQueen>. ?result <http:\/\/dbpedia.org\/property\/birthName> \"\"@en . }",
+        "id": 981,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the residence, that is a country, of the commander in Battle of Diamond Rock.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/residence> ?result . <http:\/\/dbpedia.org\/resource\/Battle_of_Diamond_Rock> <http:\/\/dbpedia.org\/ontology\/commander> ?v0 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. }",
+        "id": 645,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the child, that is a royalty, of Seleucus II Callinicus?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Seleucus_II_Callinicus> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 617,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration of the father of Emperor Go-Mizunoo.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Emperor_Go-Mizunoo> <http:\/\/dbpedia.org\/property\/father> ?v1 . ?result <http:\/\/dbpedia.org\/property\/leader> ?v1 . }",
+        "id": 488,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in South Korea.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/South_Korea> . }",
+        "id": 177,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the team of Takashi Sekizuka.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/manager> <http:\/\/dbpedia.org\/resource\/Takashi_Sekizuka> . }",
+        "id": 959,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the capital, that is a settlement, of the country of Khemis Miliana District.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. <http:\/\/dbpedia.org\/resource\/Khemis_Miliana_District> <http:\/\/dbpedia.org\/ontology\/country> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/capital> ?result . }",
+        "id": 492,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Panama.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Panama> . }",
+        "id": 303,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Who is the alumnus of Massachusetts Institute of Technology?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/almaMater> <http:\/\/dbpedia.org\/resource\/Massachusetts_Institute_of_Technology> . }",
+        "id": 427,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of Michele Pinto.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Michele_Pinto> <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 427,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the member of FC Politehnica Timi\u0219oara?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/team> <http:\/\/dbpedia.org\/resource\/FC_Politehnica_Timi\u0219oara> . }",
+        "id": 197,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the claim to fame, that is a film and a military conflict, of Sean Pertwee.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. <http:\/\/dbpedia.org\/resource\/Sean_Pertwee> <http:\/\/dbpedia.org\/ontology\/knownFor> ?result . }",
+        "id": 232,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war, that is a military conflict and an event, of the commander in Battle of Verdun.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. <http:\/\/dbpedia.org\/resource\/Battle_of_Verdun> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 492,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the residence, that is a settlement and Italian, of Sebastiano Bianchetti.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. <http:\/\/dbpedia.org\/resource\/Sebastiano_Bianchetti> <http:\/\/dbpedia.org\/property\/residence> ?result . }",
+        "id": 392,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

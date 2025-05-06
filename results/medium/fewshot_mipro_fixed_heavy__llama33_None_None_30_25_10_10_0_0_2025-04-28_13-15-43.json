@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a semantic web developer tasked with generating SPARQL queries based on given questions and examples. Using the provided `shots` and `question`, create a SPARQL query that answers the question.\n\nGiven the following shots and question:\nShots: \n- Give me the office of the president of France and entity in Paris.\nSparql Query: SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/office> ?office . ?office <http:\/\/dbpedia.org\/property\/name> \"President of France\" . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/France> . ?result <http:\/\/dbpedia.org\/ontology\/capital> <http:\/\/dbpedia.org\/resource\/Paris> . }\n- Give me the entity in Italy and entity in Province of Reggio Emilia and landmark at elevation of the award of the member of E-girls.\nSparql Query: SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/E-girls> <http:\/\/dbpedia.org\/ontology\/bandMember> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/awards> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/province> <http:\/\/dbpedia.org\/resource\/Province_of_Reggio_Emilia> . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy> . ?result <http:\/\/dbpedia.org\/ontology\/elevation> ?v1 . }\n\nQuestion: Give me the entity in Paris and landmark at elevation of 50 and office of the president of Germany.\n\nThe Sparql Query for this question would be:\nSELECT ?result WHERE { \n?result <http:\/\/dbpedia.org\/ontology\/office> ?office . \n?office <http:\/\/dbpedia.org\/property\/name> \"President of Germany\" . \n?result <http:\/\/dbpedia.org\/ontology\/capital> <http:\/\/dbpedia.org\/resource\/Paris> . \n?result <http:\/\/dbpedia.org\/ontology\/elevation> \"50\"^^xsd:integer .\n}",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

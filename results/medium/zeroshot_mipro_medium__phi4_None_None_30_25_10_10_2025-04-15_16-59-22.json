@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "1. Identify the main entities and relationships mentioned in the `question`.\n2. Determine the relevant DBpedia properties or classes for these entities.\n3. Construct a SPARQL query using appropriate prefixes:\n   - Use `PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>` and `PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>`.\n4. Formulate the `SELECT` clause to specify the desired output variables.\n5. Build the `WHERE` clause to filter data based on identified entities and relationships:\n   - Use direct property access for straightforward queries (e.g., birthplace, death place).\n   - Apply `UNION` for questions involving multiple entities or alternative paths.\n6. Incorporate `OPTIONAL` clauses if the question suggests retrieving additional related data.\n7. Adjust the query template to fit specific details from the question, ensuring it captures all necessary information.\n\nExample:\n- For a question about associated musical artists of two rappers, use:\n  ```\n  PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n  SELECT ?artist WHERE {\n    { \n      ?rapper1 a dbo:MusicalArtist ;\n               rdfs:label \"Rapper1\"@en .\n      ?rapper1 dbo:associatedMusicalArtist ?artist .\n    }\n    UNION\n    { \n      ?rapper2 a dbo:MusicalArtist ;\n               rdfs:label \"Rapper2\"@en .\n      ?rapper2 dbo:associatedMusicalArtist ?artist .\n    }\n  }\n  ```\n8. Ensure the query is syntactically correct and logically aligns with the question's intent.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

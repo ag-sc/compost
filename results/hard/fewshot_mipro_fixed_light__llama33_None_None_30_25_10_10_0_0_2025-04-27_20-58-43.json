@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query based on the given shots and question, we need to analyze the patterns in the shots and apply them to the question. The shots provide examples of how certain questions are translated into SPARQL queries. By identifying the entities, properties, and relationships mentioned in the question, we can construct an appropriate SPARQL query.\n\nGiven the fields:\n- `shots`: A list of tuples containing questions and their corresponding SPARQL queries.\n- `question`: A natural language question for which we want to generate a SPARQL query.\n\nThe task is to produce the field:\n- `sparql_query`: A SPARQL query that corresponds to the given question, based on the patterns learned from the shots.\n\nLet's analyze the provided shots and question:\n\n1. **Shots Analysis**:\n   - Shot 1: \"Give me the awardee of 30.\" translates to a query about an entity with an award property equal to \"30\".\n   - Shot 2: \"Give me the award of Sergei Makovetsky.\" translates to a query about Sergei Makovetsky's awards.\n   - Shot 3: \"Give me the commander in the profession, that is an event and a societal event, of Lisa Gavri\u0107.\" translates to a more complex query involving occupation, event types, and commander roles.\n\n2. **Question Analysis**:\n   - Question: \"Give me the awardee of the award of Sergei Makovetsky.\"\n     - This question involves finding an entity (awardee) that has received an award which is also associated with Sergei Makovetsky.\n\n3. **SPARQL Query Generation**:\n   - Based on the patterns observed, especially from Shot 2 and the complexity introduced in Shot 3, we need to find Sergei Makovetsky's award and then find who else (the awardee) has received that same award.\n   - The SPARQL query should select ?result where Sergei Makovetsky has an award (?award), and ?result also has that award.\n\n**Proposed SPARQL Query**:\n```sparql\nSELECT ?result WHERE {\n  <http:\/\/dbpedia.org\/resource\/Sergei_Makovetsky> <http:\/\/dbpedia.org\/property\/awards> ?award .\n  ?result <http:\/\/dbpedia.org\/property\/awards> ?award .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

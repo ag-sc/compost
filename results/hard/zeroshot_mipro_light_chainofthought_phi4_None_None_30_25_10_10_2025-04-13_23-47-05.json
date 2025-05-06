@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate SPARQL queries from questions about entities in DBpedia, follow these steps:\n\n1. **Parse the Question**: Identify key elements such as the entity and the specific information requested.\n2. **Map to DBpedia Concepts**: Determine which classes (e.g., `dbo:Person`) and properties (e.g., `dbo:birthDate`, `dbo:spouse`) are relevant.\n3. **Formulate the Query**:\n   - Use a `SELECT` statement for desired outputs.\n   - Construct `WHERE` clauses to define relationships and conditions.\n   - Apply filters if needed to refine results.\n4. **Verify Syntax**: Ensure correct use of prefixes and logical structure.\n\n[[ ## ]]",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

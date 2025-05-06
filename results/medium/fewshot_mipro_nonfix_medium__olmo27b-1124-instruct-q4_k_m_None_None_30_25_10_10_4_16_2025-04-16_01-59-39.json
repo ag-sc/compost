@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the residence, that is a country, of Anna Sharkey.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/Anna_Sharkey> <http:\/\/dbpedia.org\/property\/residence> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the child of the child, that is a royalty, of Frederick Francis III, Grand Duke of Mecklenburg-Schwerin.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Frederick_Francis_III,_Grand_Duke_of_Mecklenburg-Schwerin> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/child> ?result . }"
+      },
+      {
+        "question": "Who is the child of Emperor Toba?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Emperor_Toba> <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 98,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the administration, that is a region, of Charlie Baker.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. ?result <http:\/\/dbpedia.org\/property\/governor> \"Charlie Baker\"@en . }",
+        "id": 573,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the successor of the child of Alfonso I d'Este and spouse of Archduchess Barbara of Austria.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Alfonso_I_d'Este> . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Archduchess_Barbara_of_Austria> . ?v0 <http:\/\/dbpedia.org\/ontology\/successor> ?result . }",
+        "id": 465,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the team of the person born, that is a sports manager and a soccer manager and a soccer player, on the death of Pavel Vezhinov and player in Mario Ivankovi\u0107.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/coach> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?v1 <http:\/\/dbpedia.org\/ontology\/birthDate> ?v0 . <http:\/\/dbpedia.org\/resource\/Mario_Ivankovi\u0107> <http:\/\/dbpedia.org\/ontology\/team> ?result . <http:\/\/dbpedia.org\/resource\/Pavel_Vezhinov> <http:\/\/dbpedia.org\/ontology\/deathDate> ?v0 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. }",
+        "id": 216,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 7,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of the successor, that is a prime minister and an office holder and a politician, of Andr\u00e9 Tardieu and entity in France.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. <http:\/\/dbpedia.org\/resource\/Andr\u00e9_Tardieu> <http:\/\/dbpedia.org\/ontology\/successor> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/France> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PrimeMinister>. ?v0 <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 158,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 6,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the figure known as the nickname of the team, that is an organisation, of Hajime Moriyasu.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/nickname> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v1 <http:\/\/dbpedia.org\/ontology\/coach> <http:\/\/dbpedia.org\/resource\/Hajime_Moriyasu> . ?v1 <http:\/\/dbpedia.org\/property\/nickname> ?v2 . }",
+        "id": 582,
+        "subid": 27,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in the alter ego of The Shadow.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v1 . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . }",
+        "id": 456,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office of the administration of the commander, that is a politician, in Operation Green Hunt and office of Bidesh Ranjan Bose.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Bidesh_Ranjan_Bose> <http:\/\/dbpedia.org\/property\/office> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v0 <http:\/\/dbpedia.org\/property\/governor> ?v1 . ?v0 <http:\/\/dbpedia.org\/property\/office> ?result . <http:\/\/dbpedia.org\/resource\/Operation_Green_Hunt> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . }",
+        "id": 47,
+        "subid": 31,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band member of the awardee of List of awards and nominations received by Beyonc\u00e9.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/List_of_awards_and_nominations_received_by_Beyonc\u00e9> . ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . }",
+        "id": 341,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the office of Naci Bostanc\u0131 and office of the mayor, that is a politician and an office holder and Turkish, of the reference, that is an organisation and a political party and Turkish, to Millet \u0130ttifak\u0131.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/leader> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v2 <http:\/\/dbpedia.org\/ontology\/nationality> <http:\/\/dbpedia.org\/resource\/Turkey>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v2 <http:\/\/dbpedia.org\/property\/office> ?result . ?v1 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Millet \u0130ttifak\u0131\"@en . <http:\/\/dbpedia.org\/resource\/Naci_Bostanc\u0131> <http:\/\/dbpedia.org\/property\/office> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PoliticalParty>. ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Turkey>. }",
+        "id": 976,
+        "subid": 37,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 10,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the force of the mayor, that is an office holder and a politician and a president, of 1933 Spanish general election.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v2 <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . <http:\/\/dbpedia.org\/resource\/1933_Spanish_general_election> <http:\/\/dbpedia.org\/property\/leader> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/President>. ?v2 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 715,
+        "subid": 26,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 6,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the death of Pavel Vezhinov.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Pavel_Vezhinov> <http:\/\/dbpedia.org\/ontology\/deathDate> ?result . }",
+        "id": 216,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Spain.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Spain> . }",
+        "id": 166,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the professional in  and associated musical artist of EarthGang.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . <http:\/\/dbpedia.org\/resource\/EarthGang> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 129,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

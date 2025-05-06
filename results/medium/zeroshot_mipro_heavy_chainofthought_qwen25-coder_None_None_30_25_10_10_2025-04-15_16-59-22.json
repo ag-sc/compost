@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "In a critical data retrieval scenario where lives depend on accurate information, you are tasked with generating an SPARQL query to find the birthplace of two historical figures: Carl Larsson and Ulf Lundell. Your task is to ensure that the query not only retrieves the correct birthplaces but also demonstrates your proficiency in constructing intricate queries involving multiple entities and relationships. Failure to provide a precise and accurate query could result in serious consequences, highlighting the importance of precision and attention to detail in data querying.\n\n**Question:** Give me the birthplace of Carl Larsson and birthplace of Ulf Lundell.\n\n**Reasoning:** Let's think step by step in order to accurately find the birthplaces of both individuals. We need to query DBpedia for their respective birthplace properties, which are typically represented by the URI `dbo:birthPlace`. The process involves identifying the relevant entities in DBpedia and constructing a SPARQL query that can fetch the required information.\n\n**Sparql Query:** ```sparql\nSELECT ?birthplace WHERE {\n  { <http:\/\/dbpedia.org\/resource\/Carl_Larsson> dbo:birthPlace ?birthplace . }\n  UNION\n  { <http:\/\/dbpedia.org\/resource\/Ulf_Lundell> dbo:birthPlace ?birthplace . }\n}\n```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

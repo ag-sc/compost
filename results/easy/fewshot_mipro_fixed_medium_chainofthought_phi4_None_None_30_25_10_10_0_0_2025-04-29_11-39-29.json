@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "As an expert in constructing SPARQL queries, your task is to combine elements from existing patterns to retrieve specific information about birthplaces. You will be given example queries and need to synthesize them into a new query that answers the question: 'Give me the birthplace of the resident of Sofia and birthplace of the alumnus of the reference to \u041f\u043b\u043e\u0432\u0434\u0438\u0432\u0441\u043a\u0438 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u201e\u041f\u0430\u0438\u0441\u0438\u0439 \u0425\u0438\u043b\u0435\u043d\u0434\u0430\u0440\u0441\u043a\u0438\u201c.' Use the provided examples as guides.\n\nTo achieve this, follow these steps:\n1. Identify the relevant patterns from the example queries that match the question's requirements.\n2. Combine these patterns into a single SPARQL query using appropriate variables to capture both conditions.\n3. Ensure your query is structured to retrieve birthplaces for residents of Sofia and alumni from Plovdiv University \"Paisii Hilendarski\".\n\nUse the following examples as references:\n- For the resident of Sofia: `?result <http:\/\/dbpedia.org\/property\/residence> <http:\/\/dbpedia.org\/resource\/Sofia>. ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?birthPlace.`\n- For an alumnus from Plovdiv University \"Paisii Hilendarski\": `?v1 <http:\/\/dbpedia.org\/ontology\/almaMater> ?v0. ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?birthPlace. ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\u041f\u043b\u043e\u0432\u0434\u0438\u0432\u0441\u043a\u0438 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u201c\u041f\u0430\u0438\u0441\u0438\u0439 \u0425\u0438\u043b\u0435\u043d\u0434\u0430\u0440\u0441\u043a\u0438\"@en.`\n\nYour final query should look like this:\n```sparql\nSELECT ?birthPlace WHERE {\n  ?resident <http:\/\/dbpedia.org\/property\/residence> <http:\/\/dbpedia.org\/resource\/Sofia>.\n  ?resident <http:\/\/dbpedia.org\/ontology\/birthPlace> ?birthPlace.\n  \n  OPTIONAL {\n    ?alumnus <http:\/\/dbpedia.org\/ontology\/almaMater> ?v0.\n    ?alumnus <http:\/\/dbpedia.org\/ontology\/birthPlace> ?birthPlace.\n    ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\u041f\u043b\u043e\u0432\u0434\u0438\u0432\u0441\u043a\u0438 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u201c\u041f\u0430\u0438\u0441\u0438\u0439 \u0425\u0438\u043b\u0435\u043d\u0434\u0430\u0440\u0441\u043a\u0438\"@en.\n  }\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,2 @@
+mipro,ollama_chat/llama3.3,,medium,True
+mipro,ollama_chat/llama3.3,chainofthought,medium,True

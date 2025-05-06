@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "1. **Parse the Question:**\n   - Identify key entities and relationships.\n   - Note any specified types or qualifiers.\n\n2. **Map to SPARQL Components:**\n   - Determine subject, predicate, object for each part.\n   - Apply type constraints if mentioned.\n\n3. **Combine Patterns from Shots:**\n   - Use existing patterns from shots to form a complete query.\n\n4. **Construct the Query:**\n   - Assemble components into a valid SPARQL query.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

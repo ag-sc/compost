@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To construct an effective SPARQL query from the provided 'shots' and 'question', follow these detailed steps:\n\n1. **Identify Key Entities and Relationships**: Begin by carefully examining the 'question' to extract key entities, relationships, and any specific conditions mentioned. For example, in the question 'Give me the native of the residence, that is a country, of the person decedent at Patna and father of the child of Abu Ahmad Abdul Hafiz', identify entities like 'person decedent', 'Patna', 'native', 'residence', 'country', 'father', and 'Abu Ahmad Abdul Hafiz'.\n\n2. **Map Entities to RDF Properties**: Translate these identified elements into their corresponding RDF properties or classes from the given 'shots'. For instance, map 'person decedent at Patna' to `<http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Patna>` and 'native of residence that is a country' to expressions involving `<http:\/\/dbpedia.org\/ontology\/birthPlace>` and `<http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>`.\n\n3. **Analyze the Structure of Similar Queries**: Review the 'shots' to understand how similar queries are structured. Notice patterns such as chained relationships (e.g., a father's child) and conditions like type constraints (e.g., residence being a country). This analysis will guide you in structuring your query logically.\n\n4. **Construct the Query Skeleton**: Start forming the SPARQL query by establishing variables for unknowns, e.g., `?v1`, `?v0`, `?result`. These placeholders represent entities or properties that need to be resolved during query execution.\n\n5. **Incorporate Logical Conditions and Relationships**: Use the RDF triples from step 2 to build out the query body with appropriate SPARQL syntax, incorporating FILTERs if necessary for conditions not directly expressible in triple patterns (though none are needed here). For example:\n   - Link `deathPlace` to 'Patna'.\n   - Ensure `residence` is a `Country`.\n   - Connect the `birthPlace` of a result entity with this country.\n   - Establish familial relationships using properties like `<http:\/\/dbpedia.org\/property\/father>`.\n\n6. **Ensure Completeness and Correctness**: Double-check that all elements from the question are represented in your query, ensuring logical consistency and completeness. Verify that each triple pattern aligns with the intended meaning of the question.\n\n7. **Format the Final Query Properly**: Assemble all parts into a well-structured SPARQL SELECT statement, clearly defining variables to be returned (`SELECT ?result`) and organizing the WHERE clause for clarity.\n\nBy following these steps meticulously, you can translate complex natural language questions into precise SPARQL queries that accurately reflect the intended information retrieval task.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

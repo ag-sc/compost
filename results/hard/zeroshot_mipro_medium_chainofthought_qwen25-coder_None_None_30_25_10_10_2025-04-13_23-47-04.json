@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an expert DBpedia query generator tasked with retrieving information from a vast knowledge graph. A renowned historian has approached you with a critical request: they need to identify the historical figure who was both a significant political leader and a notable artist during the Renaissance period. The politician's name is Leonardo da Vinci, but they have forgotten his full title and accomplishments. Your mission is to uncover this information by crafting an SPARQL query that will fetch all relevant details about Leonardo da Vinci from DBpedia.\n\n**Question:** Who was Leonardo da Vinci, a renowned political leader and artist during the Renaissance period?\n\n**Reasoning:** Let's think step by step in order to To answer this question, we need to find information about Leonardo da Vinci that highlights both his political and artistic roles during the Renaissance. This requires querying DBpedia for details such as his titles, political affiliations, artworks, and contributions to various fields.\n\n**Sparql Query:** PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>  \nPREFIX dbr: <http:\/\/dbpedia.org\/resource\/>  \nSELECT ?title ?politicalRole ?artisticWork WHERE {  \n  dbr:Leonardo_da_Vinci dbo:title ?title.  \n  dbr:Leonardo_da_Vinci dbo:politicalRole ?politicalRole.  \n  dbr:Leonardo_da_Vinci dbo:artwork ?artisticWork.  \n}\n\n**High Stakes Scenario:** If you fail to retrieve the correct information, the historian's reputation will be tarnished, and they may lose credibility within their field of study. As a seasoned DBpedia query generator, you must perform your task with utmost precision and attention to detail.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a knowledgeable assistant specializing in generating SPARQL queries to extract information from DBpedia. Given a user's question, you will produce both a detailed reasoning step explaining how the query is derived and the corresponding SPARQL query itself.\n\n### Example:\n**Question:** Give me the birthplace of Ekaterina Zaharieva.\n**Reasoning:** Let's think step by step in order to find the birthplace of Ekaterina Zaharieva. We need to query DBpedia for her birthplace using the `dbo:birthPlace` property.\n**Sparql Query:** ```sparql\nSELECT ?birthPlace WHERE {\n  <http:\/\/dbpedia.org\/resource\/Ekaterina_Zaharieva> dbo:birthPlace ?birthPlace .\n}\n```\n\n### Steps:\n1. **Identify the entity**: Ekaterina Zaharieva\n2. **Determine the property**: `dbo:birthPlace`\n3. **Formulate the SPARQL query**: Use the `SELECT` statement to retrieve her birthplace.\n\n**Question:** Give me the party of Bruno Daniel Marie Paul Retailleau and Guillaume Peltier.\n**Reasoning:** Let's think step by step in order to find the political parties of Bruno Daniel Marie Paul Retailleau and Guillaume Peltier. Both are described as office holders and politicians, so we will use DBpedia to retrieve this information.\n\n1. **Identify the entities**: Bruno Daniel Marie Paul Retailleau and Guillaume Peltier\n2. **Determine the property**: `dbo:party`\n3. **Formulate the SPARQL query**: Use the `SELECT` statement with a `UNION` to retrieve the party information for both individuals.\n\n**Sparql Query:** ```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>\n\nSELECT ?party\nWHERE {\n  { <http:\/\/dbpedia.org\/resource\/Bruno_Daniel_Marie_Paul_Retailleau> dbo:party ?party }\n  UNION\n  { <http:\/\/dbpedia.org\/resource\/Guillaume_Peltier> dbo:party ?party }\n}\n```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query based on the provided question and shots, we need to analyze each shot and understand how it contributes to forming the final query. The process involves identifying key elements such as the subject (e.g., person, actor, commander), the predicates (e.g., deceased at, commander in, starring in), and the objects (e.g., Madrid, Spanish Civil War, All About the Andersons) from both the shots and the question.\n\nGiven the structure of the problem, we will break down each shot to understand its contribution to the SPARQL query:\n\n1. **Identify Subjects and Predicates**: From the shots, identify unique subjects (e.g., person, actor) and predicates (e.g., deceased at, starring in). This step is crucial for understanding how different conditions are connected.\n\n2. **Combine Conditions**: If a question involves multiple conditions (e.g., being an actor in one movie and another, or being deceased in a certain place), we need to combine these conditions using the appropriate logical operators (typically AND) in SPARQL.\n\n3. **Construct SPARQL Query**: Using the identified subjects, predicates, and objects, construct a SPARQL query that incorporates all conditions specified in the question.\n\nLet's consider an example where we have shots about actors in different movies and a question asking for an actor who has been in both movies:\n\n- Shot 1: `SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Movie1> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }`\n- Shot 2: `SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Movie2> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }`\n- Question: Give me the actor of Movie1 and Movie2.\n\nTo answer this question, we combine the conditions:\n\n```sparql\nSELECT ?result WHERE {\n  <http:\/\/dbpedia.org\/resource\/Movie1> <http:\/\/dbpedia.org\/ontology\/starring> ?result .\n  <http:\/\/dbpedia.org\/resource\/Movie2> <http:\/\/dbpedia.org\/ontology\/starring> ?result .\n}\n```\n\nThis query finds the actor who is common to both Movie1 and Movie2.\n\nGiven this approach, let's apply it to the provided examples:\n\n### Example 1:\nShots: \n- Give me the person deceased at Madrid.\n- Give me the commander in Spanish Civil War.\nQuestion: Give me the person deceased at Madrid and commander in Spanish Civil War.\n\nSPARQL Query:\n```sparql\nSELECT ?result WHERE {\n  ?result <http:\/\/dbpedia.org\/ontology\/restingPlace> <http:\/\/dbpedia.org\/resource\/Madrid> .\n  <http:\/\/dbpedia.org\/resource\/Spanish_Civil_War> <http:\/\/dbpedia.org\/ontology\/commander> ?result .\n}\n```\n\n### Example 2:\nShots: \n- Give me the actor of All About the Andersons.\n- Give me the actor of The Departed and native of Compton, California.\nQuestion: Give me the actor of The Departed and native of Compton, California and actor of All About the Andersons.\n\nSPARQL Query:\n```sparql\nSELECT ?result WHERE {\n  ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Compton,_California> .\n  <http:\/\/dbpedia.org\/resource\/The_Departed> <http:\/\/dbpedia.org\/ontology\/starring> ?result .\n  <http:\/\/dbpedia.org\/resource\/All_About_the_Andersons> <http:\/\/dbpedia.org\/property\/starring> ?result .\n}\n```\n\n### Example 3:\nLet's assume a new set of shots and question to further illustrate the process.\n\nShots: \n- Give me the actor of MovieA.\n- Give me the actor of MovieB and winner of AwardX.\nQuestion: Give me the actor of MovieA and MovieB and winner of AwardX.\n\nSPARQL Query:\n```sparql\nSELECT ?result WHERE {\n  <http:\/\/dbpedia.org\/resource\/MovieA> <http:\/\/dbpedia.org\/ontology\/starring> ?result .\n  <http:\/\/dbpedia.org\/resource\/MovieB> <http:\/\/dbpedia.org\/ontology\/starring> ?result .\n  ?result <http:\/\/dbpedia.org\/property\/awards> \"AwardX\" .\n}\n```\n\nBy following these steps and examples, we can generate SPARQL queries for various questions based on the provided shots.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

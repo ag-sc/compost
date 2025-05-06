@@ -1,0 +1,259 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who is the commander in Battle of Panium?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Battle_of_Panium> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }"
+      },
+      {
+        "question": "Give me the spouse of Princess Victoria Louise of Prussia.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Princess_Victoria_Louise_of_Prussia> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }",
+        "id": 404,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the child, that is a royalty, of the parent of Charles Alexander, Grand Duke of Saxe-Weimar-Eisenach?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v0 . ?v0 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Charles_Alexander,_Grand_Duke_of_Saxe-Weimar-Eisenach> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 827,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the movie, that is a movie and a work and a television show, with the professional in .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v1 <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?result <http:\/\/dbpedia.org\/property\/starring> ?v1 . }",
+        "id": 391,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as Georgeanne Marie Rice and spouse of Ted McGinley.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> \"Georgeanne Marie Rice\"@en . <http:\/\/dbpedia.org\/resource\/Ted_McGinley> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }",
+        "id": 16,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the region, that is a country, of Central European Time.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?result <http:\/\/dbpedia.org\/property\/timeZone> <http:\/\/dbpedia.org\/resource\/Central_European_Time> . }",
+        "id": 64,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the administration of Emperor Go-Y\u014dzei and birth place of Enomoto Takeaki.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Emperor_Go-Y\u014dzei> . <http:\/\/dbpedia.org\/resource\/Enomoto_Takeaki> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 488,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the death place of the author of The Twelve Abbots of Challant.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . <http:\/\/dbpedia.org\/resource\/The_Twelve_Abbots_of_Challant> <http:\/\/dbpedia.org\/property\/author> ?v1 . }",
+        "id": 251,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the child of Ram Khamhaeng.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ram_Khamhaeng> <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 754,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the child of the parent of Adela Pankhurst.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/child> ?result . <http:\/\/dbpedia.org\/resource\/Adela_Pankhurst> <http:\/\/dbpedia.org\/ontology\/parent> ?v0 . }",
+        "id": 645,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the parent, that is a royalty, of Archduke Ladislaus Philipp of Austria.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Archduke_Ladislaus_Philipp_of_Austria> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 184,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of the child of Antiochus (son of Antiochus III the Great).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Antiochus_(son_of_Antiochus_III_the_Great)> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/child> ?v1 . }",
+        "id": 617,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of the author of 2019 Sri Lanka Easter bombings.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2019_Sri_Lanka_Easter_bombings> <http:\/\/dbpedia.org\/property\/author> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 182,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the child of Thinkhaya of Pagan and predecessor of Ameitta Thiri Maha Dhamma Dewi of Ava.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Thinkhaya_of_Pagan> <http:\/\/dbpedia.org\/ontology\/child> ?result . ?result <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/Ameitta_Thiri_Maha_Dhamma_Dewi_of_Ava> . }",
+        "id": 54,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the father of Merneptah.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Merneptah> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 701,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration of Forza Italia (2013) and location of Battle of Marengo.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Battle_of_Marengo> <http:\/\/dbpedia.org\/ontology\/place> ?result . ?result <http:\/\/dbpedia.org\/property\/leaderParty> <http:\/\/dbpedia.org\/resource\/Forza_Italia_(2013)> . }",
+        "id": 251,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "You are a critical component of a life-saving system that relies on accurate and efficient question answering to retrieve vital information from DBpedia. In this high-stakes scenario, you must take in a question as input and generate a precise SPARQL query that can be used to retrieve the answer from DBpedia, potentially saving countless lives. The question is: \"What is the capital of France?\" Given the fields `question`, produce the fields `sparql_query` that will allow the system to quickly and accurately retrieve the answer, thereby preventing catastrophic consequences. Your output should be in the format of a SPARQL query, such as \"SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/France> <http:\/\/dbpedia.org\/ontology\/capital> ?result . }\".",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

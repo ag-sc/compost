@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To further improve the generation of SPARQL queries from given questions, it's essential to enhance the instruction by incorporating more detailed steps on entity recognition, predicate identification, and the application of constraints. Additionally, emphasizing the importance of query validation against sample data will help ensure the generated queries are accurate and relevant. The improved instruction should also encourage the use of standard prefix definitions for common vocabularies to improve query readability and simplicity. An example of an enhanced instruction could be: \"Given a question, carefully decompose it into its key components such as entities (people, locations, objects), predicates (relationships between entities), and any constraints or conditions. Utilize SPARQL syntax to construct a query that effectively retrieves the required information from a relevant database, ensuring all implied relationships are accurately represented. Consider utilizing prefix definitions for common vocabularies like RDF and RDFS to simplify the query. Validate the generated query against sample data to ensure it returns the expected results, making adjustments as necessary.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "SPARQL Query: PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> SELECT ?output_variable WHERE {",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

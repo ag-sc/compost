@@ -1,0 +1,239 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the party of Mark Durkan.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Mark_Durkan> <http:\/\/dbpedia.org\/ontology\/party> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the parent of John Quincy Adams.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/John_Quincy_Adams> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the office, that is a government agency and an organisation, of the reference to Carlos Franco Iribarnegaray.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Carlos_Franco_Iribarnegaray> <http:\/\/dbpedia.org\/property\/office> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/GovernmentAgency>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }"
+      },
+      {
+        "question": "Give me the spouse of the child, that is a royalty, of the parent of Elizabeth of Austria (1526\u20131545) and successor of Ren\u00e9e of France.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v3 . ?v0 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Elizabeth_of_Austria_(1526\u20131545)> . ?v0 <http:\/\/dbpedia.org\/ontology\/child> ?v3 . <http:\/\/dbpedia.org\/resource\/Ren\u00e9e_of_France> <http:\/\/dbpedia.org\/ontology\/successor> ?result . }",
+        "id": 465,
+        "subid": 37,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in Albert Edward (soccer).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Albert_Edward_(soccer)> <http:\/\/dbpedia.org\/ontology\/team> ?result . }",
+        "id": 83,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the child of the father of the spouse, that is a royalty, of Leleiohoku I.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Leleiohoku_I> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/dbpedia.org\/property\/father> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v0 . }",
+        "id": 917,
+        "subid": 26,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child, that is a royalty, of the father, that is a royalty and an office holder, of Emperor Antoku.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Emperor_Antoku> <http:\/\/dbpedia.org\/property\/father> ?v1 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?result <http:\/\/dbpedia.org\/property\/father> ?v1 . }",
+        "id": 791,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of Declan Costello and party of Enda Kenny.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Enda_Kenny> <http:\/\/dbpedia.org\/ontology\/party> ?result . <http:\/\/dbpedia.org\/resource\/Declan_Costello> <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 41,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the military force of the war, that is an event and a military conflict and a societal event, of the awardee of British South Africa Company Medal and commander in Mahdist War.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v0 <http:\/\/dbpedia.org\/ontology\/battle> ?v3 . ?v0 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/British_South_Africa_Company_Medal> . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?result <http:\/\/dbpedia.org\/ontology\/battle> ?v3 . <http:\/\/dbpedia.org\/resource\/Mahdist_War> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 124,
+        "subid": 33,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 7,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration, that is Italian and a region and a settlement and an administrative region, of Democratic Party (Italy).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/AdministrativeRegion>. ?result <http:\/\/dbpedia.org\/property\/leaderParty> <http:\/\/dbpedia.org\/resource\/Democratic_Party_(Italy)> . }",
+        "id": 892,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 5,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration, that is an organisation, of Kemal K\u0131l\u0131\u00e7daro\u011flu.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Kemal_K\u0131l\u0131\u00e7daro\u011flu> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }",
+        "id": 976,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist of the actor, that is an organisation, of Dreamville Presents: Revenge.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. <http:\/\/dbpedia.org\/resource\/Dreamville_Presents:_Revenge> <http:\/\/dbpedia.org\/property\/starring> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 129,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Who is the governor of the commander, that is a politician, in Central African Republic Civil War?",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. <http:\/\/dbpedia.org\/resource\/Central_African_Republic_Civil_War> <http:\/\/dbpedia.org\/ontology\/commander> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/governor> ?result . }",
+        "id": 83,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the ruling party in the birthplace, that is a town and Brazilian and a soccer club, of the member, that is a sports manager, of Kedah FA.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Town>. ?v1 <http:\/\/dbpedia.org\/property\/leaderParty> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClub>. ?v0 <http:\/\/dbpedia.org\/ontology\/team> <http:\/\/dbpedia.org\/resource\/Kedah_FA> . ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Brazil>. ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . }",
+        "id": 83,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 7,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the band, that is a group and a band and an organisation, of Alan Warner (musician).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Group>. <http:\/\/dbpedia.org\/resource\/Alan_Warner_(musician)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Band>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }",
+        "id": 933,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 4,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in Battle of Jarama and leader of the office, that is a government agency and an organisation, of Camilo Men\u00e9ndez Tolosa.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/leader> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/GovernmentAgency>. <http:\/\/dbpedia.org\/resource\/Camilo_Men\u00e9ndez_Tolosa> <http:\/\/dbpedia.org\/property\/office> ?v1 . <http:\/\/dbpedia.org\/resource\/Battle_of_Jarama> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 645,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given a natural language question about historical figures, generate a corresponding SPARQL query that retrieves specific information related to the entities mentioned in the question, such as their birthplace, children, or residence.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

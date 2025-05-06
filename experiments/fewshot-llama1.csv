@@ -1,0 +1,3 @@
+mipro,ollama_chat/llama3.3,,heavy,False
+mipro,ollama_chat/llama3.3,,light,False
+mipro,ollama_chat/llama3.3,chainofthought,light,False

@@ -1,0 +1,229 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the manager of 2013 J\u00fabilo Iwata season.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2013_J\u00fabilo_Iwata_season> <http:\/\/dbpedia.org\/ontology\/manager> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the war of the commander in Battle of La Rinconada de Ate.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Battle_of_La_Rinconada_de_Ate> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the actor, that is a musical artist, of the show with Stacey Dash.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/starring> <http:\/\/dbpedia.org\/resource\/Stacey_Dash>. ?v1 <http:\/\/dbpedia.org\/ontology\/starring> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the person decedent at French Algeria.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/French_Algeria> . }"
+      },
+      {
+        "question": "Give me the award of Gerald Graham.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Gerald_Graham> <http:\/\/dbpedia.org\/property\/awards> ?result . }",
+        "id": 547,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of Jack Schwartzman and professional in .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Jack_Schwartzman> . }",
+        "id": 820,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the birth name of Dino Merlin.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Dino_Merlin> <http:\/\/dbpedia.org\/property\/birthName> ?result . }",
+        "id": 421,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the residence, that is a settlement and Italian, of Sebastiano Bianchetti.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. <http:\/\/dbpedia.org\/resource\/Sebastiano_Bianchetti> <http:\/\/dbpedia.org\/property\/residence> ?result . }",
+        "id": 392,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the band member of Metallica and band member of Guns N' Roses.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Guns_N'_Roses> . ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Metallica> . }",
+        "id": 55,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the member of University of Tsukuba.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/team> <http:\/\/dbpedia.org\/resource\/University_of_Tsukuba> . }",
+        "id": 959,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the leader, that is a politician, of 1962 New South Wales state election?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. <http:\/\/dbpedia.org\/resource\/1962_New_South_Wales_state_election> <http:\/\/dbpedia.org\/property\/leader> ?result . }",
+        "id": 281,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of the native of Budapest.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Budapest> . ?result <http:\/\/dbpedia.org\/ontology\/child> ?v0 . }",
+        "id": 184,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the work of Gotabhaya Rajapaksa.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/author> <http:\/\/dbpedia.org\/resource\/Gotabhaya_Rajapaksa> . }",
+        "id": 182,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the work of the author of Iceland.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/author> ?v1 . <http:\/\/dbpedia.org\/resource\/Iceland> <http:\/\/dbpedia.org\/property\/author> ?v1 . }",
+        "id": 435,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the person born on the birth date of Pavlo Khudzik.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Pavlo_Khudzik> <http:\/\/dbpedia.org\/ontology\/birthDate> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/birthDate> ?v0 . }",
+        "id": 747,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of Loe Thai.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Loe_Thai> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 754,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

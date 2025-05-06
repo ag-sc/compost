@@ -1,0 +1,237 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the child, that is a royalty, of Princess Muna al-Hussein.",
+        "reasoning": "To find the child of Princess Muna al-Hussein who is a royalty, we need to query the database for individuals who are classified as royalty and have Princess Muna al-Hussein as their parent.",
+        "sparql_query": "SELECT ?result WHERE { \n  ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Princess_Muna_al-Hussein>.\n  ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>.\n}"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the author of Promises to Keep (Biden book) and author of the work, that is a written work and a work, of the commander, that is an office holder, in Korean conflict.",
+        "reasoning": "To answer this question, we need to find the author of \"Promises to Keep (Biden book)\" and the author of a written work that is related to the commander in the Korean conflict.",
+        "sparql_query": "SELECT ?result WHERE { { <http:\/\/dbpedia.org\/resource\/Promises_to_Keep_(Biden_book)> <http:\/\/dbpedia.org\/property\/author> ?result } UNION { ?v0 <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder> . ?v2 <http:\/\/dbpedia.org\/property\/author> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/WrittenWork> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work> . ?v0 <http:\/\/dbpedia.org\/property\/conflict> <http:\/\/dbpedia.org\/resource\/Korean_conflict> . } }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the parent of the child of the spouse of Mariclare Costello and parent of the professional in Photographer.",
+        "reasoning": "To find the parent of the child of the spouse of Mariclare Costello and the parent of the professional in Photographer, we first need to identify the spouse of Mariclare Costello, then find their child, and finally determine the parent of that child. Additionally, we need to find a professional who is a photographer and determine their parent.",
+        "sparql_query": "SELECT ?result WHERE { \n  { \n    <http:\/\/dbpedia.org\/resource\/Mariclare_Costello> <http:\/\/dbpedia.org\/ontology\/spouse> ?spouse .\n    ?spouse <http:\/\/dbpedia.org\/ontology\/child> ?child .\n    ?child <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n  }\n  UNION\n  { \n    ?professional <http:\/\/dbpedia.org\/ontology\/occupation> <http:\/\/dbpedia.org\/resource\/Photographer> .\n    ?professional <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n  }\n}"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the commander, that is an office holder and a politician, in North Carolina Air National Guard.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/North_Carolina_Air_National_Guard> <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician> . }"
+      },
+      {
+        "question": "Give me the parent of the child, that is a royalty, of Prince Faisal bin Hussein and parent of Prince Omar bin Faisal.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Prince_Omar_bin_Faisal> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Prince_Faisal_bin_Hussein> . }",
+        "id": 246,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the entity in Japan and war of Hashiba Hidekatsu and war of Toyotomi Hidenaga.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Toyotomi_Hidenaga> <http:\/\/dbpedia.org\/ontology\/battle> ?result . <http:\/\/dbpedia.org\/resource\/Hashiba_Hidekatsu> <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Japan> . }",
+        "id": 375,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the child of Stephen V of Hungary and spouse of the father of the parent, that is a royalty, of Philip, Despot of Romania.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v3 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Philip,_Despot_of_Romania> . ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary> . }",
+        "id": 905,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office of the leader of 2009 Galician regional election and tenant of Santiago de Compostela.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2009_Galician_regional_election> <http:\/\/dbpedia.org\/property\/leader> ?v1 . ?v1 <http:\/\/dbpedia.org\/property\/office> ?result . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Santiago_de_Compostela> . }",
+        "id": 119,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in the person born, that is an athlete, on the birthday of Marty Pollio and team of the person born, that is a soccer player and a soccer manager, on the birthday of Marcelo Sarmiento.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/birthDate> ?v0 . ?v2 <http:\/\/dbpedia.org\/ontology\/birthDate> ?v3 . <http:\/\/dbpedia.org\/resource\/Marcelo_Sarmiento> <http:\/\/dbpedia.org\/ontology\/birthDate> ?v0 . ?v2 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. <http:\/\/dbpedia.org\/resource\/Marty_Pollio> <http:\/\/dbpedia.org\/ontology\/birthDate> ?v3 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. ?result <http:\/\/dbpedia.org\/ontology\/coach> ?v1 . }",
+        "id": 687,
+        "subid": 60,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 9,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of Shelby Oaks and professional in the alter ego of the series of The Golden Master.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/alterEgo> ?v1 . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . <http:\/\/dbpedia.org\/resource\/The_Golden_Master> <http:\/\/dbpedia.org\/ontology\/series> ?v0 . <http:\/\/dbpedia.org\/resource\/Shelby_Oaks> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }",
+        "id": 80,
+        "subid": 36,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the child of the spouse, that is a royalty, of Constance of Burgundy.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v2 <http:\/\/dbpedia.org\/ontology\/child> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Constance_of_Burgundy> . }",
+        "id": 353,
+        "subid": 27,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the professional in Actress and native of New York (state).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/New_York_(state)> . ?v0 <http:\/\/dbpedia.org\/property\/occupation> \"Actress\"@en . ?v0 <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 585,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the party of Gustavo Petro and party of Roy Barreras.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Roy_Barreras> <http:\/\/dbpedia.org\/ontology\/party> ?result . <http:\/\/dbpedia.org\/resource\/Gustavo_Petro> <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 23,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the person born, that is an office holder and a politician, as Bruno Daniel Marie Paul Retailleau.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?result <http:\/\/dbpedia.org\/property\/birthName> \"Bruno Daniel Marie Paul Retailleau\"@en . }",
+        "id": 384,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the band member of the associated musical artist, that is a musical artist, of the member, that is an artist and a musical artist, of GS9 and native of the award, that is a region and American and a state and a settlement, of Coro de la Pontificia Universidad Cat\u00f3lica de Puerto Rico.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. <http:\/\/dbpedia.org\/resource\/Coro_de_la_Pontificia_Universidad_Cat\u00f3lica_de_Puerto_Rico> <http:\/\/dbpedia.org\/property\/awards> ?v1 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . ?v3 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/AdministrativeRegion>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. <http:\/\/dbpedia.org\/resource\/GS9> <http:\/\/dbpedia.org\/ontology\/bandMember> ?v3 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. }",
+        "id": 628,
+        "subid": 48,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 12,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in  and spouse of Carrie Johnson.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Carrie_Johnson> . }",
+        "id": 19,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      }
+    ],
+    "signature": {
+      "instructions": "Given a question about a specific topic or entity, use your understanding of DBpedia's semantic database to generate a well-structured SPARQL query that retrieves relevant information. Consider the key concepts and relationships involved in the question, and ensure that your query accurately reflects these elements. Additionally, provide a clear and concise reasoning text that explains how you arrived at the SPARQL query, including any assumptions or logical steps taken during the process.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

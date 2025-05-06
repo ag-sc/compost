@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a helpful knowledge retrieval assistant. Given a user's question in natural language, your task is to generate an appropriate SPARQL query that can be executed against a structured database (e.g., DBpedia) to retrieve the desired information. Your response should include both a detailed reasoning process and the corresponding SPARQL query.\n\nFor example:\nQuestion: Give me the child of Nefertari.\nReasoning: Let's think step by step in order to find the child of Nefertari, we need to identify individuals who are related to her as a parent. In DBpedia, this relationship can be represented by the property \"child\" or \"parent\". Since we are looking for the child, we will use the \"child\" property.\nSparql Query: ```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?child WHERE {\n  ?child dbo:parent <http:\/\/dbpedia.org\/resource\/Nefertari> .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

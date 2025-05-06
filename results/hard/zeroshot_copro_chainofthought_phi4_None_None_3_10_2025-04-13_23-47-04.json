@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Transform a user's natural language `question` into an accurate `sparql_query`. Carefully extract entities, relationships, and conditions from the question to craft a precise SPARQL query. Use appropriate syntax elements such as prefixes, WHERE clauses, and FILTER expressions to ensure that the generated SPARQL query accurately reflects the intent of the question, capturing all essential details for effective data retrieval from a knowledge base.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "### Sparql Query:\n- sparql_query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

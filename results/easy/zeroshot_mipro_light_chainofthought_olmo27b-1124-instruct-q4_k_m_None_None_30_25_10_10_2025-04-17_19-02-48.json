@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "### Steps:\n1. **Governor from Paulus Powell's Birth Place**: \n   - Paulus Powell was born in Mississippi (an administrative region).\n   - Query for a governor with a birth place matching this description.\n\n2. **Author of \"El Deafo\"**:\n   - Cece Bell is the author.\n   - Query for an author named Cece Bell.\n\n3. **Vince Gilligan**:\n   - Known as a television producer and writer.\n   - Query for a person with these attributes.\n\n### SPARQL Query Structure:\n- Use prefixes for DBpedia's ontology.\n- Construct WHERE clause to filter for the required individuals based on their names, birth places, and additional attributes.\n\n### Sparql Query:\n```sparql\nPREFIX dbpedia: <http:\/\/dbpedia.org\/ontology\/>\n\nSELECT ?governor_name ?governor_birthplace ?author_name ?author_birthplace ?vince_gilligan_name ?vince_gilligan_birthplace\nWHERE {\n  ?governor a dbpedia:Politician ;\n            dbpedia:birthPlace ?governor_birthplace .\n  ?author a dbpedia:Person ;\n           dbpedia:birthPlace ?author_birthplace .\n  ?vince_gilligan a dbpedia:Person ;\n               dbpedia:birthPlace ?vince_gilligan_birthplace .\n  ?governor rdfs:label ?governor_name .\n  ?author rdfs:label ?author_name .\n  ?vince_gilligan rdfs:label ?vince_gilligan_name\n}\n```\n\n### Completed",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

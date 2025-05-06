@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To determine the correct SPARQL query from the provided shots and question, we need to analyze the logical relationships described in each shot and how they relate to the requirements of the question. Here's a step-by-step breakdown of the reasoning process:\n\n1. **Understand the Question Requirements**: The question asks for an individual who is both the child of Soe Min Wimala Dewi's father and the parent of Thado Minsaw of Prome.\n\n2. **Identify Relevant Shots**:\n   - **Shot 3** provides information on how to find the child of Soe Min Wimala Dewi's father: \n     ```sparql\n     SELECT ?result WHERE {\n       ?v0 <http:\/\/dbpedia.org\/ontology\/child> ?result .\n       <http:\/\/dbpedia.org\/resource\/Soe_Min_Wimala_Dewi> <http:\/\/dbpedia.org\/property\/father> ?v0 .\n     }\n     ```\n   - **Shot 2** provides information on how to find an entity that is a parent of Thado Minsaw of Prome: \n     ```sparql\n     SELECT ?result WHERE {\n       <http:\/\/dbpedia.org\/resource\/Thado_Minsaw_of_Prome> <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n     }\n     ```\n   - **Combining these conditions**: We need to find an entity that satisfies both being the child of Soe Min Wimala Dewi's father and being a parent of Thado Minsaw of Prome.\n\n3. **Constructing the SPARQL Query**:\n   - Use a common variable, `?result`, to represent the individual who meets both conditions.\n   - Integrate the relevant parts from each shot into a single query, ensuring that the logical relationships are maintained.\n   \n4. **Formulate the Combined Query**: The resulting SPARQL query should look like this:\n\n```sparql\nSELECT ?result WHERE {\n  ?v0 <http:\/\/dbpedia.org\/ontology\/child> ?result .\n  <http:\/\/dbpedia.org\/resource\/Soe_Min_Wimala_Dewi> <http:\/\/dbpedia.org\/property\/father> ?v0 .\n  \n  <http:\/\/dbpedia.org\/resource\/Thado_Minsaw_of_Prome> <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n}\n```\n\n5. **Verify the Logical Flow**: Ensure that the query correctly identifies an individual who is both a child of Soe Min Wimala Dewi's father and a parent to Thado Minsaw of Prome by combining the necessary conditions.\n\nBy following this structured approach, we ensure that all aspects of the question are addressed, leading to an accurate SPARQL query construction.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

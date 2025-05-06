@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Your task is to analyze the given `question` and construct a corresponding `SPARQL query`. Focus on identifying key entities, relationships, and constraints in the question. Break down complex questions into simpler parts if necessary. Ensure your SPARQL query accurately captures the intent of the question by including appropriate variables, filters, and conditions. Consider the context and semantics to determine the correct prefixes and namespaces required for a successful execution of the query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "**SPARQL Query:**  \n```sparql\n{proposed_sparql_query}\n```",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

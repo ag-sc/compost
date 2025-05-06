@@ -1,0 +1,246 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the commander in Thirty Years' War and father of the child of the parent of Archduke Charles Joseph of Austria.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Thirty_Years'_War> <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?v2 . ?v2 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Archduke_Charles_Joseph_of_Austria> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Who is the child of Frederick Stanley, 16th Earl of Derby?",
+        "reasoning": "To find the child of Frederick Stanley, 16th Earl of Derby, we need to identify individuals who are children of him. This involves looking at family relationships in historical records.",
+        "sparql_query": "SELECT ?child WHERE {\n  <http:\/\/dbpedia.org\/resource\/Frederick_Stanley,_16th_Earl_of_Derby> <http:\/\/dbpedia.org\/ontology\/child> ?child .\n}"
+      },
+      {
+        "augmented": true,
+        "question": "Who is the parent of Dorothea of Denmark, Electress Palatine?",
+        "reasoning": "Dorothea of Denmark, Electress Palatine was born on 16 October 1703 in Heidelberg, Germany. She was the daughter of Frederick I, Elector Palatine and his wife Sophia Charlotte of Hanover.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Dorothea_of_Denmark,_Electress_Palatine> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }"
+      },
+      {
+        "question": "Give me the child of the child, that is a royalty, of the parent of Archduchess Margarete Sophie of Austria and predecessor of Carl, Duke of W\u00fcrttemberg and child of the child of Duke Philipp of W\u00fcrttemberg.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Archduchess_Margarete_Sophie_of_Austria> <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?v2 <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v5 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Duke_Philipp_of_W\u00fcrttemberg> . ?v2 <http:\/\/dbpedia.org\/ontology\/child> ?result . ?result <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/Carl,_Duke_of_W\u00fcrttemberg> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v5 . }",
+        "id": 737,
+        "subid": 58,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 7,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band member of The Alan Parsons Project and associated musical artist of Stuart Tosh and associated musical artist of the writer, that is a musical artist and an artist, of Wizards of Waverly Place (soundtrack).",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. <http:\/\/dbpedia.org\/resource\/Stuart_Tosh> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/The_Alan_Parsons_Project> . <http:\/\/dbpedia.org\/resource\/Wizards_of_Waverly_Place_(soundtrack)> <http:\/\/dbpedia.org\/property\/writer> ?v1 . }",
+        "id": 78,
+        "subid": 20,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the parent of the child of Frederick Stanley, 16th Earl of Derby and parent of the awardee of the award of Rodney Lees and father of Arthur Stanley (politician).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Rodney_Lees> <http:\/\/dbpedia.org\/property\/awards> ?v1 . <http:\/\/dbpedia.org\/resource\/Frederick_Stanley,_16th_Earl_of_Derby> <http:\/\/dbpedia.org\/ontology\/child> ?v4 . ?v4 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v0 <http:\/\/dbpedia.org\/property\/awards> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/child> ?v0 . <http:\/\/dbpedia.org\/resource\/Arthur_Stanley_(politician)> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 871,
+        "subid": 52,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 6,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the force of the awardee of Commander of the Order of the British Empire.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Commander_of_the_Order_of_the_British_Empire> . ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . }",
+        "id": 731,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the child of Saw Shwe Khet.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Saw_Shwe_Khet> . }",
+        "id": 89,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of Saw Shwe Khet and child of Saw Min Hla and predecessor of the child of Saw Shwe Khet.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Saw_Shwe_Khet> . ?v1 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Saw_Shwe_Khet> . ?result <http:\/\/dbpedia.org\/ontology\/successor> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Saw_Min_Hla> . }",
+        "id": 89,
+        "subid": 30,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born, that is a musical artist, as the persona of Nick Curran.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. <http:\/\/dbpedia.org\/resource\/Nick_Curran> <http:\/\/xmlns.com\/foaf\/0.1\/givenName> ?v1 . }",
+        "id": 782,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist of $pacely and person born as the birth name of the native, that is an artist, of Central Region, Ghana.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Central_Region,_Ghana> . ?result <http:\/\/dbpedia.org\/property\/birthName> ?v1 . <http:\/\/dbpedia.org\/resource\/$pacely> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. }",
+        "id": 668,
+        "subid": 36,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of the award, that is American and a settlement, of the awardee of New York (state).",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/awards> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?v0 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/New_York_(state)> . ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. }",
+        "id": 585,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the professional in  and actor of Rustlers' Rhapsody.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . <http:\/\/dbpedia.org\/resource\/Rustlers'_Rhapsody> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }",
+        "id": 361,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the native of the administration, that is a country, of Nicholas II of Russia.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . ?v1 <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Nicholas_II_of_Russia> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. }",
+        "id": 158,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the residence, that is a country, of Dawid Olejniczak.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/Dawid_Olejniczak> <http:\/\/dbpedia.org\/property\/residence> ?result . }",
+        "id": 119,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the native of the administration of Alexander II, Grand Duke of Finland and native of Russian Empire.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Russian_Empire> . ?v1 <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Alexander_II,_Grand_Duke_of_Finland> . }",
+        "id": 158,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given a natural language question, generate an accurate SPARQL query that retrieves the required information from DBpedia. Ensure your query is well-structured and includes all necessary joins to handle complex relationships between entities.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

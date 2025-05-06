@@ -1,0 +1,259 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the party of Alceu Collares.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Alceu_Collares> <http:\/\/dbpedia.org\/ontology\/party> ?result . }"
+      },
+      {
+        "question": "Give me the reference, that is Australian and an organisation and a military unit, to 'A' Battery, Royal Australian Artillery.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Australia>. ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"'A' Battery, Royal Australian Artillery\"@en . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryUnit>. }",
+        "id": 124,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 4,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the residence, that is a country, of the person decedent at Patna.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Patna> . ?v0 <http:\/\/dbpedia.org\/property\/residence> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. }",
+        "id": 865,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of the successor, that is a prime minister and an office holder and a politician, of Andr\u00e9 Tardieu and entity in France.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. <http:\/\/dbpedia.org\/resource\/Andr\u00e9_Tardieu> <http:\/\/dbpedia.org\/ontology\/successor> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/France> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PrimeMinister>. ?v0 <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 158,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 6,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the party of Enda Kenny.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Enda_Kenny> <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 41,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the office of Ajoy Mukherjee and office of Suvendu Adhikari and office of the awardee of Banga Bhushan.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Suvendu_Adhikari> <http:\/\/dbpedia.org\/property\/office> ?result . ?v3 <http:\/\/dbpedia.org\/property\/office> ?result . ?v3 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Banga_Bhushan> . <http:\/\/dbpedia.org\/resource\/Ajoy_Mukherjee> <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 47,
+        "subid": 29,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of Alfonso I d'Este.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Alfonso_I_d'Este> . }",
+        "id": 465,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the successor of Ercole II d'Este, Duke of Ferrara and successor of the child, that is a royalty, of Anne of Brittany and spouse of Archduchess Barbara of Austria.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Anne_of_Brittany> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/successor> ?result . <http:\/\/dbpedia.org\/resource\/Ercole_II_d'Este,_Duke_of_Ferrara> <http:\/\/dbpedia.org\/ontology\/successor> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Archduchess_Barbara_of_Austria> . }",
+        "id": 465,
+        "subid": 30,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of Kek\u016ban\u0101o\u02bba and parent of the child, that is a royalty, of Kamehameha IV.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Kamehameha_IV> . ?result <http:\/\/dbpedia.org\/ontology\/child> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/property\/father> \"Kek\u016ban\u0101o\u02bba\"@en . }",
+        "id": 917,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in Musician and associated musical artist of the person born, that is a musical artist and an artist, as Paul Laurence Dunbar Chambers Jr..",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Musician\"@en . ?v1 <http:\/\/dbpedia.org\/property\/birthName> \"Paul Laurence Dunbar Chambers Jr.\"@en . }",
+        "id": 433,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of Charles Orlando, Dauphin of France.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Charles_Orlando,_Dauphin_of_France> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 465,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the director of Entertaining Mr Sloane (film) and spouse of the person born as the birth name of Anne V. Coates.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Anne_V._Coates> <http:\/\/dbpedia.org\/property\/birthName> ?v1 . <http:\/\/dbpedia.org\/resource\/Entertaining_Mr_Sloane_(film)> <http:\/\/dbpedia.org\/ontology\/director> ?result . ?v0 <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v0 . }",
+        "id": 507,
+        "subid": 31,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist, that is an artist and a musical artist, of Scott LaFaro.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Scott_LaFaro> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }",
+        "id": 433,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born in 1971.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthYear> \"1971\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gYear> . }",
+        "id": 36,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the successor of Louis II, Grand Duke of Hesse and spouse of Anna Magdalena Appel.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Anna_Magdalena_Appel> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . <http:\/\/dbpedia.org\/resource\/Louis_II,_Grand_Duke_of_Hesse> <http:\/\/dbpedia.org\/ontology\/successor> ?result . }",
+        "id": 826,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the figure known as Vanderbilt Commodores.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/nickname> <http:\/\/dbpedia.org\/resource\/Vanderbilt_Commodores> . }",
+        "id": 130,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query from a given natural language question, analyze the question to identify key entities, predicates, and filters. Then, use this analysis to construct a formal SPARQL query that accurately reflects the intent of the question, incorporating domain-specific knowledge where necessary.\n\nFor example, if the question is \"Give me the residence, that is a country, of the native, that is Polish and an athlete, of \u0141\u00f3d\u017a,\" break down the question into its components:\n- Identify the key entities: \u0141\u00f3d\u017a, Polish, athlete.\n- Determine the relationship between these entities and the desired outcome (residence that is a country).\n- Construct a SPARQL query using the appropriate predicates and filters to retrieve the relevant information from DBpedia.\n\nThe resulting SPARQL query should be in the format of:\n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX dbp: <http:\/\/dbpedia.org\/property\/>\nPREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\nSELECT ?country\nWHERE {\n  dbr:\u0141\u00f3d\u017a dbo:country ?country .\n  ?country a dbo:Country .\n  ?athlete dbo:birthPlace dbr:\u0141\u00f3d\u017a .\n  ?athlete dbo:nationality dbr:Poland .\n  ?athlete a dbo:Athlete .\n}\n```\nThis process should be applied to each question, adapting the analysis and query construction according to the specifics of the question being asked.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given a natural language question, generate the corresponding SPARQL query using the specified predictor module. The query should accurately retrieve the required information from a knowledge graph.\n\nFor example:\n- **Question**: \"Who is the spouse of Aristotle Onassis?\"\n  - **SPARQL Query**:\n    ```sparql\n    PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n    SELECT ?spouse WHERE {\n      <http:\/\/dbpedia.org\/resource\/Aristotle_Onassis> dbo:spouse ?spouse.\n    }\n    ```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

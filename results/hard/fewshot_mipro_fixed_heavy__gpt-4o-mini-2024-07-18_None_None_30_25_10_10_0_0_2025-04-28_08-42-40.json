@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Using the provided examples of question-SPARQL query pairs (shots) and a specific natural language question, generate a corresponding SPARQL query that accurately retrieves the requested information from a knowledge base. Ensure that the generated query reflects the relationships and attributes demonstrated in the shots, and is structured to effectively query the relevant data. Pay attention to the context and specifics of the question to ensure the SPARQL query aligns with the user's inquiry.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

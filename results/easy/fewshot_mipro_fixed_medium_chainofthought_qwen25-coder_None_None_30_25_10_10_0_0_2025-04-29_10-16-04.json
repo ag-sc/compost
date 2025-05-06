@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To answer this question, we need to find the office of a commander in the Central African Republic Civil War that is also an office holder and politician. We also need to find the office of the leader of the Conservative Republican Party (Spain) and the tenant of the residence of the leader of the 2003 Madrid City Council election.\n\n1. Identify the commander in the Central African Republic Civil War.\n2. Find the office held by this commander.\n3. Identify the leader of the Conservative Republican Party (Spain).\n4. Find the office held by this leader.\n5. Identify the residence of the leader of the 2003 Madrid City Council election.\n6. Find the tenant of this residence.\n\nSparql Query: ```sparql\nSELECT ?result WHERE {\n  ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>.\n  ?result <http:\/\/dbpedia.org\/ontology\/headquarter> ?v2 .\n  <http:\/\/dbpedia.org\/resource\/Miguel_Maura> <http:\/\/dbpedia.org\/ontology\/party> ?v1 .\n  ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>.\n  ?v0 <http:\/\/dbpedia.org\/ontology\/commander> ?v5 .\n  ?v5 <http:\/\/dbpedia.org\/property\/office> ?result .\n  ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PoliticalParty>.\n  ?v3 <http:\/\/dbpedia.org\/property\/office> ?result .\n  ?v0 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Manuel_Pinto_da_Costa> .\n  ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>.\n  ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>.\n  ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>.\n  ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>.\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

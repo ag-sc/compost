@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To address the given task effectively, it's crucial to break down the process into manageable steps that ensure clarity and precision in generating the SPARQL query from a natural language question. Here\u2019s how one might approach this:\n\n1. **Understanding the Question**: The first step involves comprehending the question fully. This includes identifying key entities (people, places, objects), relationships (parent, spouse, profession), and any specific conditions or filters mentioned.\n\n2. **Identifying DBpedia Entities and Properties**: Once the components of the question are clear, the next step is to map these onto DBpedia entities and properties. For instance, people's names can be mapped to their DBpedia resource pages (e.g., `dbpedia:Carrie_Johnson`), while relationships and professions can be linked to specific properties (e.g., `dbo:spouse`, `dbo:birthName`, `dbo:occupation`).\n\n3. **Constructing the SPARQL Query**: With the entities and properties identified, the next step is to construct a SPARQL query that retrieves the required information. This involves using the appropriate prefixes (`PREFIX dbpedia: <http:\/\/dbpedia.org\/resource\/>` and `PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>`), selecting the variables of interest (`SELECT ?variable`), and specifying the conditions or patterns to match in the data (`WHERE { ... }`).\n\n4. **Testing and Refining**: After constructing the query, it's essential to test it against the DBpedia dataset to ensure it returns the expected results. Sometimes, the initial query might not yield any results due to errors in entity or property identification, or because the question is too ambiguous. In such cases, refining the query by adjusting the conditions or adding more specific filters can help.\n\n5. **Iterating for Complex Queries**: For more complex questions that involve multiple entities and relationships (like finding a spouse who is also a professional with a certain birth name), the process might require iterating through different parts of the question, constructing sub-queries, and then combining these to achieve the final result.\n\nBy following this structured approach, one can systematically address the task of generating SPARQL queries from natural language questions, ensuring that each component of the question is accurately represented in the query and that the resulting query effectively retrieves the desired information from DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

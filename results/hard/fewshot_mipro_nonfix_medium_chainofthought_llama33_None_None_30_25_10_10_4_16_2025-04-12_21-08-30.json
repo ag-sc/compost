@@ -1,0 +1,237 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the birth place, that is a region, of Joseph Whitaker (naturalist).",
+        "reasoning": "To answer this question, we need to find the birthplace of Joseph Whitaker (naturalist) that is classified as a region.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Joseph_Whitaker_(naturalist)> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the war of the commander in Battle of La Rinconada de Ate.",
+        "reasoning": "To find the war of the commander in Battle of La Rinconada de Ate, we first need to identify the commander of the Battle of La Rinconada de Ate. Then, we can query for the wars that this commander was involved in.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Battle_of_La_Rinconada_de_Ate> <http:\/\/dbpedia.org\/ontology\/commander> ?commander . ?commander <http:\/\/dbpedia.org\/ontology\/battle> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the parent of the child of Antiochus (son of Antiochus III the Great).",
+        "reasoning": "To find the parent of the child of Antiochus (son of Antiochus III the Great), we first need to identify the child of Antiochus. Then, we can query for the parent of that individual.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Antiochus_(son_of_Antiochus_III_the_Great)> <http:\/\/dbpedia.org\/ontology\/child> ?child . ?child <http:\/\/dbpedia.org\/ontology\/parent> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the office, that is an organisation, of Joo Don-sik.",
+        "reasoning": "To find the office of Joo Don-sik that is an organisation, we need to query the DBpedia dataset for entities related to Joo Don-sik and filter those that are classified as organisations.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Joo_Don-sik> <http:\/\/dbpedia.org\/property\/office> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }"
+      },
+      {
+        "question": "Give me the alma mater of Sylvia Pankhurst and entity in United Kingdom.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_Kingdom> . <http:\/\/dbpedia.org\/resource\/Sylvia_Pankhurst> <http:\/\/dbpedia.org\/ontology\/almaMater> ?result . }",
+        "id": 645,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the claim to fame of Louis des Balbes de Berton de Crillon, 1st Duke of Mah\u00f3n.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Louis_des_Balbes_de_Berton_de_Crillon,_1st_Duke_of_Mah\u00f3n> <http:\/\/dbpedia.org\/ontology\/knownFor> ?result . }",
+        "id": 378,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the successor of the predecessor, that is a sports team season and a soccer club season, of 2015 Sacramento Republic FC season.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsTeamSeason>. ?v0 <http:\/\/dbpedia.org\/ontology\/successor> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClubSeason>. ?v0 <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/2015_Sacramento_Republic_FC_season> . }",
+        "id": 356,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the father of Princess Elizabeth of Greece and Denmark and child of George I of Greece.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/George_I_of_Greece> <http:\/\/dbpedia.org\/ontology\/child> ?result . <http:\/\/dbpedia.org\/resource\/Princess_Elizabeth_of_Greece_and_Denmark> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 339,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the child of Antiochus III the Great and parent of Nysa (wife of Pharnaces I of Pontus).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Nysa_(wife_of_Pharnaces_I_of_Pontus)> . ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Antiochus_III_the_Great> . }",
+        "id": 617,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of James Burton (property developer).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/James_Burton_(property_developer)> <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 547,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the force, that is a military conflict, of Alexander I of Russia.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v1 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Alexander_I_of_Russia> . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 626,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the headquarter of the office, that is an organisation, of Joo Don-sik.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/location> ?result . <http:\/\/dbpedia.org\/resource\/Joo_Don-sik> <http:\/\/dbpedia.org\/property\/office> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }",
+        "id": 177,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the force of Dagobert Sigmund von Wurmser.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Dagobert_Sigmund_von_Wurmser> . }",
+        "id": 996,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the associated musical artist of Watchtower (band).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Watchtower_(band)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 994,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the professional in Actor?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Actor\"@en . }",
+        "id": 820,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the person decedent at French Algeria.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/French_Algeria> . }",
+        "id": 492,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "You are a semantic web developer tasked with creating SPARQL queries from natural language questions to retrieve information from DBpedia. Given the fields `question`, produce a step-by-step reasoning process and the corresponding fields `sparql_query` that can be executed on DBpedia to retrieve the desired information, ensuring your query is well-formed and effective in retrieving the correct data.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "question": "Give me the tenant of Santiago de Compostela.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Santiago_de_Compostela> . }",
+        "id": 119,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the father of the child, that is a royalty, of William I of Sicily.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/dbpedia.org\/property\/father> ?result . ?v1 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/William_I_of_Sicily> . }",
+        "id": 353,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of India.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/India> . }",
+        "id": 249,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the person decedent at the birthplace, that is a country, of Sandro Bertaggia and native of Russian Empire.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Russian_Empire> . <http:\/\/dbpedia.org\/resource\/Sandro_Bertaggia> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . }",
+        "id": 158,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the producer of the claim to fame, that is a movie and a work, of the actor of High Society Blues and producer of The Adventures of Tom Sawyer (1938 film).",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/producer> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v0 <http:\/\/dbpedia.org\/ontology\/knownFor> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. <http:\/\/dbpedia.org\/resource\/The_Adventures_of_Tom_Sawyer_(1938_film)> <http:\/\/dbpedia.org\/ontology\/producer> ?result . <http:\/\/dbpedia.org\/resource\/High_Society_Blues> <http:\/\/dbpedia.org\/property\/starring> ?v0 . }",
+        "id": 557,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the war, that is a disease and a societal event, of the owner of USS Arcadia (ID-1605) and author of Back to Work (book) and spouse of Hillary Clinton.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Hillary_Clinton> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . <http:\/\/dbpedia.org\/resource\/USS_Arcadia_(ID-1605)> <http:\/\/dbpedia.org\/ontology\/owner> ?v0 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. <http:\/\/dbpedia.org\/resource\/Back_to_Work_(book)> <http:\/\/dbpedia.org\/property\/author> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Disease>. }",
+        "id": 595,
+        "subid": 45,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of New York (state).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/New_York_(state)> . }",
+        "id": 585,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the work, that is a work and a written work and American and a book, of the commander, that is an office holder and a politician, in North Carolina Air National Guard.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/author> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. <http:\/\/dbpedia.org\/resource\/North_Carolina_Air_National_Guard> <http:\/\/dbpedia.org\/ontology\/commander> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Book>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/WrittenWork>. }",
+        "id": 38,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 8,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the producer of A Star Is Born (1937 film) and professional in the alter ego of the reference, that is a fictional character, to Kent Allard (print).",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/FictionalCharacter>. ?v2 <http:\/\/dbpedia.org\/property\/alterEgo> ?v1 . <http:\/\/dbpedia.org\/resource\/A_Star_Is_Born_(1937_film)> <http:\/\/dbpedia.org\/ontology\/producer> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . ?v2 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Kent Allard (print)\"@en . }",
+        "id": 557,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of the movie, that is a work and a film, with Audrey Hepburn and spouse of Janusz Kami\u0144ski.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/starring> \"Audrey Hepburn\"@en . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Janusz_Kami\u0144ski> . ?v1 <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. }",
+        "id": 87,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the reference to .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\"@en . }",
+        "id": 392,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the parent of Charles Martel of Anjou and spouse of Charles II of Naples and child of Stephen V of Hungary.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary> . <http:\/\/dbpedia.org\/resource\/Charles_II_of_Naples> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . <http:\/\/dbpedia.org\/resource\/Charles_Martel_of_Anjou> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 905,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of Roy Barreras and entity in the country of Daniel Elahi Gal\u00e1n.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Daniel_Elahi_Gal\u00e1n> <http:\/\/dbpedia.org\/ontology\/country> ?v2 . <http:\/\/dbpedia.org\/resource\/Roy_Barreras> <http:\/\/dbpedia.org\/ontology\/party> ?result . ?result <http:\/\/dbpedia.org\/ontology\/country> ?v2 . }",
+        "id": 23,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the birthplace of the awardee, that is Japanese, of the reference, that is a television show, to Anita Borg Institute Women of Vision Awards.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Anita Borg Institute Women of Vision Awards\"@en . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/nationality> <http:\/\/dbpedia.org\/resource\/Japan>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?v0 <http:\/\/dbpedia.org\/property\/awards> ?v2 . }",
+        "id": 225,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the parent of the child, that is a royalty, of Prince Faisal bin Hussein.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/child> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Prince_Faisal_bin_Hussein> . }",
+        "id": 246,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the commander in the war, that is a military conflict and an event, of 30th (Cambridgeshire) Regiment of Foot and military force of Battle of Cape Finisterre (1805).",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Cape_Finisterre_(1805)> . <http:\/\/dbpedia.org\/resource\/30th_(Cambridgeshire)_Regiment_of_Foot> <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . }",
+        "id": 203,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Imagine you are a data analyst tasked with extracting critical information from a vast knowledge base for a high-stakes project. Your team needs to answer specific questions about notable individuals and their contributions to the arts, politics, and history. Given the user's question, generate a SPARQL query that accurately retrieves the required data from DBpedia. Your response should include a clear reasoning process that explains how you arrived at the query. \n\nFor example, if the question is about finding a person's notable works or their relationships, outline the steps you would take to formulate the query before presenting the final SPARQL query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

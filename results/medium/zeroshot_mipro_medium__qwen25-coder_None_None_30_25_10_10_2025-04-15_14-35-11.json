@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "The task is to generate a SPARQL query based on a user's natural language question. The input will be a question in plain text, and the output should be a valid SPARQL query that can be executed against a knowledge graph like DBpedia.\n\nTo accomplish this, follow these steps:\n1. **Understand the Question**: Analyze the user's question to identify the subject, predicate, and object of interest.\n2. **Map Concepts to Vocabulary**: Convert the natural language concepts into their corresponding ontology terms in DBpedia.\n3. **Formulate the Query**: Construct a SPARQL query that retrieves the desired information based on the mapped vocabulary.\n\nHere is an example to illustrate the process:\n- **Input Question**: \"Give me the child of Stephen V of Hungary.\"\n  - **Step 1**: Identify the subject (Stephen V of Hungary), predicate (child), and object (?child).\n  - **Step 2**: Map concepts: Stephen V of Hungary -> <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary>, child -> dbo:child.\n  - **Step 3**: Formulate the SPARQL query:\n    ```sparql\n    PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n    SELECT ?child WHERE {\n      <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary> dbo:child ?child.\n    }\n    ```\n\nThe goal is to ensure that the generated SPARQL query accurately reflects the user's intent and can be executed successfully against a knowledge graph.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the associated musical artist of Saba (rapper) and professional in .",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Saba_(rapper)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . }"
+      },
+      {
+        "question": "Give me the native of the residence, that is a country, of Ram Jaipal Singh Yadav and father of the child, that is a politician, of Abu Ahmad Abdul Hafiz.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Abu_Ahmad_Abdul_Hafiz> . ?v3 <http:\/\/dbpedia.org\/property\/father> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v0 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/Ram_Jaipal_Singh_Yadav> <http:\/\/dbpedia.org\/property\/residence> ?v0 . }",
+        "id": 865,
+        "subid": 32,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist of Bill Evans and professional in Musician.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Bill_Evans> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Musician\"@en . }",
+        "id": 433,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of Being Mrs Elliot.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Being_Mrs_Elliot> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }",
+        "id": 36,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the party member of the administration, that is an organisation, of John Adams.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/party> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v1 <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/John_Adams> . }",
+        "id": 236,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the birthplace of the person born, that is a musical artist and an artist, on 1949-11-20 and birthplace of Carl Larsson.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . <http:\/\/dbpedia.org\/resource\/Carl_Larsson> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/birthDate> \"1949-11-20\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }",
+        "id": 443,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the spouse of the actor of Pacific Drive and band of the band, that is a musical artist, of Dean Brody.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Pacific_Drive> <http:\/\/dbpedia.org\/property\/starring> ?v2 . ?v2 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. <http:\/\/dbpedia.org\/resource\/Dean_Brody> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . }",
+        "id": 456,
+        "subid": 35,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of Kek\u016ban\u0101o\u02bba and child of the father of Kamehameha IV.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Kek\u016ban\u0101o\u02bba> . ?result <http:\/\/dbpedia.org\/property\/father> ?v0 . <http:\/\/dbpedia.org\/resource\/Kamehameha_IV> <http:\/\/dbpedia.org\/property\/father> ?v0 . }",
+        "id": 917,
+        "subid": 25,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the leader of the office, that is a government agency and an organisation, of the reference to Carlos Franco Iribarnegaray.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Carlos Franco Iribarnegaray\"@en . ?v2 <http:\/\/dbpedia.org\/ontology\/leader> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v1 <http:\/\/dbpedia.org\/property\/office> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/GovernmentAgency>. }",
+        "id": 715,
+        "subid": 27,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birth place of Paolo Ballesteros and entity in Philippines and region of Philippine Standard Time.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Paolo_Ballesteros> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Philippines> . ?result <http:\/\/dbpedia.org\/ontology\/timeZone> <http:\/\/dbpedia.org\/resource\/Philippine_Standard_Time> . }",
+        "id": 98,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Who is the professional in Musician?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> <http:\/\/dbpedia.org\/resource\/Musician> . }",
+        "id": 933,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native, that is an office holder, of Edinburgh.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Edinburgh> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 579,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the party, that is a political party and an organisation, of Andrea Cozzolino.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PoliticalParty>. <http:\/\/dbpedia.org\/resource\/Andrea_Cozzolino> <http:\/\/dbpedia.org\/ontology\/party> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }",
+        "id": 892,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of the person born as the birth name of Anne V. Coates.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/birthName> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v0 . <http:\/\/dbpedia.org\/resource\/Anne_V._Coates> <http:\/\/dbpedia.org\/property\/birthName> ?v2 . }",
+        "id": 507,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of Taira no Tokuko and father of the child, that is a royalty, of Emperor Takakura.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Taira_no_Tokuko> . ?v1 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Emperor_Takakura> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 791,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in the administration, that is Italian and a region and a settlement and an administrative region, of the party, that is a political party and an organisation, of Andrea Cozzolino.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?result <http:\/\/dbpedia.org\/ontology\/province> ?v0 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v0 <http:\/\/dbpedia.org\/property\/leaderParty> ?v1 . <http:\/\/dbpedia.org\/resource\/Andrea_Cozzolino> <http:\/\/dbpedia.org\/ontology\/party> ?v1 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PoliticalParty>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/AdministrativeRegion>. }",
+        "id": 892,
+        "subid": 27,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 9,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given a natural language `question`, generate the corresponding `sparql_query` that retrieves relevant information from DBpedia based on the question's context and entities involved.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

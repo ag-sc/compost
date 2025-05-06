@@ -1,0 +1,259 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who is the child, that is a royalty, of Kamehameha III?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Kamehameha_III> <http:\/\/dbpedia.org\/ontology\/child> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }"
+      },
+      {
+        "question": "Give me the person decedent at Quincy, Massachusetts.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Quincy,_Massachusetts> . }",
+        "id": 573,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in Kazuaki Nagasawa and figure known as --10-19.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/nickname> \"--10-19\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gMonthDay> . <http:\/\/dbpedia.org\/resource\/Kazuaki_Nagasawa> <http:\/\/dbpedia.org\/ontology\/team> ?result . }",
+        "id": 582,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference, that is an office holder and a politician, to James Madison.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"James Madison\"@en . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 236,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the child of Johann Heinrich Appel?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> \"Johann Heinrich Appel\"@en . }",
+        "id": 826,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office of the native of Balochistan, Pakistan.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/office> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Balochistan,_Pakistan> . }",
+        "id": 935,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the band of the band, that is a group and a band and an organisation, of the person born, that is a musical artist, on 1947-04-21.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/birthDate> \"1947-04-21\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Group>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v0 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Band>. ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v0 . }",
+        "id": 933,
+        "subid": 27,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 7,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration of Francisco da Costa Gomes.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Francisco_da_Costa_Gomes> . }",
+        "id": 554,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the military force of Battle of Tamai and commander in the war, that is a societal event and a military conflict, of the reference, that is Australian and an organisation and a military unit, to 'A' Battery, Royal Australian Artillery.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"'A' Battery, Royal Australian Artillery\"@en . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Australia>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?v0 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryUnit>. ?v0 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Tamai> . }",
+        "id": 124,
+        "subid": 31,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 9,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the force, that is a military conflict, of Abd el-Krim and commander in the force of Francisco Largo Caballero.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Abd_el-Krim> . ?v3 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Francisco_Largo_Caballero> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v3 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 715,
+        "subid": 32,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the work, that is a work and a book, of the host of Hyperland.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Hyperland> <http:\/\/dbpedia.org\/ontology\/presenter> ?v0 . ?result <http:\/\/dbpedia.org\/property\/author> ?v0 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Book>. }",
+        "id": 527,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the father of Shahla Khatun and native of British Raj and father of the child, that is a politician, of Abu Ahmad Abdul Hafiz.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Abu_Ahmad_Abdul_Hafiz> . <http:\/\/dbpedia.org\/resource\/Shahla_Khatun> <http:\/\/dbpedia.org\/property\/father> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/British_Raj> . ?v3 <http:\/\/dbpedia.org\/property\/father> ?result . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. }",
+        "id": 865,
+        "subid": 29,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the headquarter of Provincial Assembly of Balochistan and death place of the awardee of Sitara-i-Imtiaz.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Provincial_Assembly_of_Balochistan> <http:\/\/dbpedia.org\/ontology\/location> ?result . ?v2 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Sitara-i-Imtiaz> . ?v2 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . }",
+        "id": 935,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the office of the awardee of the entity, that is an award, in India and office of Suvendu Adhikari.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v0 . ?v0 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/India> . ?v1 <http:\/\/dbpedia.org\/property\/office> ?result . <http:\/\/dbpedia.org\/resource\/Suvendu_Adhikari> <http:\/\/dbpedia.org\/property\/office> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Award>. }",
+        "id": 47,
+        "subid": 36,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birthplace of the alumnus of University of Pennsylvania and figure known as Barb City.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/nickname> \"Barb City\"@en . ?v0 <http:\/\/dbpedia.org\/ontology\/almaMater> <http:\/\/dbpedia.org\/resource\/University_of_Pennsylvania> . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 606,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the entity in Northern Ireland and entity in the region, that is a country, of Western European Time.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Northern_Ireland> . ?v1 <http:\/\/dbpedia.org\/property\/timeZone> <http:\/\/dbpedia.org\/resource\/Western_European_Time> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?result <http:\/\/dbpedia.org\/ontology\/country> ?v1 . }",
+        "id": 329,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

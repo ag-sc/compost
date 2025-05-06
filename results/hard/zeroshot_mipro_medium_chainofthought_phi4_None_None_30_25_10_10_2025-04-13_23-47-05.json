@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given a natural language question, transform it into an equivalent SPARQL query using DBpedia's structured data. Follow these steps:\n\n1. **Parse the Question**: Identify key entities and relationships.\n2. **Select Relevant Classes and Properties**:\n   - Use classes like `dbo:Person`, `dbo:Writer`.\n   - Focus on properties such as `dbo:birthDate`, `dbo:deathPlace`, `dbo:spouse`.\n3. **Formulate SPARQL Query**:\n   - Start with necessary prefixes.\n   - Construct the `SELECT` and `WHERE` clauses.\n   - Apply filters if specific conditions are needed.\n4. **Review**: Ensure logical alignment with the question.\n\nExample:\n\nQuestion: \"Give me the person born on 1955-01-26.\"\n\nSPARQL Query:\n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\nSELECT ?person WHERE {\n  ?person a dbo:Person .\n  ?person dbo:birthDate ?date .\n  FILTER (YEAR(?date) = 1955 && MONTH(?date) = 1 && DAY(?date) = 26)\n}\n```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

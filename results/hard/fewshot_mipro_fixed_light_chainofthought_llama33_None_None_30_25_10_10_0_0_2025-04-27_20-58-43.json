@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate the SPARQL query based on the given shots and question, we need to analyze the patterns in the shots and apply them to the new question. \n\nGiven the fields:\n- `shots`: A list of tuples containing a natural language question and its corresponding SPARQL query.\n- `question`: A natural language question for which we want to generate a SPARQL query.\n\nWe will produce the field:\n- `sparql_query`: The generated SPARQL query that corresponds to the given `question`.\n\nHere is how we can approach it:\n\n1. **Analyze Shots**: Go through each shot and identify patterns or keywords in both the natural language question and the SPARQL query. This step helps in understanding how certain natural language constructs are translated into SPARQL.\n\n2. **Identify Relevant Shots**: Determine which shots are relevant to the given `question`. This can be done by looking for similar keywords or concepts between the `question` and the natural language parts of the shots.\n\n3. **Combine Patterns**: If necessary, combine patterns from multiple shots to create a new SPARQL query that answers the `question`. This might involve concatenating parts of different SPARQL queries or modifying them to fit the new question's requirements.\n\n4. **Generate SPARQL Query**: Based on the analysis and combination of patterns, generate the `sparql_query` that corresponds to the given `question`.\n\nLet's apply this approach to the provided examples:\n\n### Example 1:\n- Shots: \n  - Give me the show with Stacey Dash.\n  - Give me the band of the actor, that is a musical artist, of Honor Up.\n- Question: Give me the band of the actor, that is a musical artist, of the show with Stacey Dash.\n\n### Example 2:\n- Shots: \n  - Give me the parent of Min Linka.\n  - Give me the parent of May Hnin Htapi.\n  - Give me the parent of the parent of May Hnin Htapi.\n- Question: Give me the parent of the parent of Min Linka.\n\nFor each example, we will analyze the shots, identify relevant patterns, and then generate a SPARQL query that answers the question.\n\n### Example 1 Solution:\n- Relevant Shots: Both shots are relevant as they provide patterns for finding a show with a specific actor and for finding the band of an actor who is a musical artist.\n- Combined Pattern: We need to find the show with Stacey Dash, then find actors in that show who are musical artists, and finally retrieve their associated bands.\n- SPARQL Query:\n```sparql\nSELECT ?result \nWHERE { \n  ?show <http:\/\/dbpedia.org\/ontology\/starring> <http:\/\/dbpedia.org\/resource\/Stacey_Dash> .\n  ?actor <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist> .\n  ?show <http:\/\/dbpedia.org\/property\/starring> ?actor .\n  ?actor <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result .\n}\n```\n\n### Example 2 Solution:\n- Relevant Shots: The shot for \"Give me the parent of Min Linka\" and the pattern from \"Give me the parent of the parent of May Hnin Htapi\" are relevant.\n- Combined Pattern: We apply the pattern of finding a parent twice, starting with Min Linka.\n- SPARQL Query:\n```sparql\nSELECT ?result \nWHERE { \n  ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?result . \n  <http:\/\/dbpedia.org\/resource\/Min_Linka> <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . \n}\n```\n\nGiven the approach and examples, we can now propose a solution for generating SPARQL queries based on given shots and questions.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

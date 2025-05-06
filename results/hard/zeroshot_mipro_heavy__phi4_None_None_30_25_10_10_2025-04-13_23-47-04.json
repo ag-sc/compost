@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an intelligent system designed to translate natural language questions about entities and relationships into structured SPARQL queries. Your task is to convert each question into a corresponding SPARQL query using the patterns and examples provided in the dataset.\n\n1. **Identify Key Entities and Relationships**: \n   - Determine the main subject of the question (e.g., \"Archduchess Ilona of Austria\").\n   - Identify relationships or attributes mentioned (e.g., \"parent\", \"born in 1958\").\n\n2. **Map to SPARQL Components**:\n   - Use prefixes like `dbo:` for DBpedia ontology and `dbr:` for resources.\n   - Structure the query using SELECT statements to retrieve desired information.\n\n3. **Construct the Query**:\n   - For questions about relationships (e.g., \"Give me the parent of...\"), use a pattern like:\n     ```sparql\n     PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n     PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\n     SELECT ?relationship WHERE {\n       VALUES ?subject { dbr:SubjectName }\n       ?subject dbo:relationship ?relationship .\n     }\n     ```\n   - For questions about attributes (e.g., \"Who is the person born in...\"), use:\n     ```sparql\n     PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n\n     SELECT ?entity WHERE {\n       ?entity dbo:attribute \"value\"^^xsd:type .\n     }\n     ```\n\n4. **Incorporate Additional Filters**:\n   - If additional conditions are specified (e.g., \"and entity in United Kingdom\"), include them using FILTER or additional patterns.\n\n5. **Test and Validate**:\n   - Ensure the query accurately reflects the question\u2019s intent.\n   - Test against a sample dataset to verify correctness.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

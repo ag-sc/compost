@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the father of Soe Min Wimala Dewi.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Soe_Min_Wimala_Dewi> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Who is the architect of P. D. Houston Jr. House?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/P._D._Houston_Jr._House> <http:\/\/dbpedia.org\/ontology\/architect> ?result . }"
+      },
+      {
+        "question": "Give me the parent of Prince Ernest Augustus of Hanover (born 1914).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Prince_Ernest_Augustus_of_Hanover_(born_1914)> . }",
+        "id": 404,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the person born as the birth name of Carl Pontus Gahn?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> ?v1 . <http:\/\/dbpedia.org\/resource\/Carl_Pontus_Gahn> <http:\/\/dbpedia.org\/property\/birthName> ?v1 . }",
+        "id": 378,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band of Sh\u00e8na.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Sh\u00e8na> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 747,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the region of Time in Indonesia.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/timeZone> <http:\/\/dbpedia.org\/resource\/Time_in_Indonesia> . }",
+        "id": 981,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the actor of the claim to fame, that is a work, of Michael Ballhaus.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. <http:\/\/dbpedia.org\/resource\/Michael_Ballhaus> <http:\/\/dbpedia.org\/ontology\/knownFor> ?v1 . }",
+        "id": 391,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the award of the commander in Volcano and Ryukyu Islands campaign.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> ?result . <http:\/\/dbpedia.org\/resource\/Volcano_and_Ryukyu_Islands_campaign> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . }",
+        "id": 328,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent, that is a royalty, of Archduke Ladislaus Philipp of Austria.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Archduke_Ladislaus_Philipp_of_Austria> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 184,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional, that is a musical artist, in Rapper.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Rapper\"@en . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }",
+        "id": 801,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as the birth name of Dino Merlin.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> ?v1 . <http:\/\/dbpedia.org\/resource\/Dino_Merlin> <http:\/\/dbpedia.org\/property\/birthName> ?v1 . }",
+        "id": 421,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the alma mater of Jovan Hristi\u0107.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Jovan_Hristi\u0107> <http:\/\/dbpedia.org\/ontology\/almaMater> ?result . }",
+        "id": 64,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the parent of Thado Minsaw of Prome and predecessor of Ameitta Thiri Maha Dhamma Dewi of Ava.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Thado_Minsaw_of_Prome> <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?result <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/Ameitta_Thiri_Maha_Dhamma_Dewi_of_Ava> . }",
+        "id": 54,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birthplace, that is a settlement, of the director of Pipe Dreams (1976 film).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. <http:\/\/dbpedia.org\/resource\/Pipe_Dreams_(1976_film)> <http:\/\/dbpedia.org\/ontology\/director> ?v0 . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 915,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the war of the commander in Peninsular War.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . <http:\/\/dbpedia.org\/resource\/Peninsular_War> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . }",
+        "id": 378,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of Alexander Onassis and spouse of Aristotle Onassis.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Aristotle_Onassis> . <http:\/\/dbpedia.org\/resource\/Alexander_Onassis> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 285,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

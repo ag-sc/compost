@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `shots`, `question`, produce the fields `sparql_query`.\n\nThe task is to generate a SPARQL query based on the given question and shots. The `shots` field contains a list of previous queries and their results, which can be used to understand the structure of the data and refine the current query.\n\n1. Analyze the `question` to identify the main elements: entities (e.g., Italy, Province of Reggio Emilia, E-girls), attributes (e.g., elevation, country), and relationships (e.g., member of a group).\n2. Use the `shots` field to identify patterns or common structures in the data that can be leveraged for the current query.\n3. Construct the SPARQL query by:\n   - Selecting the required entities and attributes.\n   - Specifying any necessary filters or conditions based on the question.\n   - Using the relationships between entities as needed.\n\nThe resulting `sparql_query` should accurately reflect the question and retrieve the relevant data from the database.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

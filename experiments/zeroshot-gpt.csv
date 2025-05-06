@@ -1,0 +1,10 @@
+copro,openai/gpt-4o-mini-2024-07-18,chainofthought,
+copro,openai/gpt-4o-mini-2024-07-18,,
+mipro,openai/gpt-4o-mini-2024-07-18,chainofthought,heavy
+mipro,openai/gpt-4o-mini-2024-07-18,chainofthought,light
+mipro,openai/gpt-4o-mini-2024-07-18,chainofthought,medium
+mipro,openai/gpt-4o-mini-2024-07-18,,heavy
+mipro,openai/gpt-4o-mini-2024-07-18,,light
+mipro,openai/gpt-4o-mini-2024-07-18,,medium
+plain,openai/gpt-4o-mini-2024-07-18,chainofthought,
+plain,openai/gpt-4o-mini-2024-07-18,,

@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Let's break down the task into clear steps:\n\n1. **Identify the writer of \"Slowhand at 70 \u2013 Live at the Royal Albert Hall\".**\n2. **Find the professional occupation of this writer.**\n3. **Identify associated musical artists of Bill Evans and Paul Chambers.**\n4. **Combine these results to find a common associated musical artist who is also in the identified profession.**\n\nTo achieve this, we need to create a SPARQL query that:\n- Retrieves the writer of \"Slowhand at 70 \u2013 Live at the Royal Albert Hall\".\n- Filters the occupation of this writer to be \"Musician\".\n- Finds associated musical artists of Bill Evans and Paul Chambers.\n- Combines these results to find a common associated musical artist who is also a musician.\n\nHere's how we can structure the query:\n\n```sparql\nSELECT ?result WHERE {\n  <http:\/\/dbpedia.org\/resource\/Slowhand_at_70_\u2013_Live_at_the_Royal_Albert_Hall> <http:\/\/dbpedia.org\/property\/writer> ?writer .\n  ?writer <http:\/\/dbpedia.org\/property\/occupation> ?profession .\n  FILTER(?profession = \"Musician\"@en)\n  ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result .\n  ?v2 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result .\n  ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>.\n  ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>.\n  ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>.\n  ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>.\n}\n```\n\nThis query will retrieve the associated musical artist of Bill Evans and Paul Chambers who is also a musician.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

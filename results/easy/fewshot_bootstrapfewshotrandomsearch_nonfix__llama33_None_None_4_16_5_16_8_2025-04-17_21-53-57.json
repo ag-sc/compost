@@ -1,0 +1,229 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the death place of the actor of The Sky Ranger (1928 film).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Sky_Ranger_(1928_film)> <http:\/\/dbpedia.org\/property\/starring> ?v0 . ?v0 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the band member of Emilia (Bulgarian singer) and professional in the profession of Jamie T.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Emilia_(Bulgarian_singer)> . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v2 . <http:\/\/dbpedia.org\/resource\/Jamie_T> <http:\/\/dbpedia.org\/property\/occupation> ?v2 . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the spouse of the person born as Caroline Louise Bevan Symonds and professional in .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/birthName> \"Caroline Louise Bevan Symonds\"@en . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the person born as the birth name of Bobby Shmurda and native of Florida.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> ?v2 . <http:\/\/dbpedia.org\/resource\/Bobby_Shmurda> <http:\/\/dbpedia.org\/property\/birthName> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Florida>. }"
+      },
+      {
+        "question": "Give me the father of the child of Ferdinand III, Holy Roman Emperor and child of the father of Cecilia Renata of Austria.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v2 . ?v3 <http:\/\/dbpedia.org\/property\/father> ?result . ?v3 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Ferdinand_III,_Holy_Roman_Emperor> . <http:\/\/dbpedia.org\/resource\/Cecilia_Renata_of_Austria> <http:\/\/dbpedia.org\/property\/father> ?v2 . }",
+        "id": 347,
+        "subid": 38,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the album, that is a film and a work, of Lasso the Moon.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. <http:\/\/dbpedia.org\/resource\/Lasso_the_Moon> <http:\/\/dbpedia.org\/ontology\/album> ?result . }",
+        "id": 361,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the band of Kim Wilson and associated musical artist of Nick Curran and reference to The Fabulous Thunderbirds.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"The Fabulous Thunderbirds\"@en . <http:\/\/dbpedia.org\/resource\/Nick_Curran> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Kim_Wilson> . }",
+        "id": 782,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the awardee, that is Japanese, of Anita Borg Institute Women of Vision Awards.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Anita_Borg_Institute_Women_of_Vision_Awards> . ?result <http:\/\/dbpedia.org\/ontology\/nationality> <http:\/\/dbpedia.org\/resource\/Japan>. }",
+        "id": 225,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the spouse of the father, that is a royalty, of Myat Hpone Pyo.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Myat_Hpone_Pyo> <http:\/\/dbpedia.org\/property\/father> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 89,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of Florida and person born as Ackquille Jean Pollard.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ackquille Jean Pollard\"@en . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Florida> . }",
+        "id": 628,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the child of Alexander of W\u00fcrttemberg (1804-1881).",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Alexander_of_W\u00fcrttemberg_(1804-1881)> . ?result <http:\/\/dbpedia.org\/property\/father> ?v1 . }",
+        "id": 737,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the producer of A Star Is Born (1937 film) and producer of the claim to fame, that is a work, of Cora Sue Collins.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Cora_Sue_Collins> <http:\/\/dbpedia.org\/ontology\/knownFor> ?v2 . ?v2 <http:\/\/dbpedia.org\/ontology\/producer> ?result . <http:\/\/dbpedia.org\/resource\/A_Star_Is_Born_(1937_film)> <http:\/\/dbpedia.org\/ontology\/producer> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. }",
+        "id": 557,
+        "subid": 24,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the award of Ian Gregson (poet).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ian_Gregson_(poet)> <http:\/\/dbpedia.org\/property\/awards> ?result . }",
+        "id": 58,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the player in the actor, that is a soccer player and an athlete, of the film, that is a work, of Manuel Huerga and player in the person born, that is an athlete, on 1955-02-22.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v0 <http:\/\/dbpedia.org\/property\/starring> ?v4 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. ?v2 <http:\/\/dbpedia.org\/ontology\/birthDate> \"1955-02-22\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v4 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?v0 <http:\/\/dbpedia.org\/ontology\/director> <http:\/\/dbpedia.org\/resource\/Manuel_Huerga> . }",
+        "id": 687,
+        "subid": 47,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 9,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of Amasa Tracy and entity in the birthplace, that is a settlement and American, of the person deceased on 1850-08-05.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. ?result <http:\/\/dbpedia.org\/ontology\/place> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?v0 <http:\/\/dbpedia.org\/ontology\/deathDate> \"1850-08-05\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . <http:\/\/dbpedia.org\/resource\/Amasa_Tracy> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 198,
+        "subid": 36,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birthplace, that is a country, of Sandro Bertaggia.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/Sandro_Bertaggia> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 158,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate the SPARQL query for the given question, we need to identify the key components of the question and map them to the relevant DBpedia resources and properties. The question asks for the birth places of three entities: \n1. The governor of Virginia who is a politician.\n2. The author of the book \"El Deafo\" that is American.\n3. The awardee of the \"List of awards and nominations received by Vince Gilligan\".\n\nWe will use the following properties and resources:\n- `dbpedia.org\/ontology\/birthPlace` for birth places,\n- `dbpedia.org\/resource\/Virginia` for Virginia,\n- `dbpedia.org\/property\/governor` for the governor of a state,\n- `dbpedia.org\/ontology\/Politician` for identifying politicians,\n- `dbpedia.org\/resource\/El_Deafo` for the book \"El Deafo\",\n- `xmlns.com\/foaf\/0.1\/name` for the name of a resource (to identify \"El Deafo\"),\n- `dbpedia.org\/ontology\/country` for the country of origin (to identify American resources),\n- `dbpedia.org\/resource\/United_States` for the United States,\n- `dbpedia.org\/property\/awards` for awards received by individuals,\n- `dbpedia.org\/resource\/List_of_awards_and_nominations_received_by_Vince_Gilligan` for the specific award.\n\nThe SPARQL query should select the `?result` variable where:\n- The governor of Virginia is a politician and has a birth place.\n- The author of \"El Deafo\" is American and has a birth place.\n- The awardee of the \"List of awards and nominations received by Vince Gilligan\" has a birth place.\n\nHere's how we can construct this query:\n\n```sparql\nSELECT ?result \nWHERE {\n  # Governor of Virginia who is a politician\n  <http:\/\/dbpedia.org\/resource\/Virginia> <http:\/\/dbpedia.org\/property\/governor> ?governor .\n  ?governor <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician> .\n  ?governor <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result .\n\n  # Author of \"El Deafo\" that is American\n  ?elDeafo <http:\/\/xmlns.com\/foaf\/0.1\/name> \"El Deafo\"@en .\n  ?elDeafo <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States> .\n  ?elDeafo <http:\/\/dbpedia.org\/property\/author> ?author .\n  ?author <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result .\n\n  # Awardee of \"List of awards and nominations received by Vince Gilligan\"\n  ?awardee <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/List_of_awards_and_nominations_received_by_Vince_Gilligan> .\n  ?awardee <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

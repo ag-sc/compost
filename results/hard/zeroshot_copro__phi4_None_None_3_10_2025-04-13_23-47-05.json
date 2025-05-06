@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To create an optimal SPARQL query from a natural language question, the model should undertake a structured approach that effectively captures semantic nuances. This involves:\n\n1. **Comprehensive Semantic Analysis**: \n   - Identify and categorize entities, predicates, objects, filters, and other linguistic constructs in the `question`.\n   - Detect explicit or implicit requirements for sorting, filtering, aggregation, or limitations specified in the question.\n\n2. **Structured Query Construction**:\n   - Start with a `SELECT` clause specifying all necessary fields.\n   - Develop the core of the query within a `WHERE` clause using triple patterns based on the semantic elements identified.\n   - Incorporate optional information via `OPTIONAL` clauses when applicable to enrich results without compromising fundamental data retrieval.\n   - Apply `FILTER` expressions to impose specific constraints or conditions derived from the question.\n\n3. **Enhancements and Refinements**:\n   - Use SPARQL's aggregation functions such as `GROUP BY`, `COUNT` if summarization is needed.\n   - Incorporate `ORDER BY` when results need to be sorted, respecting any mentioned order in the question.\n   - Ensure efficient use of prefixes and namespaces relevant to the dataset being queried.\n\n4. **Validation**:\n   - Conduct a review of the query for adherence to SPARQL syntax standards.\n   - Optimize for performance to ensure it retrieves precise and pertinent data without extraneous complexity.\n\nBy executing this comprehensive approach, the model will be equipped to generate a SPARQL query that is both accurate in capturing the essence of the question and effective in data retrieval.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "```\nSPARQL Query:\n```",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

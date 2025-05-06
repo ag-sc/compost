@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To guide the Language Model in generating a Sparql query from a given question, provide a clear and detailed instruction that captures the essence of the task. The instruction should emphasize the need to understand the question contextually and map it onto the appropriate structured data fields within DBpedia.\n\nHere's a proposed instruction:\n\n**Proposed Instruction:**\n\n\"From the provided question, extract key entities and relationships described in the natural language text. Use your understanding of the DBpedia schema, focusing on properties such as `rdfs:label` for names and titles, and relations like `dbpedia2:associatedMusicalArtist` or `dc:creator` to link entities across different domains. Formulate a SPARQL query that will accurately retrieve the information requested by matching these entities and relationships against the DBpedia dataset.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

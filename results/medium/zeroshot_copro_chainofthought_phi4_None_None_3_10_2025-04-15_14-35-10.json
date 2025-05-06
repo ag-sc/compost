@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To convert a natural language question into its equivalent SPARQL query more effectively, adhere to the following detailed guidelines:\n\n1. **Analyze Question Semantics**:\n   - Break down the question to comprehend its semantic meaning, focusing on entities, actions (verbs), qualifiers, and overall context.\n\n2. **Extract Key Components**:\n   - Identify essential components such as subjects, objects, predicates, conditions, and logical relationships within the question.\n   - Pay attention to specific details like names, dates, and quantities that must be captured in the query.\n\n3. **Contextual Mapping**:\n   - Map natural language concepts to their SPARQL equivalents, translating named entities to ontology classes or properties as needed.\n   - Utilize any known mappings or ontologies relevant to the domain of the question.\n\n4. **Design Query Skeleton**:\n   - Determine if the query should be a `SELECT` (to retrieve specific data), an `ASK` (for yes\/no questions), or a `CONSTRUCT`\/`DESCRIBE`.\n   - Define necessary SPARQL prefixes and set up initial patterns to structure your query logically.\n\n5. **Construct WHERE Clause with Nuance**:\n   - Develop the core of the query in the WHERE clause, representing all key subject-predicate-object relationships.\n   - Incorporate filters (`FILTER`) for any constraints and optional patterns (`OPTIONAL`) where applicable to refine data retrieval.\n\n6. **Logical Enhancements**:\n   - Implement logical constructs such as `UNION`, `FILTER`, or nested sub-queries to accommodate complex question structures and conditional logic.\n\n7. **Validation and Optimization**:\n   - Validate the query against potential data models, using test cases to ensure it reflects the intent of the original question accurately.\n   - Optimize the query for performance by minimizing unnecessary computations and refining search patterns.\n\nExample Practice Questions:\n- \"List all books authored by 'J.K. Rowling'.\"\n  - SPARQL: `SELECT ?book WHERE { ?book dbo:author <http:\/\/dbpedia.org\/resource\/J._K._Rowling> . }`\n\n- \"Are there any mammals that live in the ocean?\"\n  - SPARQL: `ASK { ?mammal rdf:type dbo:Mammal ; dbo:habitat \"Ocean\" . }`\n\nBy integrating these structured steps and enhancing question analysis, your conversion process to SPARQL queries will improve accuracy and applicability.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "```\n### SPARQL Query:\n{sparql_query}\n```",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

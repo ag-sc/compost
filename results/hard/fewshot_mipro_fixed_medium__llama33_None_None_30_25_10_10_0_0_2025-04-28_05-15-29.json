@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate the SPARQL query based on the given shots and question, we need to analyze the patterns in the provided examples and apply them to create a new query. \n\nGiven the shots:\n1. ('Give me the child of Ram Khamhaeng.', 'SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ram_Khamhaeng> <http:\/\/dbpedia.org\/ontology\/child> ?result . }')\n2. ('Give me the parent of Loe Thai and parent of May Hnin Thwe-Da.', 'SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/May_Hnin_Thwe-Da> . <http:\/\/dbpedia.org\/resource\/Loe_Thai> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }')\n3. ('Give me the parent of the child of Ram Khamhaeng.', 'SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ram_Khamhaeng> <http:\/\/dbpedia.org\/ontology\/child> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/child> ?v0 . }')\n\nAnd the question: \n'Give me the parent of the child of Ram Khamhaeng and parent of Loe Thai.'\n\nWe notice that:\n- 'Give me the child of X' translates to '?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/X>'.\n- 'Give me the parent of X' translates to '<http:\/\/dbpedia.org\/resource\/X> <http:\/\/dbpedia.org\/ontology\/parent> ?result'.\n- Combining conditions involves adding more triples to the WHERE clause.\n\nThus, for 'Give me the parent of the child of Ram Khamhaeng and parent of Loe Thai', we should look for a resource that is both the parent of Ram Khamhaeng's child and the parent of Loe Thai. \n\nThis translates to:\n```sparql\nSELECT ?result \nWHERE { \n  <http:\/\/dbpedia.org\/resource\/Ram_Khamhaeng> <http:\/\/dbpedia.org\/ontology\/child> ?v0 .\n  ?result <http:\/\/dbpedia.org\/ontology\/child> ?v0 .\n  <http:\/\/dbpedia.org\/resource\/Loe_Thai> <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who is the child of Christian IX of Denmark?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Christian_IX_of_Denmark> <http:\/\/dbpedia.org\/ontology\/child> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the alter ego of the true self of The Shadow.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the death place of the father, that is a politician, of Y\u016bki Hideyasu.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Y\u016bki_Hideyasu> <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v0 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . }"
+      },
+      {
+        "question": "Give me the child of the parent of Thado Minsaw of Prome.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Thado_Minsaw_of_Prome> . }",
+        "id": 54,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration of Emperor Go-Y\u014dzei and birth place of Enomoto Takeaki.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Emperor_Go-Y\u014dzei> . <http:\/\/dbpedia.org\/resource\/Enomoto_Takeaki> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 488,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the province of the residence, that is a settlement and Italian, of Sebastiano Bianchetti.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Sebastiano_Bianchetti> <http:\/\/dbpedia.org\/property\/residence> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?v1 <http:\/\/dbpedia.org\/ontology\/province> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy>. }",
+        "id": 392,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the war of Alexander Chechenskiy and force of Alexander I of Russia.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Alexander_I_of_Russia> . <http:\/\/dbpedia.org\/resource\/Alexander_Chechenskiy> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 77,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the spouse of Amun-her-khepeshef.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Amun-her-khepeshef> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }",
+        "id": 701,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the military force of Spanish Civil War.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Spanish_Civil_War> . }",
+        "id": 161,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the successor, that is a royalty, of Antiochus (son of Antiochus III the Great)?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Antiochus_(son_of_Antiochus_III_the_Great)> <http:\/\/dbpedia.org\/ontology\/successor> ?result . }",
+        "id": 617,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born on 1985-04-29 and band of Amba Shepherd.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Amba_Shepherd> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthDate> \"1985-04-29\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . }",
+        "id": 747,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of Meritamen and parent of Henuttawy (19th dynasty).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Meritamen> <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Henuttawy_(19th_dynasty)> . }",
+        "id": 701,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in Battle of Leipzig.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Battle_of_Leipzig> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 659,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the force, that is a societal event and an event and a military conflict, of Rutger Jan Schimmelpenninck.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?result <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Rutger_Jan_Schimmelpenninck> . }",
+        "id": 659,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 4,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the award of Ralph L. Brinster.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ralph_L._Brinster> <http:\/\/dbpedia.org\/property\/awards> ?result . }",
+        "id": 778,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the headquarter of House of Sombrerete.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/House_of_Sombrerete> <http:\/\/dbpedia.org\/ontology\/location> ?result . }",
+        "id": 314,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given a user's question about a specific entity or relationship in a knowledge graph, generate an appropriate SPARQL query that can be executed against DBpedia to retrieve the desired information. The query should accurately reflect the user's intent and follow the consistent URIs used in the dataset.\n\nFor example:\n- Question: \"What is the birth name of Narciso Campero?\"\n  Sparql Query: \"SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Narciso_Campero> <http:\/\/dbpedia.org\/property\/birthName> ?result . }",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

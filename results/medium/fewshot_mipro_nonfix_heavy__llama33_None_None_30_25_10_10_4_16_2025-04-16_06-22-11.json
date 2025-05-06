@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the child, that is a royalty, of Louis the Pious.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Louis_the_Pious> <http:\/\/dbpedia.org\/ontology\/child> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the writer, that is an artist and a musical artist, of Mezzanine (album).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Mezzanine_(album)> <http:\/\/dbpedia.org\/property\/writer> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. }"
+      },
+      {
+        "question": "Give me the commander in 2022 Ukrainian eastern counteroffensive.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2022_Ukrainian_eastern_counteroffensive> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 888,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the birth name of the professional in Musician.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/occupation> <http:\/\/dbpedia.org\/resource\/Musician> . ?v0 <http:\/\/dbpedia.org\/property\/birthName> ?result . }",
+        "id": 933,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the death place of the awardee of the award, that is an award, of Syed Sohail Hussain Naqvi.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Award>. <http:\/\/dbpedia.org\/resource\/Syed_Sohail_Hussain_Naqvi> <http:\/\/dbpedia.org\/property\/awards> ?v0 . }",
+        "id": 935,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the force of the commander in Siege of Madrid.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . <http:\/\/dbpedia.org\/resource\/Siege_of_Madrid> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . }",
+        "id": 645,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of Alceu Collares.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Alceu_Collares> <http:\/\/dbpedia.org\/ontology\/party> ?result . }",
+        "id": 83,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the commander in the force, that is a military conflict, of the native of Morocco and leader of Ministry of the Air (Spain).",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . <http:\/\/dbpedia.org\/resource\/Ministry_of_the_Air_(Spain)> <http:\/\/dbpedia.org\/ontology\/leader> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v2 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Morocco> . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 715,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of British Raj and father of the child of the father of Abul Maal Abdul Muhith.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/father> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/British_Raj> . ?v1 <http:\/\/dbpedia.org\/property\/father> ?v3 . <http:\/\/dbpedia.org\/resource\/Abul_Maal_Abdul_Muhith> <http:\/\/dbpedia.org\/property\/father> ?v3 . }",
+        "id": 865,
+        "subid": 36,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of Charles the Fat and parent of the successor of the child, that is a royalty, of Louis the Pious.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Louis_the_Pious> <http:\/\/dbpedia.org\/ontology\/child> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v0 <http:\/\/dbpedia.org\/ontology\/successor> ?v3 . ?result <http:\/\/dbpedia.org\/ontology\/child> ?v3 . <http:\/\/dbpedia.org\/resource\/Charles_the_Fat> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 773,
+        "subid": 37,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to the residence of the reference, that is a scientist, to Hirotaka Sugawara and figure known as --10-19.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/residence> ?v1 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Scientist>. ?result <http:\/\/dbpedia.org\/property\/nickname> \"--10-19\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gMonthDay> . ?v2 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Hirotaka Sugawara\"@en . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v1 . }",
+        "id": 582,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in the award of the commander in Battle of Saint-Mihiel.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v2 . <http:\/\/dbpedia.org\/resource\/Battle_of_Saint-Mihiel> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/country> ?v2 . }",
+        "id": 445,
+        "subid": 27,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the leader of the birth place of The Legendary Tigerman and leader of Portuguese S\u00e3o Tom\u00e9 and Pr\u00edncipe.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/leader> ?result . <http:\/\/dbpedia.org\/resource\/The_Legendary_Tigerman> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v0 . <http:\/\/dbpedia.org\/resource\/Portuguese_S\u00e3o_Tom\u00e9_and_Pr\u00edncipe> <http:\/\/dbpedia.org\/property\/leader> ?result . }",
+        "id": 554,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the landmark at elevation of 5.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/elevation> \"5\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer> . }",
+        "id": 136,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the child of Giovanni Agnelli.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Giovanni_Agnelli> <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 273,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the professional in .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . }",
+        "id": 129,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given a natural language question about a specific topic or entity, use your understanding of SPARQL query structure and DBpedia's knowledge graph to generate a corresponding SPARQL query that accurately retrieves the desired information. Consider the complexity and diversity of potential questions, as well as the importance of metadata in evaluating query effectiveness. Be creative in your approach, and strive to produce queries that are both syntactically correct and efficient in their execution.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

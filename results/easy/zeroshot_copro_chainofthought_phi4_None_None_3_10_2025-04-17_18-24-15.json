@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the field `question` related to a domain of knowledge (e.g., history, science, literature), your task is to construct a SPARQL query that accurately retrieves relevant information from a database. Consider key aspects such as entities, properties, and relations mentioned in the question. Ensure your query captures the essence of what is being asked by including appropriate SELECT clauses for desired data, WHERE clauses for conditions, FILTERs if necessary, and any necessary prefixes. Focus on creating structured queries that align with common SPARQL patterns while addressing nuances present within each unique question.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:\n- Prefix Definitions: \n  - `<your-prefixes-here>`\n  \n- Select Statement: \n  `SELECT ?<variable1> ?<variable2> ... WHERE { <triples-and-filter-clauses> }`",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

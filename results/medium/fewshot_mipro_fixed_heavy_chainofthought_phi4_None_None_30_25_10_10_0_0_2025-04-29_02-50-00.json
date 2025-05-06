@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To construct a SPARQL query that answers the question 'Give me the death place of the awardee of Royal Astronomical Society and entity in United Kingdom and entity in the residence, that is a country, of the resident, that is an athlete, of Great Britain,' follow these detailed steps:\n\n1. **Understand the Question Components**: \n   - The question asks for three distinct pieces of information:\n     1. The death place of any individual who has received the 'Royal Astronomical Society' award.\n     2. Any entity located within the United Kingdom.\n     3. An entity located in a country that is the residence of an athlete from Great Britain.\n   \n2. **Translate Each Component into SPARQL Patterns**: \n   - For the death place of awardees:\n     - Identify individuals who have received the 'Royal Astronomical Society' award using `<http:\/\/dbpedia.org\/property\/awards>`.\n     - Retrieve their death places using `<http:\/\/dbpedia.org\/ontology\/deathPlace>`.\n\n   - For entities in the United Kingdom:\n     - Find any entity associated with the country of 'United Kingdom' using `<http:\/\/dbpedia.org\/ontology\/country>`.\n     - Ensure that these entities have a location within this country using `<http:\/\/dbpedia.org\/ontology\/location>`.\n\n   - For entities in residences of athletes from Great Britain:\n     - Identify athletes residing in 'Great Britain' using `<http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type>` for type and `<http:\/\/dbpedia.org\/property\/residence>` for residence.\n     - Determine the country associated with each athlete's residence using a similar pattern.\n     - Find entities located in these countries, ensuring they have a location within that country.\n\n3. **Combine Patterns Using `UNION`**: \n   - Since each component represents distinct information, use SPARQL's `UNION` operator to combine the results of all three patterns into one query.\n   - Ensure your query retrieves only relevant results by matching entities or places with the variable `?result` across different parts of the query.\n\n4. **Construct and Verify the SPARQL Query**: \n   - Draft a single SPARQL query incorporating all components, ensuring that each pattern is correctly structured to retrieve the desired information.\n   - Test the query in an appropriate environment to verify it retrieves accurate results based on the question's requirements.\n\n5. **Finalize and Format Your Query**: \n   - Ensure your final query is well-formatted and adheres to SPARQL syntax rules for optimal readability and execution.\n\nHere\u2019s how you can structure your SPARQL query:\n```sparql\nSELECT ?result WHERE {\n  # Death place of awardee of Royal Astronomical Society\n  { \n    ?awardee <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Royal_Astronomical_Society> .\n    ?awardee <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result .\n  }\n  UNION\n  # Entity in United Kingdom\n  { \n    ?entity <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_Kingdom> .\n    ?entity <http:\/\/dbpedia.org\/ontology\/location> ?result .\n  }\n  UNION\n  # Entity in the residence of an athlete from Great Britain\n  { \n    ?athlete <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete> .\n    ?athlete <http:\/\/dbpedia.org\/property\/residence> <http:\/\/dbpedia.org\/resource\/Great_Britain> .\n    ?country <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country> .\n    ?athlete <http:\/\/dbpedia.org\/property\/residence> ?country .\n    ?entity <http:\/\/dbpedia.org\/ontology\/location> ?country .\n    ?entity <http:\/\/dbpedia.org\/ontology\/country> ?result .\n  }\n}\n```\n\nBy following these steps, you should be able to construct a SPARQL query that effectively answers the given question.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the actor of Being Mrs Elliot.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Being_Mrs_Elliot> <http:\/\/dbpedia.org\/property\/starring> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the father of Abdulaziz.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Abdulaziz> <http:\/\/dbpedia.org\/property\/father> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the commander in Southern Ukraine campaign and awardee of the award of Oleksandr Syrskyi.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Southern_Ukraine_campaign> <http:\/\/dbpedia.org\/ontology\/commander> ?result . <http:\/\/dbpedia.org\/resource\/Oleksandr_Syrskyi> <http:\/\/dbpedia.org\/property\/awards> ?v2 . }"
+      },
+      {
+        "question": "Give me the party of the person born as David Declan Costello.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/party> ?result . ?v1 <http:\/\/dbpedia.org\/property\/birthName> \"David Declan Costello\"@en . }",
+        "id": 41,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the band of the member of the band, that is a band and a group, of Peter Schorowsky.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Peter_Schorowsky> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/bandMember> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Band>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Group>. ?v1 <http:\/\/dbpedia.org\/ontology\/bandMember> ?v2 . }",
+        "id": 839,
+        "subid": 26,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band of Manfred Mann (musician) and band of the band member of The Jones Gang.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Manfred_Mann_(musician)> . ?result <http:\/\/dbpedia.org\/ontology\/bandMember> ?v0 . ?v0 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/The_Jones_Gang> . }",
+        "id": 874,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the parent of Prince Friedrich of Hesse and by Rhine?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Prince_Friedrich_of_Hesse_and_by_Rhine> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 826,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as the birth name of the native, that is an office holder, of Edinburgh.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v2 <http:\/\/dbpedia.org\/property\/birthName> ?v0 . ?v2 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Edinburgh> . ?result <http:\/\/dbpedia.org\/property\/birthName> ?v0 . }",
+        "id": 579,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the native, that is a politician, of the reference to \u041f\u043e\u043b\u0442\u0430\u0432\u0441\u043a\u0430\u044f \u0433\u0443\u0431\u0435\u0440\u043d\u0438\u044f.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v0 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\u041f\u043e\u043b\u0442\u0430\u0432\u0441\u043a\u0430\u044f \u0433\u0443\u0431\u0435\u0440\u043d\u0438\u044f\"@en . }",
+        "id": 365,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the spouse of the spouse of Princess Victoria of Hesse and by Rhine and parent of Louise Mountbatten.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Louise_Mountbatten> <http:\/\/dbpedia.org\/ontology\/parent> ?result . <http:\/\/dbpedia.org\/resource\/Princess_Victoria_of_Hesse_and_by_Rhine> <http:\/\/dbpedia.org\/ontology\/spouse> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v2 . }",
+        "id": 965,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the alter ego of The Shadow.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?result . }",
+        "id": 456,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of Balochistan, Pakistan.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Balochistan,_Pakistan> . }",
+        "id": 935,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the native, that is a politician, of Poltava Governorate.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Poltava_Governorate> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. }",
+        "id": 365,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the player in the coach of the reference, that is an organisation and a soccer club, to Croatia U21.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClub>. ?v2 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Croatia U21\"@en . ?v0 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v2 <http:\/\/dbpedia.org\/ontology\/coach> ?v0 . }",
+        "id": 216,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the successor of the child, that is a royalty, of Louis the Pious.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/successor> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Louis_the_Pious> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . }",
+        "id": 773,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born in the birth year of Deanne Bray.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthYear> ?v1 . <http:\/\/dbpedia.org\/resource\/Deanne_Bray> <http:\/\/dbpedia.org\/ontology\/birthYear> ?v1 . }",
+        "id": 36,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "To prompt a Language Model to generate a SPARQL query and reasoning steps from a given question, use the following instruction:\n\n```\nGiven the fields `question`, produce the fields `sparql_query` (a structured SPARQL query) and `reasoning` (a sequence of reasoning steps or logical operations) that correspond to the information requested in the `question`. Ensure the `sparql_query` accurately reflects the question's intent and can be executed against a knowledge base like DBpedia, and provide reasoning steps if necessary for complex queries.\n```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,239 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the award of Vince Gilligan.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Vince_Gilligan> <http:\/\/dbpedia.org\/property\/awards> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the father of Baeda Maryam I.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Baeda_Maryam_I> <http:\/\/dbpedia.org\/property\/father> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the person deceased, that is an artist and a musical artist, on 2020-06-18.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathDate> \"2020-06-18\"^^xsd:date . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. }"
+      },
+      {
+        "question": "Who is the child of the spouse, that is a royalty, of Constance of Burgundy?",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Constance_of_Burgundy> . ?result <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 353,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the force of the awardee of the award of Edmund Hakewill-Smith and war of Tom Phillips (Royal Navy officer).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Tom_Phillips_(Royal_Navy_officer)> <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v0 . <http:\/\/dbpedia.org\/resource\/Edmund_Hakewill-Smith> <http:\/\/dbpedia.org\/property\/awards> ?v0 . }",
+        "id": 731,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the professional in the alter ego of The Shadow and band of Bob Thompson (musician) and professional in the profession of the producer of Coke Studio Philippines.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Coke_Studio_Philippines> <http:\/\/dbpedia.org\/ontology\/producer> ?v3 . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v5 . ?v3 <http:\/\/dbpedia.org\/property\/occupation> ?v2 . <http:\/\/dbpedia.org\/resource\/Bob_Thompson_(musician)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v2 . <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v5 . }",
+        "id": 39,
+        "subid": 52,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 6,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the tenant of the administration, that is Spanish, of the reference to Spanish Socialist Workers' Party and office of the leader of 2009 Galician regional election.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Spain>. ?result <http:\/\/dbpedia.org\/ontology\/headquarter> ?v1 . ?v1 <http:\/\/dbpedia.org\/property\/leaderParty> ?v0 . <http:\/\/dbpedia.org\/resource\/2009_Galician_regional_election> <http:\/\/dbpedia.org\/property\/leader> ?v2 . ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Spanish Socialist Workers' Party\"@en . ?v2 <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 119,
+        "subid": 49,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of the movie with the author of Smartbomb (book) and professional in the alter ego of The Shadow and actor of ATL (film).",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/starring> ?result . <http:\/\/dbpedia.org\/resource\/Smartbomb_(book)> <http:\/\/dbpedia.org\/property\/author> ?v3 . <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v1 . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . <http:\/\/dbpedia.org\/resource\/ATL_(film)> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v2 <http:\/\/dbpedia.org\/property\/starring> ?v3 . }",
+        "id": 80,
+        "subid": 53,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 6,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the death place of Sal Mineo and death place of the actor of Color Me Dead and death place of Reed Howes.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Sal_Mineo> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . <http:\/\/dbpedia.org\/resource\/Reed_Howes> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . <http:\/\/dbpedia.org\/resource\/Color_Me_Dead> <http:\/\/dbpedia.org\/property\/starring> ?v3 . ?v3 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . }",
+        "id": 492,
+        "subid": 20,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the professional in Singer and professional in  and band of the person born, that is a musical artist, as the birth name of Bob Thompson (musician).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Singer\"@en . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. <http:\/\/dbpedia.org\/resource\/Bob_Thompson_(musician)> <http:\/\/dbpedia.org\/property\/birthName> ?v0 . ?v1 <http:\/\/dbpedia.org\/property\/birthName> ?v0 . ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 39,
+        "subid": 45,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of Carrie Johnson.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Carrie_Johnson> . }",
+        "id": 19,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the actor of Judgment: The Trial of Julius and Ethel Rosenberg and parent of the child of the spouse of Mariclare Costello and parent of the professional in Photographer.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> ?v5 . ?v2 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v5 <http:\/\/dbpedia.org\/property\/occupation> \"Photographer\"@en . <http:\/\/dbpedia.org\/resource\/Judgment:_The_Trial_of_Julius_and_Ethel_Rosenberg> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/child> ?v2 . <http:\/\/dbpedia.org\/resource\/Mariclare_Costello> <http:\/\/dbpedia.org\/ontology\/spouse> ?v1 . }",
+        "id": 816,
+        "subid": 58,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 6,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of Saw Shwe Khet and child of the parent of Min Hla Htut of Pyakaung and predecessor of the child of the spouse, that is a royalty, of Saw Min Phyu.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Saw_Min_Phyu> . ?v1 <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Min_Hla_Htut_of_Pyakaung> . ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/successor> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Saw_Shwe_Khet> . }",
+        "id": 89,
+        "subid": 56,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 7,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to George Ducas and commander in the war, that is a television show and a societal event, of the military force of Battle of Vienna and successor of Yurii Khmelnytsky.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Yurii_Khmelnytsky> <http:\/\/dbpedia.org\/ontology\/successor> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"George Ducas\"@en . ?v0 <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Vienna> . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 159,
+        "subid": 45,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birth place of Cece Bell.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Cece_Bell> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 609,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as Hon. Mary Frances Bowes-Lyon.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> \"Hon. Mary Frances Bowes-Lyon\"@en . }",
+        "id": 263,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

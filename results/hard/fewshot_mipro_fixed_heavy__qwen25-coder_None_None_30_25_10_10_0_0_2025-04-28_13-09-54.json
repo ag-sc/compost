@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a top-secret intelligence agency tasked with retrieving critical information from a vast knowledge graph like DBpedia. A high-ranking officer has requested your assistance in solving a complex query that could potentially uncover vital intelligence. The query involves multiple entities and relationships, making it challenging to retrieve the correct data without careful analysis.\n\nThe query at hand is as follows:\nShots: [('Give me the associated musical artist of Red Tide (band).', 'SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Red_Tide_(band)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }'), ('Give me the band member of Don Dokken.', 'SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Don_Dokken> . }'), ('Give me the associated musical artist of Red Tide (band) and associated musical artist of S.A. Slayer.', 'SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/S.A._Slayer> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . <http:\/\/dbpedia.org\/resource\/Red_Tide_(band)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }')]\nQuestion: Give me the band member of Don Dokken and associated musical artist of Red Tide (band).\n\nThe stakes are high, as this information could help your agency in a critical mission. You must use the provided shots to construct an SPARQL query that accurately retrieves the requested data. The query should return all relevant entities and their relationships.\n\nPlease produce the SPARQL query for the given question based on the provided shots.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

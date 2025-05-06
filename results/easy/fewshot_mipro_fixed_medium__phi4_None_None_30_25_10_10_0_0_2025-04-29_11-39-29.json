@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To construct the SPARQL query, we need to identify three distinct entities and their corresponding birthplaces based on the criteria provided in the question. The entities are:\n\n1. **The Governor of Virginia** who is also a politician.\n2. **The Author of 'El Deafo'**, whose reference indicates they are American.\n3. **An Awardee of the List of Awards and Nominations received by Vince Gilligan**.\n\nFor each entity, we need to extract their birthplace using SPARQL queries that match these conditions:\n\n1. For the governor who is a politician from Virginia, use the `property: governor` predicate on `<http:\/\/dbpedia.org\/resource\/Virginia>` and filter for type `Politician`. Extract the `birthPlace`.\n2. For the author of 'El Deafo' who is American, match the name using `<http:\/\/xmlns.com\/foaf\/0.1\/name> ",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

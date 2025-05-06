@@ -1,0 +1,6 @@
+mipro,ollama_chat/phi4,,heavy,True
+mipro,ollama_chat/phi4,,light,True
+mipro,ollama_chat/phi4,,medium,True
+mipro,ollama_chat/phi4,chainofthought,heavy,True
+mipro,ollama_chat/phi4,chainofthought,light,True
+mipro,ollama_chat/phi4,chainofthought,medium,True

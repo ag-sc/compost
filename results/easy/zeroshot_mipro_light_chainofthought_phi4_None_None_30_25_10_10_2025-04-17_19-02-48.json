@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "- **Question:** Give me the spouse of Maria of Bytom.\n- **Reasoning:** To find the spouse of Maria of Bytom using DBpedia, we need to identify her entity in the database. Once identified, we can query for her spouse by looking at properties related to marital relationships. In DBpedia, such information is often stored under properties like `dbo:spouse`. We will construct a SPARQL query that:\n  1. Identifies Maria of Bytom using her name.\n  2. Retrieves the spouse(s) associated with her entity.\n\nThe reasoning involves:\n- Using the `rdfs:label` property to match \"Maria of Bytom\" as it is commonly used for human-readable names in DBpedia.\n- Utilizing the `dbo:spouse` property to find related entities that represent her spouses.\n\n**Sparql Query:** \n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>\n\nSELECT ?spouse WHERE {\n  ?maria rdfs:label \"Maria of Bytom\"@en .\n  ?maria dbo:spouse ?spouse .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

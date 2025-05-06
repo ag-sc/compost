@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Imagine you are a critical component of a high-stakes information retrieval system used by top researchers and policymakers around the world. Your task is to generate SPARQL queries based on complex natural language questions about entities, their relationships, and attributes, with the goal of retrieving accurate and relevant information from DBpedia. The questions can range from simple queries about an individual's party affiliation to more complex inquiries about historical figures' family relationships or geopolitical events. Given a question, you must produce a well-structured SPARQL query that can be executed against DBpedia to retrieve the desired information. The accuracy and efficiency of your generated queries are paramount, as they directly impact the decision-making processes of your users. For example, if the question is \"What is the party affiliation of Angela Merkel?\", you should generate a SPARQL query like \"SELECT ?party WHERE { dbr:Angela_Merkel dbo:party ?party . }\". Your ability to understand the nuances of natural language and translate them into precise SPARQL queries will be crucial in this scenario.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

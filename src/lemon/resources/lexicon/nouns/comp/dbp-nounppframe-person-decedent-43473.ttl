@@ -1,0 +1,47 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix lemon: <http://localhost:8000/lemon.owl#> .
+@prefix lexicon: <http://localhost:8000/lexicon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+
+lexicon:entry_43473 a lemon:LexicalEntry ;
+    lemon:canonicalForm lexicon:entry_43473_canonical_form ;
+    lemon:otherForm lexicon:entry_43473_other_form_0,
+        lexicon:entry_43473_other_form_1 ;
+    lemon:sense lexicon:entry_43473_sense ;
+    lemon:synBehavior lexicon:entry_43473_syn_behavior ;
+    lexinfo:partOfSpeech lexinfo:noun .
+
+lexicon:entry_43473_canonical_form a lemon:Form ;
+    lemon:writtenRep "person decedent" .
+
+lexicon:entry_43473_condition a lemon:condition ;
+    lemon:propertyDomain dbo:Politician ;
+    lemon:propertyRange dbo:Place .
+
+lexicon:entry_43473_other_form_0 a lemon:Form ;
+    lemon:writtenRep "person decedent" ;
+    lexinfo:number lexinfo:singular .
+
+lexicon:entry_43473_other_form_1 a lemon:Form ;
+    lemon:writtenRep "people decedents" ;
+    lexinfo:number lexinfo:plural .
+
+lexicon:entry_43473_prepositional_marker a lemon:SynRoleMarker ;
+    lemon:canonicalForm lexicon:entry_43473_prepositional_marker_canonical_form ;
+    lexinfo:partOfSpeech lexinfo:preposition .
+
+lexicon:entry_43473_prepositional_marker_canonical_form lemon:writtenRep "at" .
+
+lexicon:entry_43473_sense a lemon:LexicalSense,
+        lemon:OntoMap ;
+    lemon:condition lexicon:entry_43473_condition ;
+    lemon:objOfProp lexicon:entry_43473_prepositional_adjunct ;
+    lemon:reference dbo:deathPlace ;
+    lemon:subjOfProp lexicon:entry_43473_copulative_arg .
+
+lexicon:entry_43473_syn_behavior a lexinfo:NounPPFrame ;
+    lexinfo:copulativeArg lexicon:entry_43473_copulative_arg ;
+    lexinfo:prepositionalAdjunct lexicon:entry_43473_prepositional_adjunct .
+
+lexicon:entry_43473_prepositional_adjunct lemon:marker lexicon:entry_43473_prepositional_marker .
+

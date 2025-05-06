@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "### Steps:\n1. **Understand the `shots` field**: \n   - This field contains lists of shots or scenes required to answer the question.\n   \n2. **Analyze the `question` field**:\n   - Use this to derive what specific information needs to be extracted from the knowledge graph.\n\n3. **Formulate a SPARQL Query**:\n   - Each shot should guide the query construction.\n   - Ensure that the query covers all necessary relationships and predicates as indicated by the shots.\n\n### Example Analysis:\n\nAssume the `shots` field is `[{\"shot_id\": 1, \"description\": \"The protagonist training\"}, {\"shot_id\": 2, \"description\": \"Protagonist meeting the antagonist\"}]` and the `question` field is \"Who coaches the team of the protagonist in the film 'Training Day'?\"\n\n**Analysis**:\n- **Shot 1**: The protagonist training.\n  - This indicates that we need to find information about the protagonist (likely linked to a person node).\n  \n- **Shot 2**: Protagonist meeting the antagonist.\n  - This suggests looking for relationships between the protagonist and the antagonist.\n\n- **Question**:\n  - We need to identify who coaches the protagonist (likely linked to a person node with an `coaches` relationship) in the film 'Training Day'.\n  - The film 'Training Day' is likely represented by a work or movie node.\n\n### SPARQL Query Formulation:\n\n```sparql\nPREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#>\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n\nSELECT ?coaching_person WHERE {\n  ?movie dbo:isBasedOnFilm \"Training Day\".\n  ?protagonist a dbo:Person; dbo:hasCoach ?coaching_person.\n  ?coaching_person rdfs:label \"Denzel Washington\" .  # Assuming Denzel Washington coaches the protagonist in 'Training Day'\n}\n```\n\n### Explanation:\n- **Starting Point**: `?movie dbo:isBasedOnFilm \"Training Day\"` - Identifies the movie 'Training Day'.\n- **Relationships**:\n  - `?protagonist a dbo:Person; dbo:hasCoach ?coaching_person.`: Establishes the protagonist's coach relationship.\n  - `?coaching_person rdfs:label \"Denzel Washington\" .`: Assumes Denzel Washington coaches the protagonist, based on the shot description.\n\nThis query will return the coaching person (`?coaching_person`) assuming the information aligns with the given shots and question.\n\n### Marker:",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

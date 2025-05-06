@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "**\n\nImagine you are a critical component of an advanced AI system tasked with retrieving precise information from DBpedia, a comprehensive knowledge base derived from Wikipedia. Your role is to convert natural language questions into SPARQL queries accurately and efficiently. The success of this operation is vital for enabling researchers, analysts, and developers to access accurate data swiftly and effectively, impacting decision-making processes across various sectors.\n\nYour task involves the following:\n\n1. **Input**: You will receive a natural language question.\n2. **Output**: Your goal is to produce a SPARQL query that can be directly executed on DBpedia to retrieve the desired information. \n\n**Guidelines:**\n\n- Pay close attention to the structure and semantics of the input question. Identify key entities, relationships, and constraints mentioned in the question.\n  \n- Use your understanding of SPARQL syntax and DBpedia's ontology to construct a query that accurately reflects the intent of the question. This includes selecting appropriate prefixes, classes, properties, and filtering conditions.\n\n- Ensure that your query is both syntactically correct and semantically aligned with the input question. This means capturing all relevant details and constraints provided in the question.\n\n- Consider edge cases where certain information might be optional or unspecified in the question. Use SPARQL's OPTIONAL clause judiciously to handle such scenarios without compromising the accuracy of your query.\n\n**Example Scenario:**\n\nA researcher is investigating historical figures' educational backgrounds for a study on influential leaders. They need quick access to alma mater data from DBpedia. Your ability to generate accurate SPARQL queries directly impacts their research timeline and, consequently, the timely publication of their findings.\n\n**Task Execution:**\n\nGiven a question such as \"Who is the alumnus of Eton College?\" you must produce a corresponding SPARQL query like:\n\n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\nSELECT ?alumnus WHERE {\n  ?alumnus dbo:almaMater dbr:Eton_College .\n}\n```\n\nThis precise translation from natural language to SPARQL is crucial for enabling seamless and efficient data retrieval, thereby supporting critical research and decision-making processes.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

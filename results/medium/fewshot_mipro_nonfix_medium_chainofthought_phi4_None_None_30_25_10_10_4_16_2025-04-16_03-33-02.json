@@ -1,0 +1,255 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the father of the child, that is a politician, of Abu Ahmad Abdul Hafiz and father of Shahla Khatun.",
+        "reasoning": "To solve this query, we need to identify a common individual who is both the father of a child that is a politician (child of Abu Ahmad Abdul Hafiz) and also the father of Shahla Khatun. The SPARQL query will involve finding these relationships in DBpedia.\n\n1. Identify the child of Abu Ahmad Abdul Hafiz who is a politician.\n2. Find the father of this identified child.\n3. Ensure that this individual is also the father of Shahla Khatun.",
+        "sparql_query": "SELECT ?father WHERE {\n  ?child <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Abu_Ahmad_Abdul_Hafiz> .\n  ?child <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician> .\n  ?child <http:\/\/dbpedia.org\/property\/father> ?father .\n  ?shahla <http:\/\/dbpedia.org\/property\/father> ?father .\n  ?shahla <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Shahla Khatun\"@en .\n}"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the spouse, that is a royalty, of Charles Martel of Anjou.",
+        "reasoning": "To find the spouse who is a royalty of Charles Martel of Anjou, we need to query DBpedia for entities related to Charles Martel of Anjou. Specifically, we are interested in his spouse and ensure that this spouse has a type indicating they are part of royalty.\n\n1. Identify Charles Martel of Anjou's spouse using the `spouse` property.\n2. Ensure that the identified spouse is classified as a member of royalty by checking if their type includes `Royalty`.",
+        "sparql_query": "SELECT ?result WHERE { \n  <http:\/\/dbpedia.org\/resource\/Charles_Martel_of_Anjou> <http:\/\/dbpedia.org\/ontology\/spouse> ?result .\n  ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty> .\n}"
+      },
+      {
+        "question": "Give me the entity in England and death place of Patrick Moore.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Patrick_Moore> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . ?result <http:\/\/dbpedia.org\/ontology\/location> <http:\/\/dbpedia.org\/resource\/England> . }",
+        "id": 445,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the awardee of Australian Defence Medal.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Australian_Defence_Medal> . }",
+        "id": 216,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the child of Kek\u016ban\u0101o\u02bba.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> \"Kek\u016ban\u0101o\u02bba\"@en . }",
+        "id": 917,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in Lukas K\u00fcbler.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Lukas_K\u00fcbler> <http:\/\/dbpedia.org\/ontology\/team> ?result . }",
+        "id": 382,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the band of Matthias R\u00f6hr and band of the person born, that is a musical artist, as the persona of Kevin Russell (musician).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Matthias_R\u00f6hr> . ?v1 <http:\/\/dbpedia.org\/property\/birthName> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . <http:\/\/dbpedia.org\/resource\/Kevin_Russell_(musician)> <http:\/\/xmlns.com\/foaf\/0.1\/givenName> ?v2 . }",
+        "id": 839,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party member of the administration, that is an organisation, of John Adams.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/party> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v1 <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/John_Adams> . }",
+        "id": 236,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the professional in Writer?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Writer\"@en . }",
+        "id": 326,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the birthplace of the commander, that is a politician, in 1939\u20131940 Winter Offensive.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. <http:\/\/dbpedia.org\/resource\/1939\u20131940_Winter_Offensive> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . }",
+        "id": 508,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the office of Naci Bostanc\u0131 and office of the mayor, that is a politician and an office holder and Turkish, of the reference, that is an organisation and a political party and Turkish, to Millet \u0130ttifak\u0131.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/leader> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v2 <http:\/\/dbpedia.org\/ontology\/nationality> <http:\/\/dbpedia.org\/resource\/Turkey>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v2 <http:\/\/dbpedia.org\/property\/office> ?result . ?v1 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Millet \u0130ttifak\u0131\"@en . <http:\/\/dbpedia.org\/resource\/Naci_Bostanc\u0131> <http:\/\/dbpedia.org\/property\/office> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PoliticalParty>. ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Turkey>. }",
+        "id": 976,
+        "subid": 37,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 10,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the military force of Battle of Tamai.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Tamai> . }",
+        "id": 124,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the coach of the reference, that is an organisation and a soccer club, to Croatia U21.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClub>. ?v1 <http:\/\/dbpedia.org\/ontology\/coach> ?result . ?v1 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Croatia U21\"@en . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }",
+        "id": 216,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of Alexandrine of Mecklenburg-Schwerin and child of Christian X of Denmark.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Christian_X_of_Denmark> . ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Alexandrine_of_Mecklenburg-Schwerin> . }",
+        "id": 417,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Canada and birthplace of Gerald Regan.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Canada> . <http:\/\/dbpedia.org\/resource\/Gerald_Regan> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 5,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the person decedent at Quincy, Massachusetts and person decedent at the administration, that is a region, of Charlie Baker.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/governor> \"Charlie Baker\"@en . ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Quincy,_Massachusetts> . }",
+        "id": 573,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "**Task**: Translate natural language questions into SPARQL queries for DBpedia, ensuring accuracy and efficiency. The LM must consider the complexity of the query, leverage RDF structure effectively, and understand the high stakes involved in generating these queries.\n\n**Input**: A question about familial relationships or other entities within DBpedia.\n\n**Output Requirements**:\n- **Reasoning**: Provide a step-by-step explanation of how you derive the SPARQL query from the given question. This should include identifying relevant RDF properties and understanding their connections.\n- **SPARQL Query**: Construct a syntactically correct SPARQL query that accurately reflects the question's intent.\n\n**Example**:\n- **Question**: \"Who is the child of Emperor Toba?\"\n- **Reasoning**: Identify the parent-child relationship using `dbpedia-ontology:parent`. Formulate a query to find entities where Emperor Toba is listed as a parent.\n- **SPARQL Query**:\n  ```sparql\n  SELECT ?child WHERE {\n    ?child <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Emperor_Toba>.\n  }\n  ```\n\n**High Stakes**: Consider the scenario where researchers depend on these queries for critical data extraction. The accuracy of your output directly impacts the quality and reliability of their work.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

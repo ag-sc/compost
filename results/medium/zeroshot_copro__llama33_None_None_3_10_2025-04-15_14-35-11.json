@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query from a given question, first identify the key elements of the question such as the subject, predicate, and object. Then, map these elements to their corresponding RDF (Resource Description Framework) terms. Use the SPARQL syntax to construct a query that retrieves the desired information. For example, if the question is \"What are the names of all people born in Paris?\", your SPARQL query might look like \"PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX foaf: <http:\/\/xmlns.com\/foaf\/0.1\/> SELECT ?name WHERE { ?person foaf:bornIn <http:\/\/example.org\/Paris>. ?person foaf:name ?name. }\". Ensure that the query is correctly formatted and uses the appropriate prefixes and syntax.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX foaf: <http:\/\/xmlns.com\/foaf\/0.1\/> SELECT ?",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

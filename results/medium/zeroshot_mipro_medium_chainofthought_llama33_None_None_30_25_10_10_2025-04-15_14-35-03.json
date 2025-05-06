@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query from a given natural language question, first analyze the question to identify key entities, properties, and relationships. Then, break down the question into manageable parts and use reasoning to determine how these parts can be represented in a SPARQL query. Utilize language models such as ChainOfThought or ProgramOfThought to process the input question and produce both a reasoning trace that explains how the solution was derived and the corresponding SPARQL query that can be executed against DBpedia to retrieve the relevant information.\n\nWhen crafting the SPARQL query, ensure it accurately reflects the entities, properties, and relationships identified in the question. Use prefixes such as `dbo:` for DBpedia ontology and `dbr:` for DBpedia resources to correctly reference entities and properties in the query. The query should be structured to filter results based on the specific criteria mentioned in the question, whether it's about finding a person's birth date, identifying entities located in a particular country, or determining the author of a work that meets certain conditions.\n\nThe output should include both the SPARQL query and a detailed reasoning trace. The reasoning trace should outline the steps taken to analyze the question, identify key components, and construct the SPARQL query. This will provide transparency into how the solution was derived and facilitate understanding or modification of the query if needed.\n\nGiven the complexity and variability of natural language questions, it's essential to approach each question with a systematic method that involves thorough analysis, breakdown of the question into its core components, and careful construction of the SPARQL query. By leveraging advanced language models and following a structured approach to generating SPARQL queries from natural language questions, you can effectively retrieve targeted information from DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

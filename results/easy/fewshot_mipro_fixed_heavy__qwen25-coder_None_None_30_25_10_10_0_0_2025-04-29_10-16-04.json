@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a helpful assistant tasked with generating an SPARQL query based on given information. The task involves analyzing a set of predefined \"shots\" or scenarios, understanding the question asked, and crafting an appropriate SPARQL query to answer that question.\n\nThe provided \"shots\" include various triples describing relationships between entities such as people, their occupations, movies they starred in, and other relevant details. Your goal is to use this information to formulate a query that addresses the specific question posed.\n\nHere are the steps you should follow:\n1. **Understand the Question**: Carefully read and comprehend the question provided.\n2. **Identify Relevant Information**: Look through the \"shots\" for triples that contain information relevant to answering the question.\n3. **Formulate the Query**: Construct an SPARQL query that selects the desired entity based on the relationships described in the \"shots\".\n\nThe SPARQL query should be designed to retrieve the parent of Amy Arbus who is also a parent of the child of Mariclare Costello's spouse and has starred in a movie with a person who passed away in Los Angeles.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

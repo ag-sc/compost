@@ -1,0 +1,264 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the parent of Princess Sara bint Faisal.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Princess_Sara_bint_Faisal> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }"
+      },
+      {
+        "question": "Give me the parent of the father, that is a royalty, of Charles I of Hungary and spouse of the father of Philip I, Prince of Taranto and child of the child, that is a royalty, of B\u00e9la IV of Hungary.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Charles_I_of_Hungary> <http:\/\/dbpedia.org\/property\/father> ?v5 . <http:\/\/dbpedia.org\/resource\/Philip_I,_Prince_of_Taranto> <http:\/\/dbpedia.org\/property\/father> ?v2 . ?v5 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v0 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/B\u00e9la_IV_of_Hungary> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?result <http:\/\/dbpedia.org\/property\/father> ?v0 . }",
+        "id": 905,
+        "subid": 55,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 8,
+        "num_nodes": 7,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in the actor, that is a soccer player and an athlete, of the film, that is a work, of Manuel Huerga and player in the person born, that is an athlete, on 1955-02-22.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v0 <http:\/\/dbpedia.org\/property\/starring> ?v4 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. ?v2 <http:\/\/dbpedia.org\/ontology\/birthDate> \"1955-02-22\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v4 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?v0 <http:\/\/dbpedia.org\/ontology\/director> <http:\/\/dbpedia.org\/resource\/Manuel_Huerga> . }",
+        "id": 687,
+        "subid": 47,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 9,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office of the leader, that is a politician, of Conservative Republican Party (Spain).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Conservative_Republican_Party_(Spain)> <http:\/\/dbpedia.org\/property\/leader> ?v1 . ?v1 <http:\/\/dbpedia.org\/property\/office> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. }",
+        "id": 531,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band of the person born, that is a musical artist, as the birth name of Bob Thompson (musician).",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?v2 <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. <http:\/\/dbpedia.org\/resource\/Bob_Thompson_(musician)> <http:\/\/dbpedia.org\/property\/birthName> ?v1 . }",
+        "id": 39,
+        "subid": 27,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the theme of the show with Anumta Qureshi and native of Lahore.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/starring> <http:\/\/dbpedia.org\/resource\/Anumta_Qureshi> . ?v2 <http:\/\/dbpedia.org\/ontology\/openingTheme> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Lahore> . }",
+        "id": 288,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the founding date of the alma mater, that is a university and an organisation and an educational institution, of Luiza Erundina.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. <http:\/\/dbpedia.org\/resource\/Luiza_Erundina> <http:\/\/dbpedia.org\/ontology\/almaMater> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/EducationalInstitution>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/University>. ?v0 <http:\/\/dbpedia.org\/ontology\/foundingDate> ?result . }",
+        "id": 258,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the father of William II of Sicily and child of Elvira of Castile, Queen of Sicily.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Elvira_of_Castile,_Queen_of_Sicily> <http:\/\/dbpedia.org\/ontology\/child> ?result . <http:\/\/dbpedia.org\/resource\/William_II_of_Sicily> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 353,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist of the person born as Elorm Kabu Amenyah and professional in the profession of the writer, that is a musical artist, of The Live Anthology.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v0 <http:\/\/dbpedia.org\/property\/occupation> ?v4 . ?v2 <http:\/\/dbpedia.org\/property\/birthName> \"Elorm Kabu Amenyah\"@en . <http:\/\/dbpedia.org\/resource\/The_Live_Anthology> <http:\/\/dbpedia.org\/property\/writer> ?v0 . ?v2 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v4 . }",
+        "id": 668,
+        "subid": 47,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of the administration, that is a country, of Theodor Heuss and manager of 2020\u201321 SBV Vitesse season.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v2 . ?v2 <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Theodor_Heuss> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/2020\u201321_SBV_Vitesse_season> <http:\/\/dbpedia.org\/ontology\/manager> ?result . }",
+        "id": 756,
+        "subid": 24,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office of the leader, that is a politician, of Conservative Republican Party (Spain) and tenant of Madrid and office of the commander, that is an office holder and a politician, in Central African Republic Civil War.",
+        "sparql_query": "SELECT ?result WHERE { ?v4 <http:\/\/dbpedia.org\/property\/office> ?result . ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. <http:\/\/dbpedia.org\/resource\/Conservative_Republican_Party_(Spain)> <http:\/\/dbpedia.org\/property\/leader> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Madrid> . ?v2 <http:\/\/dbpedia.org\/property\/office> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. <http:\/\/dbpedia.org\/resource\/Central_African_Republic_Civil_War> <http:\/\/dbpedia.org\/ontology\/commander> ?v4 . }",
+        "id": 531,
+        "subid": 44,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 8,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the show of the host, that is an educational institution, of Nobel Prize in Physics and award of the awardee of Nobel Prize in Physics.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Nobel_Prize_in_Physics> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/EducationalInstitution>. <http:\/\/dbpedia.org\/resource\/Nobel_Prize_in_Physics> <http:\/\/dbpedia.org\/ontology\/presenter> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/presenter> ?v2 . ?v3 <http:\/\/dbpedia.org\/property\/awards> ?result . }",
+        "id": 414,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the author of the work, that is a work and a written work and American and a book, of Joe Biden and author of the work, that is a written work and a work, of Joe Biden.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/author> <http:\/\/dbpedia.org\/resource\/Joe_Biden> . ?v3 <http:\/\/dbpedia.org\/property\/author> <http:\/\/dbpedia.org\/resource\/Joe_Biden> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/WrittenWork>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/WrittenWork>. ?v2 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v3 <http:\/\/dbpedia.org\/property\/author> ?result . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Book>. ?v2 <http:\/\/dbpedia.org\/ontology\/author> ?result . }",
+        "id": 38,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 10,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the entity in Poland and war of the commander in French Revolutionary Wars.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Poland> . ?v2 <http:\/\/dbpedia.org\/ontology\/battle> ?result . <http:\/\/dbpedia.org\/resource\/French_Revolutionary_Wars> <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . }",
+        "id": 119,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the associated musical artist of $pacely and person born as the birth name of the native, that is an artist, of Central Region, Ghana.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Central_Region,_Ghana> . ?result <http:\/\/dbpedia.org\/property\/birthName> ?v1 . <http:\/\/dbpedia.org\/resource\/$pacely> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. }",
+        "id": 668,
+        "subid": 36,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of Rustlers' Rhapsody and professional in Actor and professional in the alter ego of The Shadow.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Actor\"@en . <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v3 . <http:\/\/dbpedia.org\/resource\/Rustlers'_Rhapsody> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v3 . }",
+        "id": 361,
+        "subid": 20,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

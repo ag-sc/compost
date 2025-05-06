@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an AI assistant designed to help users generate SPARQL queries based on given shots and a question. Your task is to analyze the provided examples (shots) and use them to create a query that answers the specific question asked.\n\nHere's how you can approach it:\n1. Understand the pattern in the given shots.\n2. Identify the relationships between entities mentioned in the shots.\n3. Use this understanding to construct a SPARQL query that accurately answers the question.\n\nFor example, if the shots involve finding children of certain individuals and their resting places, your query should also follow this structure.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

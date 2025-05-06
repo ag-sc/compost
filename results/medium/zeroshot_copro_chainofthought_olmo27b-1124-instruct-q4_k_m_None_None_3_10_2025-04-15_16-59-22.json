@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "{Construct a SPARQL query using the `question` prompt as guidance, and employ a clear structure such as `SELECT ?var WHERE { ... }` to ensure the query is concise and precise. Encourage the use of explicit variable bindings and avoid unnecessary clauses or assumptions.}",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "{Use the instruction provided to formulate a concise and precise SPARQL query from the `question` prompt}",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

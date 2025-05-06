@@ -1,0 +1,48 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix lemon: <http://localhost:8000/lemon.owl#> .
+@prefix lexicon: <http://localhost:8000/lexicon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+lexicon:entry_43398 a lemon:LexicalEntry ;
+    lemon:canonicalForm lexicon:entry_43398_canonical_form ;
+    lemon:otherForm lexicon:entry_43398_other_form_0,
+        lexicon:entry_43398_other_form_1 ;
+    lemon:sense lexicon:entry_43398_sense ;
+    lemon:synBehavior lexicon:entry_43398_syn_behavior ;
+    lexinfo:partOfSpeech lexinfo:noun .
+
+lexicon:entry_43398_canonical_form a lemon:Form ;
+    lemon:writtenRep "class" .
+
+lexicon:entry_43398_condition a lemon:condition ;
+    lemon:propertyDomain dbo:Insect ;
+    lemon:propertyRange owl:Thing .
+
+lexicon:entry_43398_other_form_0 a lemon:Form ;
+    lemon:writtenRep "class" ;
+    lexinfo:number lexinfo:singular .
+
+lexicon:entry_43398_other_form_1 a lemon:Form ;
+    lemon:writtenRep "classes" ;
+    lexinfo:number lexinfo:plural .
+
+lexicon:entry_43398_prepositional_marker a lemon:SynRoleMarker ;
+    lemon:canonicalForm lexicon:entry_43398_prepositional_marker_canonical_form ;
+    lexinfo:partOfSpeech lexinfo:preposition .
+
+lexicon:entry_43398_prepositional_marker_canonical_form lemon:writtenRep "of" .
+
+lexicon:entry_43398_sense a lemon:LexicalSense,
+        lemon:OntoMap ;
+    lemon:condition lexicon:entry_43398_condition ;
+    lemon:objOfProp lexicon:entry_43398_copulative_arg ;
+    lemon:reference dbo:class ;
+    lemon:subjOfProp lexicon:entry_43398_prepositional_adjunct .
+
+lexicon:entry_43398_syn_behavior a lexinfo:NounPPFrame ;
+    lexinfo:copulativeArg lexicon:entry_43398_copulative_arg ;
+    lexinfo:prepositionalAdjunct lexicon:entry_43398_prepositional_adjunct .
+
+lexicon:entry_43398_prepositional_adjunct lemon:marker lexicon:entry_43398_prepositional_marker .
+

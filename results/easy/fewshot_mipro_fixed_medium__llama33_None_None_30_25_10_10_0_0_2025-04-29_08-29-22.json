@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a semantic web developer tasked with generating SPARQL queries based on given questions and shots. Given the fields `shots` and `question`, produce the field `sparql_query`.\n\n[[ ## step 1: Analyze the question and shots ## ]]\nAnalyze the given question and shots to identify the key concepts, entities, and relationships involved.\n\n[[ ## step 2: Identify the relevant triples ## ]]\nIdentify the relevant triples (subject-predicate-object) that need to be included in the SPARQL query to answer the question.\n\n[[ ## step 3: Construct the SPARQL query ## ]]\nConstruct the SPARQL query using the identified triples and any necessary filters, aggregations, or other query elements.\n\n[[ ## step 4: Validate the SPARQL query ## ]]\nValidate the constructed SPARQL query to ensure it is syntactically correct and will produce the desired results.\n\n\nGiven the provided shots and question:\nShots: \n- Give me the associated musical artist of Stuart Tosh and band member of the associated musical artist of David Paton.\n- ...\nQuestion: \nGive me the associated musical artist of the person born, that is a musical artist, as Stuart Mcbeath Tosh and associated musical artist of the writer, that is a musical artist and an artist, of Wizards of Waverly Place (soundtrack) and band member of The Alan Parsons Project.\n\nThe sparql_query would be:\n```sparql\nSELECT ?result WHERE { \n  <http:\/\/dbpedia.org\/resource\/Wizards_of_Waverly_Place_(soundtrack)> <http:\/\/dbpedia.org\/property\/writer> ?v0 .\n  ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist> .\n  ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist> .\n  ?v1 <http:\/\/dbpedia.org\/property\/birthName> \"Stuart Mcbeath Tosh\"@en .\n  ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist> .\n  ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result .\n  ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/The_Alan_Parsons_Project> .\n  ?v0 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

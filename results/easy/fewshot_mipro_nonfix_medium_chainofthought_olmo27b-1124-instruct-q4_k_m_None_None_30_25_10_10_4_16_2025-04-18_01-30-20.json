@@ -1,0 +1,246 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the birth place of Victor Saville.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Victor_Saville> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the child of Maximilian I, Holy Roman Emperor.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Maximilian_I,_Holy_Roman_Emperor> <http:\/\/dbpedia.org\/ontology\/child> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the leader, that is an office holder, of 2003 Madrid City Council election.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2003_Madrid_City_Council_election> <http:\/\/dbpedia.org\/property\/leader> ?result . }"
+      },
+      {
+        "question": "Give me the band of Kim Wilson and reference to the real name of The Fabulous Thunderbirds.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v0 . <http:\/\/dbpedia.org\/resource\/The_Fabulous_Thunderbirds> <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Kim_Wilson> . }",
+        "id": 782,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birth name of Bob Thompson (musician).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Bob_Thompson_(musician)> <http:\/\/dbpedia.org\/property\/birthName> ?result . }",
+        "id": 39,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of the parent, that is a royalty and a noble, of Francis I, Duke of Lorraine.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . <http:\/\/dbpedia.org\/resource\/Francis_I,_Duke_of_Lorraine> <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Noble>. }",
+        "id": 633,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the player in the manager, that is a sports manager and a soccer manager, of Hong Kong C Team.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. <http:\/\/dbpedia.org\/resource\/Hong_Kong_C_Team> <http:\/\/dbpedia.org\/ontology\/manager> ?v0 . }",
+        "id": 769,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the successor of the commander, that is a politician and an office holder, in the force, that is an event and a military conflict, of Micha\u0142 Kazimierz Pac and reference to the writer of the work of George Ducas.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . ?v0 <http:\/\/dbpedia.org\/property\/writer> ?v5 . ?v2 <http:\/\/dbpedia.org\/ontology\/successor> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v3 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Micha\u0142_Kazimierz_Pac> . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v5 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?v0 <http:\/\/dbpedia.org\/property\/writer> \"George Ducas\"@en . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. }",
+        "id": 159,
+        "subid": 59,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 10,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of the award, that is a region and American and a state and a settlement, of the awardee, that is a band, of New York (state) and person born as the birth name of Bobby Shmurda.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/AdministrativeRegion>. ?result <http:\/\/dbpedia.org\/property\/birthName> ?v4 . ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Band>. ?v2 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/New_York_(state)> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. <http:\/\/dbpedia.org\/resource\/Bobby_Shmurda> <http:\/\/dbpedia.org\/property\/birthName> ?v4 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v2 . }",
+        "id": 628,
+        "subid": 51,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 10,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration of Olaf I of Denmark and territory administered from Copenhagen and administration of the person born, that is a royalty, as Prince Christian of Schleswig-Holstein-Sonderburg-Beck.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Olaf_I_of_Denmark> . ?v3 <http:\/\/dbpedia.org\/property\/birthName> \"Prince Christian of Schleswig-Holstein-Sonderburg-Beck\"@en . ?result <http:\/\/dbpedia.org\/property\/leader> ?v3 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/capital> <http:\/\/dbpedia.org\/resource\/Copenhagen> . }",
+        "id": 472,
+        "subid": 20,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the reference to the alter ego of the reference to Lamont Cranston (radio, film and television).",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Lamont Cranston (radio, film and television)\"@en . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v0 . ?v2 <http:\/\/dbpedia.org\/property\/alterEgo> ?v0 . }",
+        "id": 943,
+        "subid": 26,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the war, that is a television show and a societal event, of the military force of Battle of Vienna and successor of Yurii Khmelnytsky and reference to the writer of Always the Love Songs.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Vienna> . ?v2 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?v2 . <http:\/\/dbpedia.org\/resource\/Yurii_Khmelnytsky> <http:\/\/dbpedia.org\/ontology\/successor> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v5 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. <http:\/\/dbpedia.org\/resource\/Always_the_Love_Songs> <http:\/\/dbpedia.org\/property\/writer> ?v5 . }",
+        "id": 159,
+        "subid": 58,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 8,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of the actor of 1,000 Dollars a Minute and person born as Harriette Arlene Lake and party member of Republican Party (United States).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/1,000_Dollars_a_Minute> <http:\/\/dbpedia.org\/property\/starring> ?v3 . ?result <http:\/\/dbpedia.org\/ontology\/party> <http:\/\/dbpedia.org\/resource\/Republican_Party_(United_States)> . ?v3 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?result <http:\/\/dbpedia.org\/property\/birthName> \"Harriette Arlene Lake\"@en . }",
+        "id": 293,
+        "subid": 29,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to the real name of Peter IV of Aragon.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Peter_IV_of_Aragon> <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v1 . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v1 . }",
+        "id": 468,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the manager of the team, that is a soccer club season and a sports season and a sports team season, of the person born, that is a sports manager, on 1968-08-26 and native of the administration, that is a country, of the leader of West Germany.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?v3 <http:\/\/dbpedia.org\/ontology\/manager> ?v1 . <http:\/\/dbpedia.org\/resource\/West_Germany> <http:\/\/dbpedia.org\/property\/leader> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v5 . ?v3 <http:\/\/dbpedia.org\/ontology\/manager> ?result . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsTeamSeason>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsSeason>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClubSeason>. ?v1 <http:\/\/dbpedia.org\/ontology\/birthDate> \"1968-08-26\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v5 <http:\/\/dbpedia.org\/property\/leader> ?v0 . }",
+        "id": 756,
+        "subid": 61,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 11,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of Jamshedpur.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Jamshedpur> . }",
+        "id": 249,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      }
+    ],
+    "signature": {
+      "instructions": "You are a developer working on a natural language processing pipeline designed to convert user questions into SPARQL queries. Your task is to craft a new instruction that will prompt a Language Model to accurately map complex and simple queries about various entities, including politicians, artists, and locations, within the context of DBpedia datasets. Ensure the instruction clearly delineates the expected input format (a structured JSON object) and the desired output format (a SPARQL query and reasoning text). The instruction should emphasize the importance of understanding the semantics of the question to generate a precise and logically sound SPARQL query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

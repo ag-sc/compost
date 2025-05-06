@@ -1,0 +1,264 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who is the awardee of Knight Commander of the Order of the Bath?",
+        "reasoning": "The question asks for individuals who have been awarded the title of Knight Commander of the Order of the Bath. This title is a British honor, and we can query DBpedia to find notable individuals who have received this award.",
+        "sparql_query": "SELECT ?person WHERE { ?person <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Knight_Commander_of_the_Order_of_the_Bath> . }"
+      },
+      {
+        "question": "Give me the child of the father of Cecilia Renata of Austria and commander in the war, that is a societal event and an event and a television show, of the military force of Algerian War.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v3 <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Algerian_War> . ?v2 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v3 <http:\/\/dbpedia.org\/ontology\/battle> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. <http:\/\/dbpedia.org\/resource\/Cecilia_Renata_of_Austria> <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. }",
+        "id": 347,
+        "subid": 48,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 8,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the leader of Ulster Unionist Party.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ulster_Unionist_Party> <http:\/\/dbpedia.org\/ontology\/leader> ?result . }",
+        "id": 513,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the reference to Spanish Socialist Workers' Party.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Spanish Socialist Workers' Party\"@en . }",
+        "id": 119,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birthplace of the alumnus of the reference to \u041f\u043b\u043e\u0432\u0434\u0438\u0432\u0441\u043a\u0438 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u201e\u041f\u0430\u0438\u0441\u0438\u0439 \u0425\u0438\u043b\u0435\u043d\u0434\u0430\u0440\u0441\u043a\u0438\u201c.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/almaMater> ?v0 . ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\u041f\u043b\u043e\u0432\u0434\u0438\u0432\u0441\u043a\u0438 \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442 \u201e\u041f\u0430\u0438\u0441\u0438\u0439 \u0425\u0438\u043b\u0435\u043d\u0434\u0430\u0440\u0441\u043a\u0438\u201c\"@en . }",
+        "id": 742,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the parent of Kate Dimbleby.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Kate_Dimbleby> . }",
+        "id": 375,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the actor of The Campus Queen and associated musical artist of the person born as Cynthia Ikponmwenosa Morgan.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/birthName> \"Cynthia Ikponmwenosa Morgan\"@en . <http:\/\/dbpedia.org\/resource\/The_Campus_Queen> <http:\/\/dbpedia.org\/property\/starring> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 143,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the child of Dawit I and father of the father, that is a royalty and an office holder, of the child of Baeda Maryam I.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v3 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Baeda_Maryam_I> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v0 <http:\/\/dbpedia.org\/property\/father> ?result . ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Dawit_I> . }",
+        "id": 943,
+        "subid": 36,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of Judgment: The Trial of Julius and Ethel Rosenberg and parent of the professional in Photographer and parent of the child of Allan Arbus.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v4 <http:\/\/dbpedia.org\/property\/occupation> \"Photographer\"@en . <http:\/\/dbpedia.org\/resource\/Allan_Arbus> <http:\/\/dbpedia.org\/ontology\/child> ?v2 . <http:\/\/dbpedia.org\/resource\/Judgment:_The_Trial_of_Julius_and_Ethel_Rosenberg> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?result <http:\/\/dbpedia.org\/ontology\/child> ?v4 . }",
+        "id": 816,
+        "subid": 44,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 5,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birthplace of the alumnus of Plovdiv University \"Paisii Hilendarski\" and birthplace of the resident of Sofia.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/property\/residence> <http:\/\/dbpedia.org\/resource\/Sofia> . ?v2 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v2 <http:\/\/dbpedia.org\/ontology\/almaMater> <http:\/\/dbpedia.org\/resource\/Plovdiv_University_%22Paisii_Hilendarski%22> . ?v3 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 742,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the show of Royal Swedish Academy of Sciences and award of the awardee of Nobel Prize in Physics.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/presenter> <http:\/\/dbpedia.org\/resource\/Royal_Swedish_Academy_of_Sciences> . ?v0 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Nobel_Prize_in_Physics> . ?v0 <http:\/\/dbpedia.org\/property\/awards> ?result . }",
+        "id": 414,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the band member of the producer, that is an organisation and a group, of the reference to Nothing to Gein.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Group>. ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Nothing to Gein\"@en . ?v0 <http:\/\/dbpedia.org\/ontology\/producer> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }",
+        "id": 723,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the force of the awardee of the award of Quincy Adams Gillmore and entity in the birthplace, that is a settlement and American, of the person deceased on 1850-08-05.",
+        "sparql_query": "SELECT ?result WHERE { ?v5 <http:\/\/dbpedia.org\/property\/awards> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/place> ?v3 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v5 . <http:\/\/dbpedia.org\/resource\/Quincy_Adams_Gillmore> <http:\/\/dbpedia.org\/property\/awards> ?v0 . ?v3 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. ?v1 <http:\/\/dbpedia.org\/ontology\/deathDate> \"1850-08-05\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v3 . }",
+        "id": 198,
+        "subid": 61,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 8,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in the profession of Shatrughan Sinha and professional in the alter ego of the series, that is a comics character, of The Shadow (video game).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Shatrughan_Sinha> <http:\/\/dbpedia.org\/property\/occupation> ?v4 . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v4 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/ComicsCharacter>. ?result <http:\/\/dbpedia.org\/property\/occupation> ?v2 . ?v1 <http:\/\/dbpedia.org\/property\/alterEgo> ?v2 . <http:\/\/dbpedia.org\/resource\/The_Shadow_(video_game)> <http:\/\/dbpedia.org\/ontology\/series> ?v1 . }",
+        "id": 103,
+        "subid": 51,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the team of the person born, that is a soccer player and a soccer manager, on 1979-11-03 and player in the person born, that is an athlete, on the birthday of Marty Pollio and player in Sergio Ag\u00fcero.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Marty_Pollio> <http:\/\/dbpedia.org\/ontology\/birthDate> ?v3 . ?v1 <http:\/\/dbpedia.org\/ontology\/birthDate> \"1979-11-03\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. ?v2 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?v2 <http:\/\/dbpedia.org\/ontology\/birthDate> ?v3 . <http:\/\/dbpedia.org\/resource\/Sergio_Ag\u00fcero> <http:\/\/dbpedia.org\/ontology\/team> ?result . ?result <http:\/\/dbpedia.org\/ontology\/coach> ?v1 . }",
+        "id": 687,
+        "subid": 53,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 9,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of Lahore.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Lahore> . }",
+        "id": 288,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      }
+    ],
+    "signature": {
+      "instructions": "Imagine you are a researcher working on a critical project that involves uncovering detailed biographical information about influential figures in politics and entertainment. You have a series of complex questions that need precise answers to enhance your understanding of their lives and relationships. Your task is to generate a SPARQL query that accurately retrieves the necessary data from the DBpedia dataset based on the provided natural language question. For each question, provide a clear reasoning statement that explains your thought process in constructing the query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query for finding the father of Emperor Go-Toba and spouse of the spouse, who is royalty, of Emperor Takakura:\n\n1. **Identify Key Entities:**\n   - Emperor Go-Toba\n   - Emperor Takakura\n\n2. **Determine Relationships:**\n   - Father of Emperor Go-Toba.\n   - Spouse of Emperor Takakura (must be royalty).\n   - Identify the father of this royal spouse.\n\n3. **Construct SPARQL Query:**\n\n```sparql\nSELECT ?father WHERE {\n  # Find Emperor Go-Toba and his father\n  ?goToba dbo:parent ?father .\n  ?goToba rdfs:label \"Emperor Go-Toba\"@en .\n\n  # Find spouse of Emperor Takakura who is royalty\n  OPTIONAL { \n    ?takakura dbo:spouse ?spouse .\n    ?takakura rdfs:label \"Emperor Takakura\"@en .\n    FILTER (regex(str(?spouse), \"Imperial Princess Shushi\", \"i\"))\n  }\n\n  # Find father of the spouse identified as royalty\n  OPTIONAL {\n    ?spouse dbo:parent ?father .\n    FILTER (regex(str(?spouse), \"Imperial Princess Shushi\", \"i\"))\n  }\n}\n```\n\n### Explanation:\n\n- **`?goToba dbo:parent ?father .`:** Retrieves the father of Emperor Go-Toba.\n- **`?takakura dbo:spouse ?spouse .`:** Finds the spouse of Emperor Takakura, ensuring it matches \"Imperial Princess Shushi\" using a regex filter for case insensitivity.\n- **`FILTER (regex(str(?spouse), \"Imperial Princess Shushi\", \"i\"))`:** Ensures the spouse is recognized as royalty.\n- **`?spouse dbo:parent ?father .`:** Identifies the father of the royal spouse.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

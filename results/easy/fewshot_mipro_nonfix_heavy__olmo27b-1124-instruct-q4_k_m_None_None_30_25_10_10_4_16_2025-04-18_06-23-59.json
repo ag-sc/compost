@@ -1,0 +1,239 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the father, that is a royalty, of Peter IV of Aragon.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/father> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Peter_IV_of_Aragon> <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Person> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the work, that is a written work and a book and a work, of Bill Clinton.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/author> <http:\/\/dbpedia.org\/resource\/Bill_Clinton> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/WrittenWork>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Book> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the child, that is a royalty, of Saw Shwe Khet.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Saw_Shwe_Khet> <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty> . }"
+      },
+      {
+        "question": "Give me the show, that is a movie, with the reference to Afeez Oyetoro.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Afeez Oyetoro\"@en . ?result <http:\/\/dbpedia.org\/ontology\/starring> ?v0 . }",
+        "id": 143,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the office of Alberto N\u00fa\u00f1ez Feij\u00f3o.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Alberto_N\u00fa\u00f1ez_Feij\u00f3o> <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 119,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in the alter ego of The Shadow and actor of the album, that is a film and a work, of Lasso the Moon.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> ?v2 . <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v2 . <http:\/\/dbpedia.org\/resource\/Lasso_the_Moon> <http:\/\/dbpedia.org\/ontology\/album> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. }",
+        "id": 361,
+        "subid": 24,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the associated musical artist of the person born, that is a musical artist, as the persona of Nick Curran and band of Kim Wilson.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/birthName> ?v0 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . <http:\/\/dbpedia.org\/resource\/Nick_Curran> <http:\/\/xmlns.com\/foaf\/0.1\/givenName> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Kim_Wilson> . }",
+        "id": 782,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child, that is a royalty, of Princess Muna al-Hussein.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Princess_Muna_al-Hussein> <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 246,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the author of the work, that is a written work and a book and a work, of the resident, that is a politician and an office holder, of Chappaqua, New York and commander in Third Taiwan Strait Crisis.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/property\/author> ?v0 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Book>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. <http:\/\/dbpedia.org\/resource\/Third_Taiwan_Strait_Crisis> <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v0 <http:\/\/dbpedia.org\/ontology\/residence> <http:\/\/dbpedia.org\/resource\/Chappaqua,_New_York> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/WrittenWork>. ?v3 <http:\/\/dbpedia.org\/property\/author> ?result . }",
+        "id": 595,
+        "subid": 37,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 9,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the predecessor of the child of the spouse, that is a royalty, of Saw Min Phyu and spouse of the father, that is a royalty, of Myat Hpone Pyo and child of Saw Min Hla.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Myat_Hpone_Pyo> <http:\/\/dbpedia.org\/property\/father> ?v5 . ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Saw_Min_Hla> . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v5 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Saw_Min_Phyu> . ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/successor> ?v2 . ?v2 <http:\/\/dbpedia.org\/property\/father> ?v1 . }",
+        "id": 89,
+        "subid": 58,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 8,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of Jamshedpur.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Jamshedpur> . }",
+        "id": 249,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the birthplace of Burhan Belge.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Burhan_Belge> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 151,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the predecessor of the person born, that is a politician, as Ada Jane Low and person decedent at Melbourne.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v0 <http:\/\/dbpedia.org\/property\/birthName> \"Ada Jane Low\"@en . ?result <http:\/\/dbpedia.org\/ontology\/successor> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Melbourne> . }",
+        "id": 270,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the native of Lahore.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Lahore> . }",
+        "id": 288,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the child of Allan Arbus.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Allan_Arbus> <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 816,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Russian Empire and war of the awardee of 25.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?v1 <http:\/\/dbpedia.org\/property\/awards> \"25\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer> . ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Russian_Empire> . }",
+        "id": 386,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Provide a Sparql query based on the input question, simulating how the `Predict` module within the FewShotPipeline would generate a query to answer the given question about entities and relationships in the DBpedia knowledge base.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

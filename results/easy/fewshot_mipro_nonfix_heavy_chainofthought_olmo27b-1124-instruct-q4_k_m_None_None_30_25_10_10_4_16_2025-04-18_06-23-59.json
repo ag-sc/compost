@@ -1,0 +1,237 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the child of the parent, that is a royalty, of Duke Anthony Ulrich of Brunswick.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/child> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Duke_Anthony_Ulrich_of_Brunswick> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the spouse of Maria of Bytom.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Maria_of_Bytom> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the reference to Mitaka.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Mitaka\"@en . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birthplace of Ebrahim Alkazi.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ebrahim_Alkazi> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }"
+      },
+      {
+        "question": "Give me the child of Elvira of Castile, Queen of Sicily and father of William II of Sicily and child of Roger II of Sicily.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Elvira_of_Castile,_Queen_of_Sicily> <http:\/\/dbpedia.org\/ontology\/child> ?result . <http:\/\/dbpedia.org\/resource\/William_II_of_Sicily> <http:\/\/dbpedia.org\/property\/father> ?result . <http:\/\/dbpedia.org\/resource\/Roger_II_of_Sicily> <http:\/\/dbpedia.org\/ontology\/child> ?result . }",
+        "id": 353,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the war, that is a military conflict and an event, of the figure known as The Triple X's.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/battle> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?v2 <http:\/\/dbpedia.org\/property\/nickname> \"The Triple X's\"@en . ?v0 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. }",
+        "id": 203,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the father of Baeda Maryam I and child of the parent, that is a royalty, of the commander, that is a royalty, in Siege of Mukha.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Baeda_Maryam_I> <http:\/\/dbpedia.org\/property\/father> ?result . ?v3 <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . <http:\/\/dbpedia.org\/resource\/Siege_of_Mukha> <http:\/\/dbpedia.org\/ontology\/commander> ?v3 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . }",
+        "id": 943,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the governor, that is a politician, of Virginia?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Virginia> <http:\/\/dbpedia.org\/property\/governor> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. }",
+        "id": 609,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in the alter ego of the reference, that is a fictional character, to Kent Allard (print).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> ?v0 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/FictionalCharacter>. ?v2 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Kent Allard (print)\"@en . ?v2 <http:\/\/dbpedia.org\/property\/alterEgo> ?v0 . }",
+        "id": 557,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the author of Promises to Keep (Biden book).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Promises_to_Keep_(Biden_book)> <http:\/\/dbpedia.org\/ontology\/author> ?result . }",
+        "id": 38,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the war of Tom Phillips (Royal Navy officer).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Tom_Phillips_(Royal_Navy_officer)> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 731,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the force of the awardee of the award of Edmund Hakewill-Smith and war of Tom Phillips (Royal Navy officer).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Tom_Phillips_(Royal_Navy_officer)> <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v0 . <http:\/\/dbpedia.org\/resource\/Edmund_Hakewill-Smith> <http:\/\/dbpedia.org\/property\/awards> ?v0 . }",
+        "id": 731,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the war of the awardee of the show, that is an award, of United States Congress and force of the awardee of Gillmore Medal.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/presenter> <http:\/\/dbpedia.org\/resource\/United_States_Congress> . ?v4 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Gillmore_Medal> . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v4 . ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Award>. }",
+        "id": 198,
+        "subid": 46,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of Kate Dimbleby.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Kate_Dimbleby> . }",
+        "id": 375,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the military force of Battle of Cape Finisterre (1805).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Cape_Finisterre_(1805)> . }",
+        "id": 203,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the child, that is a royalty, of Archduke Charles Louis of Austria and predecessor of Carl, Duke of W\u00fcrttemberg and child of the child of Duke Philipp of W\u00fcrttemberg.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v4 . ?v2 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Archduke_Charles_Louis_of_Austria> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/dbpedia.org\/ontology\/child> ?result . ?v4 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Duke_Philipp_of_W\u00fcrttemberg> . ?result <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/Carl,_Duke_of_W\u00fcrttemberg> . }",
+        "id": 737,
+        "subid": 44,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "You are a data retrieval expert tasked with translating natural language questions into structured SPARQL queries to extract information from the DBpedia knowledge base. Your goal is to ensure that each question, which pertains to royalty relationships, alter egos in fiction, or sports seasons and their successors, is accurately represented in a machine-understandable format that can be executed by the `Predict` module within the `FewShotPipeline`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

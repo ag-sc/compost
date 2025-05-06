@@ -1,0 +1,237 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the movie, that is a television show, with the person born as Richard Grant Esterhuysen.",
+        "reasoning": "To find the movie that is a television show with the person born as Richard Grant Esterhuysen, we need to identify the individual with that birth name and then find the television shows they have been involved in.",
+        "sparql_query": "SELECT ?result WHERE { \n  ?person <http:\/\/dbpedia.org\/property\/birthName> \"Richard Grant Esterhuysen\"@en .\n  ?movie <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow> .\n  ?movie <http:\/\/dbpedia.org\/ontology\/starring> ?person .\n  BIND(?movie AS ?result)\n}"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the professional in Actor.",
+        "reasoning": "To find the professional in \"Actor\", we need to query the DBpedia database for individuals who have \"Actor\" as their occupation.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Actor\"@en . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the member of 1. FC Magdeburg and reference to the designer of Aston Martin AMR1.",
+        "reasoning": "To find the member of 1. FC Magdeburg and the reference to the designer of Aston Martin AMR1, we need to query the DBpedia database for entities that match these conditions.",
+        "sparql_query": "SELECT ?result WHERE { \n  { ?result <http:\/\/dbpedia.org\/ontology\/team> <http:\/\/dbpedia.org\/resource\/1._FC_Magdeburg> . }\n  UNION\n  { ?car <http:\/\/dbpedia.org\/ontology\/name> \"Aston Martin AMR1\"@en . \n    ?car <http:\/\/dbpedia.org\/ontology\/designer> ?designer .\n    ?result <http:\/\/dbpedia.org\/ontology\/reference> ?designer .\n  }\n}"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the child of the spouse of Mariclare Costello.",
+        "reasoning": "To find the child of the spouse of Mariclare Costello, we first need to identify the spouse of Mariclare Costello and then find their child.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Mariclare_Costello> <http:\/\/dbpedia.org\/ontology\/spouse> ?spouse . ?spouse <http:\/\/dbpedia.org\/ontology\/child> ?result . }"
+      },
+      {
+        "question": "Give me the player in Juan Carlos Molina (footballer).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Juan_Carlos_Molina_(footballer)> <http:\/\/dbpedia.org\/ontology\/team> ?result . }",
+        "id": 687,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the residence, that is a country, of the native, that is Polish and an athlete, of \u0141\u00f3d\u017a.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?v0 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Poland>. ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/\u0141\u00f3d\u017a> . ?v0 <http:\/\/dbpedia.org\/property\/residence> ?result . }",
+        "id": 119,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the war of the awardee of 25 and entity in the birth place of Elena \u017dalinkevi\u010dait\u0117-Petrauskien\u0117.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> ?v2 . ?v3 <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?v3 <http:\/\/dbpedia.org\/property\/awards> \"25\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer> . <http:\/\/dbpedia.org\/resource\/Elena_\u017dalinkevi\u010dait\u0117-Petrauskien\u0117> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v2 . }",
+        "id": 386,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the professional in .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . }",
+        "id": 39,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of Jamshedpur.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Jamshedpur> . }",
+        "id": 249,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the commander in Great Turkish War and successor of Yurii Khmelnytsky.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Great_Turkish_War> <http:\/\/dbpedia.org\/ontology\/commander> ?result . <http:\/\/dbpedia.org\/resource\/Yurii_Khmelnytsky> <http:\/\/dbpedia.org\/ontology\/successor> ?result . }",
+        "id": 159,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of the awardee of Medal of Honor and entity in Charleston, South Carolina.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Medal_of_Honor> . ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Charleston,_South_Carolina> . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 198,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the writer of the album, that is a musical work and a work and an album, of Sappy?",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalWork>. ?v0 <http:\/\/dbpedia.org\/property\/writer> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Album>. <http:\/\/dbpedia.org\/resource\/Sappy> <http:\/\/dbpedia.org\/ontology\/album> ?v0 . }",
+        "id": 311,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the native of the work, that is Indian, of Jamsetji Tata.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/author> <http:\/\/dbpedia.org\/resource\/Jamsetji_Tata> . ?v0 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/India>. }",
+        "id": 249,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the spouse of Charles II of Naples and child of Stephen V of Hungary.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Charles_II_of_Naples> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary> . }",
+        "id": 905,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party member of the ruling party in Central, Louisiana and person born as the birth name of Ann Sothern.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Central,_Louisiana> <http:\/\/dbpedia.org\/property\/leaderParty> ?v2 . ?result <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/party> ?v2 . <http:\/\/dbpedia.org\/resource\/Ann_Sothern> <http:\/\/dbpedia.org\/property\/birthName> ?v1 . }",
+        "id": 293,
+        "subid": 35,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to  and child of the parent, that is a royalty, of the commander, that is a royalty, in Siege of Mukha.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v0 . <http:\/\/dbpedia.org\/resource\/Siege_of_Mukha> <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\"@en . ?v2 <http:\/\/dbpedia.org\/ontology\/parent> ?v0 . }",
+        "id": 943,
+        "subid": 31,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "To generate a SPARQL query based on a natural language question about movies, follow these steps:\n\n1. **Analyze the Question**: Understand the intent behind the question by identifying key entities such as movie titles, actors, or directors.\n2. **Identify Relevant DBpedia Resources**: Map the identified entities to their corresponding resources in the DBpedia database. For example, a movie title should be linked to its DBpedia resource page.\n3. **Determine the Query Type**: Decide on the type of SPARQL query needed based on the question. This could involve retrieving information about a specific movie, finding movies by a particular actor or director, etc.\n4. **Construct the SPARQL Query**: Use the identified resources and query type to construct a valid SPARQL query. This involves specifying the prefixes for the namespaces used (e.g., `dbo` for DBpedia ontology), defining the query variables, and formulating the query pattern using triple patterns that match the required information.\n5. **Execute the Query**: Run the constructed SPARQL query against the DBpedia database to retrieve the desired information.\n\nExample:\n- Question: \"Who starred in the movie 'Paradise (2013 film)'?\"\n- Analysis: The key entity is the movie title \"Paradise (2013 film)\".\n- DBpedia Resource: `<http:\/\/dbpedia.org\/resource\/Paradise_(2013_film)>`\n- Query Type: Retrieve actors of a specific movie.\n- SPARQL Query:\n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?actor WHERE {\n  <http:\/\/dbpedia.org\/resource\/Paradise_(2013_film)> dbo:starring ?actor .\n}\n```\n- Execution: This query is executed against the DBpedia database to find the actors who starred in \"Paradise (2013 film)\".\n\nBy following these steps, you can translate natural language questions about movies into SPARQL queries that retrieve relevant information from the DBpedia database.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

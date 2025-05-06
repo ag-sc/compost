@@ -1,0 +1,239 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the producer, that is an organisation and a group, of Nothing to Gein.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Nothing_to_Gein> <http:\/\/dbpedia.org\/ontology\/producer> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Group>. }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the father of the father, that is a royalty and an office holder, of the child of Baeda Maryam I and child of the parent, that is a royalty, of Yeshaq I.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/father> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?result <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v2 <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v3 <http:\/\/dbpedia.org\/property\/father> ?v2 . ?v4 <http:\/\/dbpedia.org\/ontology\/parent> ?v3 . <http:\/\/dbpedia.org\/resource\/Baeda_Maryam_I> <http:\/\/dbpedia.org\/ontology\/child> ?v4 . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the native of India.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/India> . }"
+      },
+      {
+        "question": "Give me the father of William II of Sicily and child of Elvira of Castile, Queen of Sicily.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Elvira_of_Castile,_Queen_of_Sicily> <http:\/\/dbpedia.org\/ontology\/child> ?result . <http:\/\/dbpedia.org\/resource\/William_II_of_Sicily> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 353,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the death place of the actor of Color Me Dead and death place of the actor of Aladdin (1958 film).",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . <http:\/\/dbpedia.org\/resource\/Color_Me_Dead> <http:\/\/dbpedia.org\/property\/starring> ?v2 . <http:\/\/dbpedia.org\/resource\/Aladdin_(1958_film)> <http:\/\/dbpedia.org\/property\/starring> ?v1 . }",
+        "id": 492,
+        "subid": 24,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the father of the child, that is a politician, of the alumnus of Eton College and parent of the awardee of Commander of the Royal Victorian Order and parent of Edward Stanley, 17th Earl of Derby.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/father> ?result . ?v2 <http:\/\/dbpedia.org\/property\/father> ?v5 . ?v5 <http:\/\/dbpedia.org\/ontology\/almaMater> <http:\/\/dbpedia.org\/resource\/Eton_College> . <http:\/\/dbpedia.org\/resource\/Edward_Stanley,_17th_Earl_of_Derby> <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?result <http:\/\/dbpedia.org\/ontology\/child> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/awards> \"Commander of the Royal Victorian Order\"@en . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. }",
+        "id": 871,
+        "subid": 56,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 7,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of 1,000 Dollars a Minute.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/1,000_Dollars_a_Minute> <http:\/\/dbpedia.org\/property\/starring> ?result . }",
+        "id": 293,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band of the person born, that is a musical artist, as the birth name of Bob Thompson (musician) and professional in the alter ego of the creation, that is a fictional character and a comics character, of Walter B. Gibson.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/FictionalCharacter>. <http:\/\/dbpedia.org\/resource\/Bob_Thompson_(musician)> <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?v0 <http:\/\/dbpedia.org\/ontology\/creator> <http:\/\/dbpedia.org\/resource\/Walter_B._Gibson> . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v3 <http:\/\/dbpedia.org\/property\/birthName> ?v1 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/ComicsCharacter>. ?v3 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v5 . ?v0 <http:\/\/dbpedia.org\/property\/alterEgo> ?v5 . }",
+        "id": 39,
+        "subid": 61,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 9,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in the person born, that is an athlete, on the birthday of Marty Pollio.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/birthDate> ?v2 . ?v0 <http:\/\/dbpedia.org\/ontology\/team> ?result . <http:\/\/dbpedia.org\/resource\/Marty_Pollio> <http:\/\/dbpedia.org\/ontology\/birthDate> ?v2 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. }",
+        "id": 687,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as the birth name of the native, that is a musical artist, of Florida and native of the award, that is a region and American and a state and a settlement, of Coro de la Pontificia Universidad Cat\u00f3lica de Puerto Rico.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v3 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. ?v0 <http:\/\/dbpedia.org\/property\/birthName> ?v4 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/AdministrativeRegion>. <http:\/\/dbpedia.org\/resource\/Coro_de_la_Pontificia_Universidad_Cat\u00f3lica_de_Puerto_Rico> <http:\/\/dbpedia.org\/property\/awards> ?v3 . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Florida> . ?v3 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. ?result <http:\/\/dbpedia.org\/property\/birthName> ?v4 . }",
+        "id": 628,
+        "subid": 50,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 10,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in the profession of Sam Concepcion and band of Bob Thompson (musician).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Bob_Thompson_(musician)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . <http:\/\/dbpedia.org\/resource\/Sam_Concepcion> <http:\/\/dbpedia.org\/property\/occupation> ?v1 . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . }",
+        "id": 39,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in the manager, that is a sports manager and a soccer manager, of Hong Kong C Team.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. <http:\/\/dbpedia.org\/resource\/Hong_Kong_C_Team> <http:\/\/dbpedia.org\/ontology\/manager> ?v0 . }",
+        "id": 769,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the birthplace of the actor of Akaler Shandhaney.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . <http:\/\/dbpedia.org\/resource\/Akaler_Shandhaney> <http:\/\/dbpedia.org\/property\/starring> ?v0 . }",
+        "id": 706,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the person born as Elorm Kabu Amenyah?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> \"Elorm Kabu Amenyah\"@en . }",
+        "id": 668,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of the awardee of 25.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/awards> \"25\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer> . ?v0 <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 386,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the administration, that is Spanish, of Spanish Socialist Workers' Party.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Spain>. ?result <http:\/\/dbpedia.org\/property\/leaderParty> <http:\/\/dbpedia.org\/resource\/Spanish_Socialist_Workers'_Party> . }",
+        "id": 119,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "1. **Input Analysis**: Begin by parsing the natural language question to identify key entities and relationships.\n2. **Choose Prediction Strategy**:\n   - Use `Predict` for direct conversion of simple queries.\n   - Opt for `ChainOfThought` when intermediate reasoning is needed.\n   - Select `ProgramOfThought` for structured query generation.\n3. **Construct SPARQL Query**: Map identified components to DBpedia URIs, ensuring correct syntax and semantics.\n4. **Format Output**: Ensure the output starts with `[[ ## proposed_instruction ## ]]` and ends with `[[ ## completed ## ]]`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

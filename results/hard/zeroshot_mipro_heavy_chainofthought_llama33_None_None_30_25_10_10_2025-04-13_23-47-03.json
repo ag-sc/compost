@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To address the given task, we need to generate a SPARQL query based on the input question. The question is: \"Give me the parent of Archduchess Ilona of Austria.\"\n\nReasoning: Let's think step by step in order to find the parent of Archduchess Ilona of Austria. We will use a SPARQL query that retrieves the parent information from DBpedia. We'll utilize the `dbpedia:` prefix to refer to DBpedia resources and the `rdf:` prefix for the RDF vocabulary. The query should filter results to include only the resource with the label \"Archduchess Ilona of Austria\" and then retrieve its parent using the `dbo:parent` property.\n\nSparql Query: \n```sparql\nPREFIX dbpedia: <http:\/\/dbpedia.org\/resource\/>\nPREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#>\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n\nSELECT ?parent\nWHERE {\n  dbpedia:Archduchess_Ilona_of_Austria dbo:parent ?parent .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

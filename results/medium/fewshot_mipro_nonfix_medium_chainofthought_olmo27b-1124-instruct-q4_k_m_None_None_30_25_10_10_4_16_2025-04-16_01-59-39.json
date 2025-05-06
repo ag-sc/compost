@@ -1,0 +1,237 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the commander in the force of the commander in Siege of Madrid.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Siege_of_Madrid> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the death place of Abdul Raziq Bugti.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Abdul_Raziq_Bugti> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the parent of Charles the Fat.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Charles_the_Fat> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Who is the child of Emperor Toba?",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Emperor_Toba> <http:\/\/dbpedia.org\/ontology\/child> ?result . }"
+      },
+      {
+        "question": "Give me the member of E-girls.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/E-girls> <http:\/\/dbpedia.org\/ontology\/bandMember> ?result . }",
+        "id": 892,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of the child, that is a royalty, of Kamehameha IV and child of Kek\u016ban\u0101o\u02bba.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> ?v2 . ?v2 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Kamehameha_IV> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Kek\u016ban\u0101o\u02bba> . }",
+        "id": 917,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration of the commander, that is a politician, in Operation Green Hunt.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/governor> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. <http:\/\/dbpedia.org\/resource\/Operation_Green_Hunt> <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . }",
+        "id": 47,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the father of Ke\u02bbelik\u014dlani and child of Kek\u016ban\u0101o\u02bba and parent of Albert Kamehameha.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Albert_Kamehameha> . <http:\/\/dbpedia.org\/resource\/Ke\u02bbelik\u014dlani> <http:\/\/dbpedia.org\/property\/father> ?v3 . ?result <http:\/\/dbpedia.org\/property\/father> \"Kek\u016ban\u0101o\u02bba\"@en . ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v3 . }",
+        "id": 917,
+        "subid": 29,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the force of the commander in Siege of Madrid and leader of Ministry of the Army (Spain).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ministry_of_the_Army_(Spain)> <http:\/\/dbpedia.org\/ontology\/leader> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . <http:\/\/dbpedia.org\/resource\/Siege_of_Madrid> <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . }",
+        "id": 645,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Spain.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Spain> . }",
+        "id": 166,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the father of the child, that is a politician, of Abu Ahmad Abdul Hafiz and father of the child of Abu Ahmad Abdul Hafiz.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/father> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v2 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Abu_Ahmad_Abdul_Hafiz> . ?v1 <http:\/\/dbpedia.org\/property\/father> ?result . ?v1 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Abu_Ahmad_Abdul_Hafiz> . }",
+        "id": 865,
+        "subid": 38,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in the profession of Henri Crolla.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Henri_Crolla> <http:\/\/dbpedia.org\/property\/occupation> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/country> ?v1 . }",
+        "id": 892,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the child, that is a royalty, of Frederick Francis III, Grand Duke of Mecklenburg-Schwerin and spouse of Princess Caroline-Mathilde of Denmark.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Frederick_Francis_III,_Grand_Duke_of_Mecklenburg-Schwerin> . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Princess_Caroline-Mathilde_of_Denmark> . ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 417,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band of the band, that is a musical artist, of Dean Brody and spouse of Danielle Spencer (Australian actress).",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . <http:\/\/dbpedia.org\/resource\/Danielle_Spencer_(Australian_actress)> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . <http:\/\/dbpedia.org\/resource\/Dean_Brody> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . }",
+        "id": 456,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in 2022 Ukrainian eastern counteroffensive.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2022_Ukrainian_eastern_counteroffensive> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 888,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the player in the father, that is an athlete and a soccer manager and a sports manager, of Masami Nagasawa.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Masami_Nagasawa> <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. ?v1 <http:\/\/dbpedia.org\/ontology\/team> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. }",
+        "id": 582,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "To prompt the Language Model (LM) to generate a SPARQL query from a given question, provide it with the following instruction:\n\n\"Given a natural language question describing a specific entity or relationship, your task is to translate this question into a corresponding SPARQL query that can be executed against the DBpedia knowledge base. Your output should consist of two parts: \n1. A `sparql_query` string which represents the actual SQL-like query that fetches the required information from DBpedia.\n2. An explanatory `reasoning` string, which breaks down the process into logical steps, showing how each part of the question corresponds to a segment of the SPARQL query.\n\n**High Stakes Scenario:** You are a database administrator tasked with automating data retrieval from DBpedia to support a live application. Manual queries are time-consuming and error-prone, so your system needs to reliably convert natural language questions into SPARQL queries without human intervention. The application depends on this functionality to provide real-time information about various entities.\n\n**Example:**\n- **Question:** \"Who are the band members of Manfred Mann?\"\n- **Expected Output:** \n  * `sparql_query`: SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Manfred_Mann_(musician)> . }\n  * `reasoning`: The question is asking for the band members of a specific musician, Manfred Mann. In SPARQL, this is achieved by querying the DBpedia's 'bandMember' property associated with the resource representing Manfred Mann.\n\nRemember, your response should be accurate and clear, providing a direct path from the question to the generated SPARQL query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

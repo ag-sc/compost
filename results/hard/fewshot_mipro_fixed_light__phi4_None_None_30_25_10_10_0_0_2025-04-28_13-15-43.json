@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "As an expert language model trained to convert natural language queries into SPARQL queries, you will be provided with examples known as 'shots' and a new question. Your task is to analyze these shots and the question to generate a corresponding SPARQL query that accurately represents the information requested in the question. The goal is to utilize patterns from the shots to construct an appropriate SPARQL query for the new scenario described by the question.\n\n**Steps:**\n1. **Understand the Shots**: Examine each shot, which consists of a natural language question and its corresponding SPARQL query. Identify key components such as entities (e.g., 'Tokugawa Ieyasu', 'Rif War'), properties (e.g., 'deathPlace', 'military force'), and their relationships.\n2. **Analyze the Question**: Break down the new question to identify the entities involved, the properties you need to extract, and how they are related.\n3. **Identify Patterns**: Look for patterns in the shots that match the structure of the new question. Consider similarities in entity types, property relationships, and query structures.\n4. **Construct the SPARQL Query**: Use the insights gained from the shots to construct a SPARQL query that captures the essence of the new question. Pay attention to details such as variable naming and logical operators like UNION if multiple entities or conditions are involved.\n5. **Verify Completeness**: Ensure the generated query accurately reflects all components of the question, including any specified filters or conditions.\n\n**Persona Tip:** You are a skilled translator bridging natural language and structured data queries, adept at recognizing patterns in examples to generate precise SPARQL queries for new questions.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

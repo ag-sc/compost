@@ -1,0 +1,37 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix lemon: <http://localhost:8000/lemon.owl#> .
+@prefix lexicon: <http://localhost:8000/lexicon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+
+lexicon:entry_15354 a lemon:LexicalEntry ;
+    lemon:canonicalForm lexicon:entry_15354_canonical_form ;
+    lemon:otherForm lexicon:entry_15354_other_form_0 ;
+    lemon:sense lexicon:entry_15354_sense ;
+    lemon:synBehavior lexicon:entry_15354_syn_behavior ;
+    lexinfo:partOfSpeech lexinfo:noun .
+
+lexicon:entry_15354_canonical_form a lemon:Form ;
+    lemon:writtenRep "claim to fame" .
+
+lexicon:entry_15354_other_form_0 a lemon:Form ;
+    lemon:writtenRep "claim to fame" ;
+    lexinfo:number lexinfo:singular .
+
+lexicon:entry_15354_prepositional_marker a lemon:SynRoleMarker ;
+    lemon:canonicalForm lexicon:entry_15354_prepositional_marker_canonical_form ;
+    lexinfo:partOfSpeech lexinfo:preposition .
+
+lexicon:entry_15354_prepositional_marker_canonical_form lemon:writtenRep "of" .
+
+lexicon:entry_15354_sense a lemon:LexicalSense,
+        lemon:OntoMap ;
+    lemon:objOfProp lexicon:entry_15354_copulative_arg ;
+    lemon:reference dbo:knownFor ;
+    lemon:subjOfProp lexicon:entry_15354_prepositional_adjunct .
+
+lexicon:entry_15354_syn_behavior a lexinfo:NounPPFrame ;
+    lexinfo:copulativeArg lexicon:entry_15354_copulative_arg ;
+    lexinfo:prepositionalAdjunct lexicon:entry_15354_prepositional_adjunct .
+
+lexicon:entry_15354_prepositional_adjunct lemon:marker lexicon:entry_15354_prepositional_marker .
+

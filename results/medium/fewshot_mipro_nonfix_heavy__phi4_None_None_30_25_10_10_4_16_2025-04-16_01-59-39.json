@@ -1,0 +1,229 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the office of Bidesh Ranjan Bose.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Bidesh_Ranjan_Bose> <http:\/\/dbpedia.org\/property\/office> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth name of Alan Warner (musician).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Alan_Warner_(musician)> <http:\/\/dbpedia.org\/property\/birthName> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth place of the awardee of People's Artist of Russia.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v2 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/People's_Artist_of_Russia> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth date of Dan Cathy.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Dan_Cathy> <http:\/\/dbpedia.org\/ontology\/birthDate> ?result . }"
+      },
+      {
+        "question": "Give me the work, that is a work and a book, of the host of Hyperland.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Hyperland> <http:\/\/dbpedia.org\/ontology\/presenter> ?v0 . ?result <http:\/\/dbpedia.org\/property\/author> ?v0 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Book>. }",
+        "id": 527,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the manager of the player in the member, that is a soccer player, of England women's national football team.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/manager> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/team> ?v1 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?v0 <http:\/\/dbpedia.org\/ontology\/team> <http:\/\/dbpedia.org\/resource\/England_women's_national_football_team> . }",
+        "id": 102,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the associated musical artist of Paul Chambers and professional in the profession of Bob Marley.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . <http:\/\/dbpedia.org\/resource\/Bob_Marley> <http:\/\/dbpedia.org\/property\/occupation> ?v1 . <http:\/\/dbpedia.org\/resource\/Paul_Chambers> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 433,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Italy.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Italy> . }",
+        "id": 892,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the governor of Dana Murphy and person born as the birth name of Kevin Stitt.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Kevin_Stitt> <http:\/\/dbpedia.org\/property\/birthName> ?v0 . <http:\/\/dbpedia.org\/resource\/Dana_Murphy> <http:\/\/dbpedia.org\/property\/governor> ?result . ?result <http:\/\/dbpedia.org\/property\/birthName> ?v0 . }",
+        "id": 459,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the artistic movement of Ella Cheever Thayer and claim to fame of Katherine \"Kitty\" Marshall.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Katherine_%22Kitty%22_Marshall> <http:\/\/dbpedia.org\/ontology\/knownFor> ?result . <http:\/\/dbpedia.org\/resource\/Ella_Cheever_Thayer> <http:\/\/dbpedia.org\/ontology\/movement> ?result . }",
+        "id": 232,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the band of the member of the band, that is a band and a group, of Peter Schorowsky.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Peter_Schorowsky> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/bandMember> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Band>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Group>. ?v1 <http:\/\/dbpedia.org\/ontology\/bandMember> ?v2 . }",
+        "id": 839,
+        "subid": 26,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the death place of Patrick Moore and entity in United Kingdom and entity in England.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Patrick_Moore> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_Kingdom> . ?result <http:\/\/dbpedia.org\/ontology\/location> <http:\/\/dbpedia.org\/resource\/England> . }",
+        "id": 445,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of the child, that is a royalty, of Kamehameha IV and child of Kek\u016ban\u0101o\u02bba.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> ?v2 . ?v2 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Kamehameha_IV> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Kek\u016ban\u0101o\u02bba> . }",
+        "id": 917,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the true self of Enrico Crolla.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/givenName> \"Enrico Crolla\"@en . }",
+        "id": 892,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the member of E-girls.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/E-girls> <http:\/\/dbpedia.org\/ontology\/bandMember> ?result . }",
+        "id": 892,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the successor of Louis II, Grand Duke of Hesse and predecessor of the parent of Prince Friedrich of Hesse and by Rhine.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Louis_II,_Grand_Duke_of_Hesse> <http:\/\/dbpedia.org\/ontology\/successor> ?result . <http:\/\/dbpedia.org\/resource\/Prince_Friedrich_of_Hesse_and_by_Rhine> <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/successor> ?v1 . }",
+        "id": 826,
+        "subid": 25,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "**\n\nTo transform a natural language question into a SPARQL query suitable for querying DBpedia, follow these guidelines:\n\n1. **Identify Key Entities**: Determine the main entities mentioned in the question. This could be individuals, organizations, or any specific items relevant to the query.\n\n2. **Understand Relationships**: Analyze the relationships described in the question. Identify what information is being sought about the entities (e.g., birthplace, associated band).\n\n3. **Map to DBpedia Properties**: Translate these relationships into corresponding properties available in DBpedia's ontology. This may involve recognizing terms like \"band,\" \"birthplace,\" or \"associated musical artist\" and matching them with their respective URIs.\n\n4. **Construct the SPARQL Query**:\n   - Use `SELECT ?result` to specify what you want to retrieve.\n   - Construct a `WHERE` clause that includes patterns for each relationship identified, using the appropriate DBpedia properties.\n   - For optional information (e.g., secondary conditions), use `OPTIONAL` clauses.\n\n5. **Ensure Correct Syntax**: Make sure your SPARQL query adheres to proper syntax, including correct URI references and string literals where necessary.\n\n6. **Test Your Query**: Before finalizing, test the generated SPARQL query against a SPARQL endpoint for DBpedia to ensure it returns expected results.\n\n**Example Transformation:**\n\n- **Question**: \"Give me the band of Peter Schorowsky.\"\n- **SPARQL Query**: \n  ```sparql\n  SELECT ?result WHERE { \n    ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Peter_Schorowsky> . \n  }\n  ```\n\nBy following these steps, you can effectively convert natural language questions into SPARQL queries that accurately query DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given a natural language question about a specific topic or entity, generate a corresponding SPARQL query that can be used to retrieve relevant information from DBpedia. The input question should be analyzed to identify key concepts, entities, and relationships, which will then be translated into a valid SPARQL query syntax. This may involve using prefixes for DBpedia resources and ontologies, selecting specific properties or attributes, and filtering results based on conditions. The output SPARQL query should be able to retrieve the desired information from DBpedia when executed.\n\nFor example, if the input question is \"What is the death place of Abdul Raziq Bugti?\", the generated SPARQL query should use the `dbo:deathPlace` property to retrieve the death place of the entity `dbr:Abdul_Raziq_Bugti`. Similarly, for more complex questions like \"Give me the parent of Charles the Fat and parent of the successor of the child, that is a royalty, of Louis the Pious\", the generated SPARQL query should use multiple triples to navigate the relationships between entities and retrieve the required information.\n\nThe goal is to produce a SPARQL query that accurately reflects the intent behind the input question, allowing users to retrieve relevant information from DBpedia. To achieve this, consider the structure of the question, the entities and properties involved, and the desired output, and use this information to construct a valid and effective SPARQL query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

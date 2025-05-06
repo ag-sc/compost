@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "The provided problem involves using SPARQL queries to extract information from a database that represents real-world facts about films, actors, birth years, and names. To solve this, we need to construct a SPARQL query based on the details given in the `shots` and `question` fields.\n\nHere's how you can break it down:\n\n1. **Identify Key Entities and Properties:**\n   - From `shots`: `Being_Mrs_Elliot`, `Lepacious_Bose`, `1971`, \"Ayo Makun\"\n   - From `question`: Find the person born in 1971 who is also the actor of \"Being Mrs Elliot\" and born as \"Ayo Makun\".\n\n2. **Formulate the SPARQL Query:**\n   - Start by selecting the film \"Being_Mrs_Elliot\" and its starring actors.\n   - Filter those actors to include only those born in 1971 and whose birth name is \"Ayo Makun\".\n\nLet's write the corresponding SPARQL query:\n\n```sparql\nSELECT ?result \nWHERE {\n  <http:\/\/dbpedia.org\/resource\/Being_Mrs_Elliot> <http:\/\/dbpedia.org\/ontology\/starring> ?result .\n  ?result <http:\/\/dbpedia.org\/ontology\/birthYear> \"1971\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gYear> .\n  <http:\/\/dbpedia.org\/resource\/Ayo_Makun> <http:\/\/dbpedia.org\/property\/birthName> \"Ayo Makun\"@en\n}\n```\n\nThis query will fetch the `?result` (which represents an actor in the film \"Being Mrs Elliot\") that meets all the conditions specified: born in 1971 and with a birth name of \"Ayo Makun\".\n\n3. **Mark Completion Indicator**\n   - `[[ ## completed ## ]]`\n\nThe SPARQL query above should provide the correct solution based on the given problem statement.\n\n**Final Answer:**\n\n```sparql\nSELECT ?result \nWHERE {\n  <http:\/\/dbpedia.org\/resource\/Being_Mrs_Elliot> <http:\/\/dbpedia.org\/ontology\/starring> ?result .\n  ?result <http:\/\/dbpedia.org\/ontology\/birthYear> \"1971\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gYear> .\n  <http:\/\/dbpedia.org\/resource\/Ayo_Makun> <http:\/\/dbpedia.org\/property\/birthName> \"Ayo Makun\"@en\n}\n```\n\n**[[ ## completed ## ]]**",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

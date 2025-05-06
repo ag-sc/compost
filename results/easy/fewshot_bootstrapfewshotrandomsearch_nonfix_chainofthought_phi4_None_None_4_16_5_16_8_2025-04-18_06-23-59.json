@@ -1,0 +1,246 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the birth place of Cece Bell and birth place of the governor, that is a politician, of Virginia and birth place of Vince Gilligan.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT DISTINCT ?result WHERE { \n  OPTIONAL {\n    <http:\/\/dbpedia.org\/resource\/CeCe_Bell> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result .\n  }\n  OPTIONAL {\n    ?v0 <http:\/\/dbpedia.org\/property\/governor> \"Virginia\"@en.\n    ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>.\n    ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result .\n  }\n  OPTIONAL {\n    <http:\/\/dbpedia.org\/resource\/Vince_Gilligan> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result .\n  }\n}"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the spouse of the spouse of the child, that is a royalty, of Princess Antoinette of Brunswick-Wolfenb\u00fcttel.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Princess_Antoinette_of_Brunswick-Wolfenb\u00fcttel> <http:\/\/dbpedia.org\/ontology\/child> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty> . ?result1 <http:\/\/dbpedia.org\/ontology\/spouse> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?result1 . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the parent of Princess Sara bint Faisal and parent of Prince Omar bin Faisal.",
+        "reasoning": "To find a common parent of both Princess Sara bint Faisal and Prince Omar bin Faisal, we need to query their respective parent entities from DBpedia. The query will use two conditions: one to identify the parent of Princess Sara bint Faisal and another for Prince Omar bin Faisal. We then filter the results to find a common entity that satisfies both conditions.",
+        "sparql_query": "SELECT ?result WHERE {\n  <http:\/\/dbpedia.org\/resource\/Princess_Sara_bint_Faisal> <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n  <http:\/\/dbpedia.org\/resource\/Prince_Omar_bin_Faisal> <http:\/\/dbpedia.org\/ontology\/parent> ?result .\n}"
+      },
+      {
+        "question": "Give me the native of the administration, that is a country, of the leader of West Germany and manager of the player, that is a sports club and an organisation and a soccer club, in 2007\u201308 VfL Bochum season.",
+        "sparql_query": "SELECT ?result WHERE { ?v4 <http:\/\/dbpedia.org\/property\/leader> ?v0 . <http:\/\/dbpedia.org\/resource\/West_Germany> <http:\/\/dbpedia.org\/property\/leader> ?v0 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsClub>. ?v2 <http:\/\/dbpedia.org\/ontology\/manager> ?result . <http:\/\/dbpedia.org\/resource\/2007\u201308_VfL_Bochum_season> <http:\/\/dbpedia.org\/ontology\/team> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v4 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClub>. }",
+        "id": 756,
+        "subid": 47,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 9,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to the real name of The Fabulous Thunderbirds and associated musical artist of Nick Curran and band of Kim Wilson.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v1 . <http:\/\/dbpedia.org\/resource\/Nick_Curran> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Kim_Wilson> . <http:\/\/dbpedia.org\/resource\/The_Fabulous_Thunderbirds> <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v1 . }",
+        "id": 782,
+        "subid": 28,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the professional in the profession of Shirley Stoler and native of New York (state).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Shirley_Stoler> <http:\/\/dbpedia.org\/property\/occupation> ?v0 . ?v3 <http:\/\/dbpedia.org\/property\/occupation> ?v0 . ?v3 <http:\/\/dbpedia.org\/ontology\/child> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/New_York_(state)> . }",
+        "id": 585,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the player in the person born, that is an athlete, on the birthday of Marty Pollio.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/birthDate> ?v2 . ?v0 <http:\/\/dbpedia.org\/ontology\/team> ?result . <http:\/\/dbpedia.org\/resource\/Marty_Pollio> <http:\/\/dbpedia.org\/ontology\/birthDate> ?v2 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. }",
+        "id": 687,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the tenant of the administration, that is Spanish, of the reference to Spanish Socialist Workers' Party and tenant of Spain.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/leaderParty> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> ?v1 . ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Spanish Socialist Workers' Party\"@en . ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Spain>. ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Spain> . }",
+        "id": 119,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of the movie, that is a work and a film, with Iliza Shlesinger and actor of the movie, that is a work and a film, with Audrey Hepburn.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v1 <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v3 <http:\/\/dbpedia.org\/property\/starring> <http:\/\/dbpedia.org\/resource\/Iliza_Shlesinger> . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v3 <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v1 <http:\/\/dbpedia.org\/property\/starring> \"Audrey Hepburn\"@en . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. }",
+        "id": 87,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 8,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the reference to  and father of the father, that is a royalty and an office holder, of the child of Baeda Maryam I.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v0 <http:\/\/dbpedia.org\/property\/father> ?result . ?v2 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Baeda_Maryam_I> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\"@en . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 943,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the force of the awardee of Gillmore Medal and war of Amasa Tracy and entity in the birthplace, that is a settlement and American, of the person deceased on 1850-08-05.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/deathDate> \"1850-08-05\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v5 . ?v5 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Gillmore_Medal> . ?v2 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?result <http:\/\/dbpedia.org\/ontology\/place> ?v2 . ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v2 . <http:\/\/dbpedia.org\/resource\/Amasa_Tracy> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 198,
+        "subid": 58,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 8,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the award, that is American and a settlement, of Coro de la Pontificia Universidad Cat\u00f3lica de Puerto Rico.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. <http:\/\/dbpedia.org\/resource\/Coro_de_la_Pontificia_Universidad_Cat\u00f3lica_de_Puerto_Rico> <http:\/\/dbpedia.org\/property\/awards> ?result . }",
+        "id": 585,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the associated musical artist of the associated musical artist, that is an artist, of R.E.M..",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . <http:\/\/dbpedia.org\/resource\/R.E.M.> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . }",
+        "id": 311,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the force of Quincy Adams Gillmore and entity in Charleston, South Carolina and war of the awardee of the show, that is an award, of United States Congress.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Charleston,_South_Carolina> . ?result <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Quincy_Adams_Gillmore> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Award>. ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v2 . ?v2 <http:\/\/dbpedia.org\/ontology\/presenter> <http:\/\/dbpedia.org\/resource\/United_States_Congress> . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 198,
+        "subid": 40,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the war, that is a television show and a societal event, of Jean Baptist, Comte d'Arco and successor of the commander, that is a politician and an office holder, in the force, that is an event and a military conflict, of Micha\u0142 Kazimierz Pac and reference to George Ducas.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?v2 <http:\/\/dbpedia.org\/ontology\/successor> ?result . <http:\/\/dbpedia.org\/resource\/Jean_Baptist,_Comte_d'Arco> <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . ?v3 <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"George Ducas\"@en . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v3 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Micha\u0142_Kazimierz_Pac> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. }",
+        "id": 159,
+        "subid": 53,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 12,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the album of the work, that is a song and a musical work, of T.I..",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalWork>. ?v1 <http:\/\/dbpedia.org\/ontology\/album> ?result . ?v1 <http:\/\/dbpedia.org\/property\/writer> <http:\/\/dbpedia.org\/resource\/T.I.> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Song>. }",
+        "id": 80,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

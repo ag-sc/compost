@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the residence of David Luckman.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/David_Luckman> <http:\/\/dbpedia.org\/ontology\/residence> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the native of Lahore.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Lahore> . }"
+      },
+      {
+        "question": "Give me the name of Mitaka, Tokyo.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Mitaka,_Tokyo> <http:\/\/xmlns.com\/foaf\/0.1\/name> ?result . }",
+        "id": 345,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the person born, that is a musical artist, on 1945-03-30.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?result <http:\/\/dbpedia.org\/ontology\/birthDate> \"1945-03-30\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . }",
+        "id": 782,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the father, that is a royalty, of Charles I of Hungary.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Charles_I_of_Hungary> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 905,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Athens and war of Konstantinos Ventiris.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Athens> . <http:\/\/dbpedia.org\/resource\/Konstantinos_Ventiris> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 412,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the person born as Ackquille Jean Pollard and band member of Uncle Murda.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Uncle_Murda> . ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ackquille Jean Pollard\"@en . }",
+        "id": 628,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the tenant of the administration, that is Spanish, of Spanish Socialist Workers' Party and office of Alberto N\u00fa\u00f1ez Feij\u00f3o and tenant of Spain.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Alberto_N\u00fa\u00f1ez_Feij\u00f3o> <http:\/\/dbpedia.org\/property\/office> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Spain>. ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Spain> . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> ?v1 . ?v1 <http:\/\/dbpedia.org\/property\/leaderParty> <http:\/\/dbpedia.org\/resource\/Spanish_Socialist_Workers'_Party> . }",
+        "id": 119,
+        "subid": 30,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to the alter ego of the reference to Lamont Cranston (radio, film and television) and child of the parent, that is a royalty, of Yeshaq I.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Lamont Cranston (radio, film and television)\"@en . ?v0 <http:\/\/dbpedia.org\/property\/alterEgo> ?v3 . <http:\/\/dbpedia.org\/resource\/Yeshaq_I> <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> ?v3 . }",
+        "id": 943,
+        "subid": 47,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the military force of Battle of Fort Royal and military force of the force, that is an event and a societal event, of Robert Calder.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Fort_Royal> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?result <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Robert_Calder> . }",
+        "id": 203,
+        "subid": 25,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birthplace, that is a settlement and American, of the person deceased on 1850-08-05.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/deathDate> \"1850-08-05\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 198,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of Always (1989 film) and spouse of the awardee of List of awards and nominations received by Janusz Kami\u0144ski.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Always_(1989_film)> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v2 . ?v2 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/List_of_awards_and_nominations_received_by_Janusz_Kami\u0144ski> . }",
+        "id": 87,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the professional in the alter ego of The Shadow and actor of the album, that is a film and a work, of Lasso the Moon.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> ?v2 . <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v2 . <http:\/\/dbpedia.org\/resource\/Lasso_the_Moon> <http:\/\/dbpedia.org\/ontology\/album> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. }",
+        "id": 361,
+        "subid": 24,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the child of Roger II of Sicily and father of William II of Sicily and child of the child of the spouse, that is a royalty, of Constance of Burgundy.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/child> ?result . ?v1 <http:\/\/dbpedia.org\/property\/father> ?v0 . <http:\/\/dbpedia.org\/resource\/Roger_II_of_Sicily> <http:\/\/dbpedia.org\/ontology\/child> ?result . <http:\/\/dbpedia.org\/resource\/William_II_of_Sicily> <http:\/\/dbpedia.org\/property\/father> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Constance_of_Burgundy> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 353,
+        "subid": 45,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birthplace of the awardee of Sangeet Natak Akademi Fellowship.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Sangeet_Natak_Akademi_Fellowship> . ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 706,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the person decedent at Switzerland and native of the administration, that is a country, of Nicholas II of Russia.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v2 . ?v2 <http:\/\/dbpedia.org\/property\/leader> <http:\/\/dbpedia.org\/resource\/Nicholas_II_of_Russia> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Switzerland> . }",
+        "id": 158,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "You are a Knowledge Navigator, skilled in translating everyday language questions into structured SPARQL queries for querying DBpedia. Your role is to interpret natural language inputs accurately and convert them into precise SPARQL queries that retrieve relevant information from the dataset.\n\nGiven the field `question`, produce the field `sparql_query` by following these steps:\n\n- Identify the main entities and their relationships mentioned in the question.\n- Determine the appropriate DBpedia properties and classes needed to form the query.\n- Construct a SPARQL query that accurately reflects the intent of the question, ensuring it targets the correct DBpedia resources.\n\nFor example:\n- If asked about an actor associated with a film, identify the film resource and use the `dbpedia:ontology\/starring` property in your query.\n- For questions involving familial relationships (e.g., father), ensure you include both the relationship and any relevant type constraints (e.g., royalty).\n\nYour output should be a well-formed SPARQL query that can be executed to retrieve the desired information.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

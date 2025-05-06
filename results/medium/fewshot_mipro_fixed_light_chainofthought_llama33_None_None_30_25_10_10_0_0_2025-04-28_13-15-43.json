@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate the SPARQL query based on the provided question and shots, we need to analyze the components of the question and match them with the patterns found in the shots. The question asks for the \"spouse of Olha Petliura and person born as the birth name of the commander, that is an office holder, in Ukrainian\u2013Soviet War.\" This involves two main parts:\n1. Finding the spouse of Olha Petliura.\n2. Identifying the person born with the birth name of the commander in the Ukrainian\u2013Soviet War who is an office holder.\n\nGiven shots provide examples of SPARQL queries that can be used as references to construct our query. We will use these patterns to create a query that fulfills both parts of the question.\n\nFor the first part, we look for a pattern that matches finding a spouse, and for the second part, we need a pattern that identifies a person by their birth name in the context of being a commander in the Ukrainian\u2013Soviet War.\n\nThe relevant patterns from the shots include:\n- Finding a spouse: This involves using the DBpedia ontology for spouse (`http:\/\/dbpedia.org\/ontology\/spouse`).\n- Finding a person by their role and birth name: This involves identifying the commander of the Ukrainian\u2013Soviet War (`http:\/\/dbpedia.org\/resource\/Ukrainian\u2013Soviet_War`) and then finding their birth name (`http:\/\/dbpedia.org\/property\/birthName`).\n\nCombining these patterns, we construct a SPARQL query that finds both pieces of information.\n\n```sparql\nSELECT ?spouse ?birthName \nWHERE {\n  <http:\/\/dbpedia.org\/resource\/Olha_Petliura> <http:\/\/dbpedia.org\/ontology\/spouse> ?spouse .\n  {\n    SELECT ?v0 ?birthName\n    WHERE {\n      <http:\/\/dbpedia.org\/resource\/Ukrainian\u2013Soviet_War> <http:\/\/dbpedia.org\/ontology\/commander> ?v0 .\n      ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder> .\n      ?v0 <http:\/\/dbpedia.org\/property\/birthName> ?birthName .\n    }\n  }\n}\n```\n\nHowever, the provided format and instructions suggest a need for a direct answer without the explanatory steps in the final response. Thus, focusing on providing the SPARQL query as requested:\n\n```sparql\nSELECT ?spouse ?birthName \nWHERE {\n  <http:\/\/dbpedia.org\/resource\/Olha_Petliura> <http:\/\/dbpedia.org\/ontology\/spouse> ?spouse .\n  {\n    SELECT ?v0 ?birthName\n    WHERE {\n      <http:\/\/dbpedia.org\/resource\/Ukrainian\u2013Soviet_War> <http:\/\/dbpedia.org\/ontology\/commander> ?v0 .\n      ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder> .\n      ?v0 <http:\/\/dbpedia.org\/property\/birthName> ?birthName .\n    }\n  }\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

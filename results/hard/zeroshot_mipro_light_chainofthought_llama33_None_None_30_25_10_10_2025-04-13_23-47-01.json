@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To address the task at hand, we will follow a step-by-step approach to generate a SPARQL query based on the given question. The question is: \"Give me the entity in Serbia.\"\n\n1. **Understanding the Question**: The question asks for an entity located in Serbia. This requires identifying entities that have a relationship with Serbia, typically through a \"country\" or \"location\" property.\n\n2. **Formulating the SPARQL Query**: To find entities related to Serbia, we can use the DBpedia ontology and resource prefixes. The query should select entities (`?entity`) where these entities are connected to Serbia via a country relation.\n\n3. **Executing the Query**: The SPARQL query will be executed on the DBpedia dataset to retrieve the list of entities that match the criteria.\n\nGiven this approach, the SPARQL query to find an entity in Serbia would look like the following:\n\n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\nSELECT ?entity\nWHERE {\n  ?entity dbo:country dbr:Serbia .\n}\n```\n\nThis query uses the `dbo:country` property to link entities with their respective countries and filters the results to include only those entities associated with Serbia (`dbr:Serbia`).",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

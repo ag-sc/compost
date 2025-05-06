@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate the field `sparql_query` from the input `question`, follow these steps:\n\n1. **Parse the Question**: Identify key elements such as the subject (e.g., person, place), and the properties or relationships you need to query (e.g., country of a location, spouse of an individual).\n\n2. **Determine SPARQL Components**:\n   - Use `PREFIX` statements for common DBpedia namespaces (`dbo`, `rdfs`, etc.).\n   - Construct a `SELECT` statement specifying the variables you want to retrieve.\n   - Formulate a `WHERE` clause that describes the graph pattern matching your query. This includes identifying resources and their properties using appropriate predicates (e.g., `dbo:country`, `dbo:spouse`).\n\n3. **Translate Natural Language to SPARQL**: Convert the natural language question into SPARQL syntax:\n   - For questions about a location's country, target the property `dbo:country`.\n   - For finding relationships like spouses or birthplaces, use properties such as `dbo:spouse`, `dbo:birthPlace`, etc.\n\n4. **Handle Optional and Filtered Data**: Use optional clauses (`OPTIONAL`) for data that may not always be present and filters (`FILTER`) to refine results based on specific criteria (e.g., filtering by country name).\n\n5. **Ensure Correct Syntax and Structure**: Make sure the query is syntactically correct, with proper use of SPARQL keywords and logical operators.\n\n6. **Test and Validate**: Execute the generated SPARQL query against a DBpedia endpoint to ensure it returns the expected results for similar questions.\n\nExample:\nFor the question 'Give me the country that El Valle de Ant\u00f3n is in', translate this into a SPARQL query as follows:\n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>\nSELECT ?country WHERE {\n  ?place rdfs:label \"El Valle de Ant\u00f3n\"@en .\n  ?place dbo:country ?country .\n}\n```\n\nBy following these steps, you can systematically convert questions into SPARQL queries to retrieve the desired information from DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

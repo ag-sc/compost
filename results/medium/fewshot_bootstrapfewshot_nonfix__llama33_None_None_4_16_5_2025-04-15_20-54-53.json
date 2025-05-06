@@ -1,0 +1,229 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the office of Bidesh Ranjan Bose.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Bidesh_Ranjan_Bose> <http:\/\/dbpedia.org\/property\/office> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth name of Alan Warner (musician).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Alan_Warner_(musician)> <http:\/\/dbpedia.org\/property\/birthName> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the father of the child, that is a royalty, of the father, that is a royalty and an office holder, of Emperor Antoku.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Emperor_Antoku> <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth place of the awardee of People's Artist of Russia.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/People's_Artist_of_Russia> . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }"
+      },
+      {
+        "question": "Give me the father of AK Abdul Momen and native of British Raj and father of the child of Abu Ahmad Abdul Hafiz.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Abu_Ahmad_Abdul_Hafiz> . <http:\/\/dbpedia.org\/resource\/AK_Abdul_Momen> <http:\/\/dbpedia.org\/property\/father> ?result . ?v1 <http:\/\/dbpedia.org\/property\/father> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/British_Raj> . }",
+        "id": 865,
+        "subid": 30,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the child, that is a royalty, of the parent, that is a royalty, of Alexandrine of Mecklenburg-Schwerin?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Alexandrine_of_Mecklenburg-Schwerin> <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?result <http:\/\/dbpedia.org\/property\/father> ?v1 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 417,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the landmark at elevation of the award of the member of E-girls.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/awards> ?v0 . <http:\/\/dbpedia.org\/resource\/E-girls> <http:\/\/dbpedia.org\/ontology\/bandMember> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/elevation> ?v0 . }",
+        "id": 892,
+        "subid": 26,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the father of AK Abdul Momen and native of the residence, that is a country, of Ram Jaipal Singh Yadav.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ram_Jaipal_Singh_Yadav> <http:\/\/dbpedia.org\/property\/residence> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/AK_Abdul_Momen> <http:\/\/dbpedia.org\/property\/father> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . }",
+        "id": 865,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of Alceu Collares and ruling party in the birthplace, that is a town and Brazilian and a soccer club, of Sandro (footballer, born October 1983).",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/leaderParty> ?result . ?v2 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Brazil>. <http:\/\/dbpedia.org\/resource\/Alceu_Collares> <http:\/\/dbpedia.org\/ontology\/party> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Town>. <http:\/\/dbpedia.org\/resource\/Sandro_(footballer,_born_October_1983)> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClub>. }",
+        "id": 83,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 6,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the movie, that is a work and English and a television show, with Bernard Bresslaw.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_Kingdom>. ?result <http:\/\/dbpedia.org\/property\/starring> <http:\/\/dbpedia.org\/resource\/Bernard_Bresslaw> . }",
+        "id": 527,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 4,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the birthplace of Charles I. Barber.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Charles_I._Barber> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 606,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the entity in Tennessee and figure known as Vanderbilt Commodores.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/nickname> <http:\/\/dbpedia.org\/resource\/Vanderbilt_Commodores> . ?result <http:\/\/dbpedia.org\/ontology\/state> <http:\/\/dbpedia.org\/resource\/Tennessee> . }",
+        "id": 130,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the person born, that is a sports manager and a soccer manager and a soccer player, on the death of Pavel Vezhinov.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?result <http:\/\/dbpedia.org\/ontology\/birthDate> ?v1 . <http:\/\/dbpedia.org\/resource\/Pavel_Vezhinov> <http:\/\/dbpedia.org\/ontology\/deathDate> ?v1 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. }",
+        "id": 216,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in Musician and associated musical artist of the person born, that is a musical artist and an artist, as Paul Laurence Dunbar Chambers Jr..",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Musician\"@en . ?v1 <http:\/\/dbpedia.org\/property\/birthName> \"Paul Laurence Dunbar Chambers Jr.\"@en . }",
+        "id": 433,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of Anne V. Coates and professional in Film director, television director.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Anne_V._Coates> . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Film director, television director\"@en . }",
+        "id": 507,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to Angelcorpse and band member of Order from Chaos.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Angelcorpse\"@en . ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Order_from_Chaos> . }",
+        "id": 200,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

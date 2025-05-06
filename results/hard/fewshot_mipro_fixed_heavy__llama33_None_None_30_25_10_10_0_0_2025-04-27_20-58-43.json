@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "In a high-stakes scenario where accurate information retrieval is crucial, such as in a legal or medical setting, generate a SPARQL query based on the provided shots and question to retrieve specific information from DBpedia. The shots are example question-SPARQL query pairs that provide context and patterns for the model to learn from, and the question is a new inquiry that requires the model to apply this knowledge to produce a relevant SPARQL query.\n\nGiven the fields `shots` and `question`, produce the field `sparql_query` by analyzing the patterns and relationships in the shots and applying them to the question. This requires the model to understand the structure and semantics of the questions and queries, as well as the relationships between entities and properties in DBpedia.\n\nFor example, if the shots are:\n [('Give me the person deceased at Madrid.', 'SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/restingPlace> <http:\/\/dbpedia.org\/resource\/Madrid> . }'), \n  ('Give me the commander in Spanish Civil War.', 'SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Spanish_Civil_War> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }'), \n  ('Give me the person deceased at Madrid and awardee of 30.', 'SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/awards> \"30\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer> . ?result <http:\/\/dbpedia.org\/ontology\/restingPlace> <http:\/\/dbpedia.org\/resource\/Madrid> . }')]\nAnd the question is:\n 'Give me the person deceased at Madrid and commander in Spanish Civil War.'\nThe model should produce the SPARQL query:\n 'SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Spanish_Civil_War> <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?result <http:\/\/dbpedia.org\/ontology\/restingPlace> <http:\/\/dbpedia.org\/resource\/Madrid> . }'\n\nThis requires the model to recognize the patterns in the shots, such as the use of `<http:\/\/dbpedia.org\/ontology\/restingPlace>` to indicate the death place, and `<http:\/\/dbpedia.org\/ontology\/commander>` to indicate the commander, and apply them to the question to produce a relevant SPARQL query.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

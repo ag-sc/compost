@@ -1,0 +1,246 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the person born as Georgeanne Marie Rice and spouse of Ted McGinley.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> \"Georgeanne Marie Rice\"@en . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Ted_McGinley> . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the band of Sh\u00e8na and band of Amba Shepherd.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?band WHERE { { <http:\/\/dbpedia.org\/resource\/Sh\u00e8na> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?band . } UNION { <http:\/\/dbpedia.org\/resource\/Amba_Shepherd> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?band . } }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the leader of People's Commissariat of Defense of the Soviet Union.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/People's_Commissariat_of_Defense_of_the_Soviet_Union> <http:\/\/dbpedia.org\/ontology\/leader> ?result . }"
+      },
+      {
+        "question": "Give me the war of the author of 2019 Sri Lanka Easter bombings.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2019_Sri_Lanka_Easter_bombings> <http:\/\/dbpedia.org\/property\/author> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 182,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the award of Ralph L. Brinster.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ralph_L._Brinster> <http:\/\/dbpedia.org\/property\/awards> ?result . }",
+        "id": 778,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the native of Paris and professional in Financier, businessman, vineyard owner, art collector, racehorse owner\/breeder.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Financier, businessman, vineyard owner, art collector, racehorse owner\/breeder\"@en . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Paris> . }",
+        "id": 30,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the person born on 1985-04-29 and band of Amba Shepherd.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Amba_Shepherd> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthDate> \"1985-04-29\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . }",
+        "id": 747,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band of Carl Falk.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Carl_Falk> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 48,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the awardee of Leroy P. Steele Prize?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/awards> \"Leroy P. Steele Prize\"@en . }",
+        "id": 197,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the birthplace of Dumitru Nadu and birthplace of George Lusztig.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/George_Lusztig> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . <http:\/\/dbpedia.org\/resource\/Dumitru_Nadu> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 197,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the commander in Battle of Leipzig and awardee of Order of St. Andrew.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Order_of_St._Andrew> . <http:\/\/dbpedia.org\/resource\/Battle_of_Leipzig> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 626,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the band, that is an organisation and a band, of Solace of Requiem.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Band>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. <http:\/\/dbpedia.org\/resource\/Solace_of_Requiem> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 498,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Who is the commander in the war, that is a military conflict and a societal event and an event, of Thomas Trigge?",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. <http:\/\/dbpedia.org\/resource\/Thomas_Trigge> <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. }",
+        "id": 378,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 5,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office, that is an organisation, of Joo Don-sik.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Joo_Don-sik> <http:\/\/dbpedia.org\/property\/office> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. }",
+        "id": 177,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the child of the parent of Thado Minsaw of Prome.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Thado_Minsaw_of_Prome> . }",
+        "id": 54,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist of the reference to Watchtower.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?v1 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Watchtower\"@en . }",
+        "id": 994,
+        "subid": 15,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Imagine you are a researcher tasked with uncovering vital historical connections for a documentary. You must extract specific information from a vast knowledge base. Given the question about an entity's relationship or attribute, generate a SPARQL query that accurately retrieves the required data from DBpedia. Ensure to articulate your reasoning step by step as you interpret the question and formulate the query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

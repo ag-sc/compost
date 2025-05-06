@@ -1,0 +1,255 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the predecessor of the child of the spouse, that is a royalty, of Archduchess Helena of Austria.",
+        "reasoning": "To find the predecessor of the child of the spouse who is a royalty of Archduchess Helena of Austria, we first identify the spouse of Archduchess Helena, then find their child, and finally retrieve the predecessor of that child. This involves querying the relationships within the DBpedia ontology to navigate through family connections.",
+        "sparql_query": "SELECT ?result WHERE { \n  ?spouse <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Archduchess_Helena_of_Austria> . \n  ?child <http:\/\/dbpedia.org\/ontology\/parent> ?spouse . \n  ?result <http:\/\/dbpedia.org\/ontology\/successor> ?child . \n}"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the associated musical artist of the person born, that is a musical artist, as Stuart Mcbeath Tosh and associated musical artist of Billy Lyall.",
+        "reasoning": "To find the associated musical artists of both Stuart Mcbeath Tosh and Billy Lyall, we need to query their respective entities in DBpedia and look for their relationships with associated musical artists.",
+        "sparql_query": "SELECT ?artist WHERE { \n    { <http:\/\/dbpedia.org\/resource\/Stuart_Mcbeath_Tosh> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?artist . }\n    UNION\n    { <http:\/\/dbpedia.org\/resource\/Billy_Lyall> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?artist . }\n}"
+      },
+      {
+        "question": "Give me the professional in  and spouse of Carrie Johnson.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Carrie_Johnson> . }",
+        "id": 19,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the real name of Peter IV of Aragon.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Peter_IV_of_Aragon> <http:\/\/xmlns.com\/foaf\/0.1\/name> ?result . }",
+        "id": 468,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the office of the leader, that is a politician, of the party, that is a political party, of Miguel Maura and office of Mariano Rajoy and tenant of Madrid.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/leader> ?v1 . <http:\/\/dbpedia.org\/resource\/Miguel_Maura> <http:\/\/dbpedia.org\/ontology\/party> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PoliticalParty>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. <http:\/\/dbpedia.org\/resource\/Mariano_Rajoy> <http:\/\/dbpedia.org\/property\/office> ?result . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Madrid> . ?v1 <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 531,
+        "subid": 45,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of the awardee of the show, that is an award, of United States Congress and force of the awardee of Gillmore Medal.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/presenter> <http:\/\/dbpedia.org\/resource\/United_States_Congress> . ?v4 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Gillmore_Medal> . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v4 . ?v1 <http:\/\/dbpedia.org\/property\/awards> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Award>. }",
+        "id": 198,
+        "subid": 46,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist of Stuart Tosh and band member of the associated musical artist of David Paton.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Stuart_Tosh> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . <http:\/\/dbpedia.org\/resource\/David_Paton> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v0 . }",
+        "id": 78,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the military force of the war, that is a military conflict and an event, of the reference to William Bayne and military force of Battle of Cape Finisterre (1805) and commander in French campaign in Egypt and Syria.",
+        "sparql_query": "SELECT ?result WHERE { ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?result <http:\/\/dbpedia.org\/ontology\/battle> ?v4 . ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v0 <http:\/\/dbpedia.org\/ontology\/battle> ?v4 . ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"William Bayne\"@en . <http:\/\/dbpedia.org\/resource\/French_campaign_in_Egypt_and_Syria> <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Cape_Finisterre_(1805)> . }",
+        "id": 203,
+        "subid": 43,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the author of the work, that is a written work and a book and a work, of the resident, that is a politician and an office holder, of Chappaqua, New York and spouse of Hillary Clinton.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/residence> <http:\/\/dbpedia.org\/resource\/Chappaqua,_New_York> . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/WrittenWork>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v3 <http:\/\/dbpedia.org\/property\/author> ?result . <http:\/\/dbpedia.org\/resource\/Hillary_Clinton> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v3 <http:\/\/dbpedia.org\/property\/author> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Book>. }",
+        "id": 595,
+        "subid": 33,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 9,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of Amasa Tracy.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Amasa_Tracy> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 198,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of Tom Phillips (Royal Navy officer).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Tom_Phillips_(Royal_Navy_officer)> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 731,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the war of Karl Gustav von Baggovut.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Karl_Gustav_von_Baggovut> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 386,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the office of Miguel Maura and tenant of the residence of Alberto Ruiz-Gallard\u00f3n and office of the commander, that is an office holder and a politician, in Central African Republic Civil War.",
+        "sparql_query": "SELECT ?result WHERE { ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/dbpedia.org\/ontology\/headquarter> ?v2 . <http:\/\/dbpedia.org\/resource\/Alberto_Ruiz-Gallard\u00f3n> <http:\/\/dbpedia.org\/property\/residence> ?v2 . <http:\/\/dbpedia.org\/resource\/Central_African_Republic_Civil_War> <http:\/\/dbpedia.org\/ontology\/commander> ?v4 . <http:\/\/dbpedia.org\/resource\/Miguel_Maura> <http:\/\/dbpedia.org\/property\/office> ?result . ?v4 <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 531,
+        "subid": 41,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as Ackquille Jean Pollard and band member of Uncle Murda.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Uncle_Murda> . ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ackquille Jean Pollard\"@en . }",
+        "id": 628,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in Aleksandr Filimonov and figure known as the nickname of Russia national football team.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/nickname> ?v2 . <http:\/\/dbpedia.org\/resource\/Aleksandr_Filimonov> <http:\/\/dbpedia.org\/ontology\/team> ?result . <http:\/\/dbpedia.org\/resource\/Russia_national_football_team> <http:\/\/dbpedia.org\/property\/nickname> ?v2 . }",
+        "id": 398,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the associated musical artist of $pacely and person born as Darryl Paa Kwesi Bannerman-Martin.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> \"Darryl Paa Kwesi Bannerman-Martin\"@en . <http:\/\/dbpedia.org\/resource\/$pacely> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 668,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query based on a natural language question, follow these steps: \n1. Analyze the question to identify key entities and relationships.\n2. Determine the relevant DBpedia properties (e.g., dbo:award, dbo:residence, dbo:party) that correspond to the information requested in the question.\n3. Construct a SPARQL query using the identified properties and entities. Use PREFIX declarations for dbpedia resources and ontology properties as needed.\n4. Utilize SELECT and WHERE clauses to specify the variables (e.g., ?award, ?residence, ?party) you want to retrieve and the conditions under which they should be retrieved.\n5. If necessary, use UNION to combine multiple queries into one or filter results based on additional conditions.\n\nFor example, if the question is \"Give me the entity in the award of George H. Cameron and residence of Doug Beattie,\" your SPARQL query might look like this:\n```sparql\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nPREFIX dbp: <http:\/\/dbpedia.org\/property\/>\n\nSELECT ?award ?residence\nWHERE {\n  { <http:\/\/dbpedia.org\/resource\/George_H._Cameron> dbo:award ?award }\n  UNION\n  { <http:\/\/dbpedia.org\/resource\/Doug_Beattie> dbo:residence ?residence }\n}\n```\nEnsure your query is well-formed and effectively retrieves the desired information from DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

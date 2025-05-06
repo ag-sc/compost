@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the spouse of the spouse of the child, that is a royalty, of Princess Antoinette of Brunswick-Wolfenb\u00fcttel.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty> . <http:\/\/dbpedia.org\/resource\/Princess_Antoinette_of_Brunswick-Wolfenb\u00fcttel> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the person born as the birth name of Bobby Shmurda and band member of Uncle Murda and native of Florida.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ackquille Jean Pollard\"@en . ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> <http:\/\/dbpedia.org\/resource\/Uncle_Murda> . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Florida>. }"
+      },
+      {
+        "question": "Give me the actor of the album, that is a film and a work, of Lasso the Moon and professional in Actor.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Actor\"@en . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v2 <http:\/\/dbpedia.org\/ontology\/starring> ?result . <http:\/\/dbpedia.org\/resource\/Lasso_the_Moon> <http:\/\/dbpedia.org\/ontology\/album> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. }",
+        "id": 361,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the birth name of Linda Bruckheimer.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Linda_Bruckheimer> <http:\/\/dbpedia.org\/property\/birthName> ?result . }",
+        "id": 58,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the commander in the war, that is a disease and a societal event, of the owner of USS Arcadia (ID-1605) and spouse of the author, that is a politician and an office holder, of the work, that is a book and a written work, of Hillary Clinton.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/WrittenWork>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v2 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Disease>. ?v3 <http:\/\/dbpedia.org\/ontology\/author> <http:\/\/dbpedia.org\/resource\/Hillary_Clinton> . ?v0 <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Book>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . <http:\/\/dbpedia.org\/resource\/USS_Arcadia_(ID-1605)> <http:\/\/dbpedia.org\/ontology\/owner> ?v0 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v3 <http:\/\/dbpedia.org\/property\/author> ?v2 . }",
+        "id": 595,
+        "subid": 60,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 12,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to  and child of the parent, that is a royalty, of the commander, that is a royalty, in Siege of Mukha.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v0 . <http:\/\/dbpedia.org\/resource\/Siege_of_Mukha> <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"\"@en . ?v2 <http:\/\/dbpedia.org\/ontology\/parent> ?v0 . }",
+        "id": 943,
+        "subid": 31,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band member of the associated musical artist, that is a musical artist, of the member, that is an artist and a musical artist, of GS9 and native of the award, that is a region and American and a state and a settlement, of Coro de la Pontificia Universidad Cat\u00f3lica de Puerto Rico.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. <http:\/\/dbpedia.org\/resource\/Coro_de_la_Pontificia_Universidad_Cat\u00f3lica_de_Puerto_Rico> <http:\/\/dbpedia.org\/property\/awards> ?v1 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v1 . ?v3 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v2 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/AdministrativeRegion>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Region>. <http:\/\/dbpedia.org\/resource\/GS9> <http:\/\/dbpedia.org\/ontology\/bandMember> ?v3 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. }",
+        "id": 628,
+        "subid": 48,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 12,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the producer of the claim to fame, that is a work, of Cora Sue Collins and producer of A Star Is Born (1937 film) and professional in the alter ego of The Shadow.",
+        "sparql_query": "SELECT ?result WHERE { ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v2 . <http:\/\/dbpedia.org\/resource\/Cora_Sue_Collins> <http:\/\/dbpedia.org\/ontology\/knownFor> ?v4 . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v2 . <http:\/\/dbpedia.org\/resource\/A_Star_Is_Born_(1937_film)> <http:\/\/dbpedia.org\/ontology\/producer> ?result . ?v4 <http:\/\/dbpedia.org\/ontology\/producer> ?result . }",
+        "id": 557,
+        "subid": 41,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in the residence, that is a country, of Dawid Olejniczak and war of the commander in French Revolutionary Wars.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Dawid_Olejniczak> <http:\/\/dbpedia.org\/property\/residence> ?v3 . ?v2 <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?result <http:\/\/dbpedia.org\/ontology\/place> ?v3 . <http:\/\/dbpedia.org\/resource\/French_Revolutionary_Wars> <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. }",
+        "id": 119,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the commander in the war, that is a military conflict and an event, of the figure known as The Triple X's and military force of Battle of Cape Finisterre (1805) and military force of Battle of Fort Royal.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Cape_Finisterre_(1805)> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?v2 <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v2 <http:\/\/dbpedia.org\/property\/nickname> \"The Triple X's\"@en . ?result <http:\/\/dbpedia.org\/ontology\/battle> <http:\/\/dbpedia.org\/resource\/Battle_of_Fort_Royal> . ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 203,
+        "subid": 40,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the force, that is an event and a societal event, of the awardee of Knight Commander of the Order of the Bath.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v1 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Knight_Commander_of_the_Order_of_the_Bath> . }",
+        "id": 203,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of Always (1989 film) and spouse of Janusz Kami\u0144ski.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Always_(1989_film)> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Janusz_Kami\u0144ski> . }",
+        "id": 87,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the predecessor of Carl, Duke of W\u00fcrttemberg and child of the child of the child of Alexander of W\u00fcrttemberg (1804-1881).",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Alexander_of_W\u00fcrttemberg_(1804-1881)> . ?v3 <http:\/\/dbpedia.org\/property\/father> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/Carl,_Duke_of_W\u00fcrttemberg> . ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v3 . }",
+        "id": 737,
+        "subid": 33,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born, that is a musical artist, on 1945-03-30.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?result <http:\/\/dbpedia.org\/ontology\/birthDate> \"1945-03-30\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . }",
+        "id": 782,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of the movie, that is a work, with the person decedent at Los Angeles.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Los_Angeles> . ?v0 <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?v0 <http:\/\/dbpedia.org\/property\/starring> ?v2 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. }",
+        "id": 816,
+        "subid": 23,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of Amasa Tracy and force of Quincy Adams Gillmore and entity in Charleston, South Carolina.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Charleston,_South_Carolina> . ?result <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Quincy_Adams_Gillmore> . <http:\/\/dbpedia.org\/resource\/Amasa_Tracy> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 198,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "In a high-stakes scenario where a critical decision depends on accurate information retrieval from DBpedia, given a question about an entity or relationship within the knowledge graph, produce a precise SPARQL query that can be executed to retrieve the required information. The question may involve simple or complex queries, including filtering by specific properties or relationships, and the generated SPARQL query must accurately reflect the intent of the question to ensure the correct data is retrieved. The success of this task is crucial as it directly impacts the ability to make informed decisions based on the retrieved data.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

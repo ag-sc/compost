@@ -1,0 +1,246 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the band of Phil Alvin.",
+        "reasoning": "To find the band associated with Phil Alvin, we need to query DBpedia for entities that have a relationship indicating they are an \"associatedMusicalArtist\" of Phil Alvin. This involves using SPARQL to search for records where Phil Alvin is linked as a member or collaborator.",
+        "sparql_query": "```sparql\nSELECT ?band WHERE {\n  <http:\/\/dbpedia.org\/resource\/Phil_Alvin> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?band .\n}\n```"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the alma mater of the awardee of Royal Medal.",
+        "reasoning": "To find the alma mater of individuals who have been awarded the Royal Medal, we need to identify entities that are both awardees of the Royal Medal and have an associated alma mater. The query will involve selecting entities with a type indicating they are awardees of the Royal Medal and then retrieving their alma mater information.",
+        "sparql_query": "```sparql\nSELECT ?result WHERE {\n  ?person <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Royal_Medal> .\n  ?person <http:\/\/dbpedia.org\/ontology\/almaMater> ?result .\n}\n```"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the location, that is a venue and an architectural structure, of 2012 Pro12 Grand Final.",
+        "reasoning": "Not supplied for this particular example.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/2012_Pro12_Grand_Final> <http:\/\/dbpedia.org\/ontology\/location> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Venue>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/ArchitecturalStructure> . }"
+      },
+      {
+        "question": "Give me the author of Pushd and popd.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Pushd_and_popd> <http:\/\/dbpedia.org\/property\/author> ?result . }",
+        "id": 778,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the spouse of Laodice IV and parent of Nysa (wife of Pharnaces I of Pontus).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Nysa_(wife_of_Pharnaces_I_of_Pontus)> . <http:\/\/dbpedia.org\/resource\/Laodice_IV> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }",
+        "id": 617,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the associated musical artist, that is a group and an organisation, of Queensr\u00ffche.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. <http:\/\/dbpedia.org\/resource\/Queensr\u00ffche> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Group>. }",
+        "id": 44,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Who is the awardee of Leroy P. Steele Prize?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/awards> \"Leroy P. Steele Prize\"@en . }",
+        "id": 197,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the commander in German campaign of 1813.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/German_campaign_of_1813> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 659,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native of Paris and professional in Financier, businessman, vineyard owner, art collector, racehorse owner\/breeder.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"Financier, businessman, vineyard owner, art collector, racehorse owner\/breeder\"@en . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Paris> . }",
+        "id": 30,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the headquarter of House of Sombrerete.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/House_of_Sombrerete> <http:\/\/dbpedia.org\/ontology\/location> ?result . }",
+        "id": 314,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Who is the child of Christian IX of Denmark?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Christian_IX_of_Denmark> . }",
+        "id": 339,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the person decedent, that is an athlete and a soccer player, at Zolotonosha?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Zolotonosha> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. }",
+        "id": 747,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the team of the manager, that is a sports manager, of 1998 Kashima Antlers season.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/manager> ?v0 . <http:\/\/dbpedia.org\/resource\/1998_Kashima_Antlers_season> <http:\/\/dbpedia.org\/ontology\/manager> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. }",
+        "id": 959,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in the alter ego of The Shadow.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> ?v0 . <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v0 . }",
+        "id": 801,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of the child of Tina Onassis Niarchos.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?result . <http:\/\/dbpedia.org\/resource\/Tina_Onassis_Niarchos> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . }",
+        "id": 285,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the residence, that is a country, of James Wilkes Maurice.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/James_Wilkes_Maurice> <http:\/\/dbpedia.org\/property\/residence> ?result . }",
+        "id": 645,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      }
+    ],
+    "signature": {
+      "instructions": "To translate a natural language question into a SPARQL query using the provided dataset and program structure, follow these steps:\n\n1. **Identify the Entity or Relationship**:\n   - Determine the main subject of the question (e.g., a person, event, or relationship).\n   - Identify any specific attributes or relationships mentioned (e.g., birth name, commander).\n\n2. **Map to DBpedia Resources and Properties**:\n   - Locate the corresponding DBpedia resource for the entity.\n   - Identify relevant properties that relate to the query (e.g., `dbo:birthName`, `dbo:commander`).\n\n3. **Construct the Reasoning**:\n   - Explain how the question is interpreted in terms of DBpedia resources and properties.\n   - Outline the logical steps taken to form the SPARQL query.\n\n4. **Formulate the SPARQL Query**:\n   - Use the identified resources and properties to construct a valid SPARQL query.\n   - Ensure the query syntax aligns with SPARQL standards for querying DBpedia.\n\n5. **Output**:\n   - Provide both the reasoning process and the final SPARQL query as output fields.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "The task is to generate a SPARQL query based on the given question and the provided list of shots. The shots contain examples of similar queries that can be used as a reference.\n\nTo create the SPARQL query, follow these steps:\n1. Identify the key elements in the question: Louis II, Grand Duke of Hesse, Anna Magdalena Appel, successor, predecessor, parent, and child.\n2. Translate these elements into corresponding SPARQL predicates and objects.\n3. Use the examples from the shots to structure the query.\n\nThe goal is to create a query that accurately represents the question and retrieves the desired information from the dataset.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a high-quality SPARQL query from a given question, first thoroughly analyze the question to extract key elements such as subjects, predicates, and objects. Then, accurately map these elements onto their corresponding components in SPARQL syntax, including any necessary prefixes for vocabularies used, the appropriate SELECT or CONSTRUCT clause based on whether specific data retrieval or new triple construction is intended, a precise WHERE clause to define query conditions, and relevant FILTER functions for additional constraints. Ensure the constructed query is both syntactically valid according to SPARQL standards and semantically aligned with the question's intent. For optimization, consider common SPARQL practices such as using DISTINCT when appropriate to reduce result set size, applying filter conditions efficiently, and ensuring that variable names are descriptive and consistent throughout the query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "SPARQL Query: PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

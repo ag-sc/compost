@@ -1,0 +1,264 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the party of Campbell Newman.",
+        "reasoning": "To find the party of Campbell Newman, we need to query the DBpedia database for the political party affiliation of Campbell Newman.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Campbell_Newman> <http:\/\/dbpedia.org\/ontology\/party> ?result . }"
+      },
+      {
+        "question": "Give me the professional in Film director, television director and spouse of the person born as the birth name of Anne V. Coates.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Anne_V._Coates> <http:\/\/dbpedia.org\/property\/birthName> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> ?v1 . ?v1 <http:\/\/dbpedia.org\/property\/birthName> ?v2 . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Film director, television director\"@en . }",
+        "id": 507,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the player in Albert Edward (soccer).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Albert_Edward_(soccer)> <http:\/\/dbpedia.org\/ontology\/team> ?result . }",
+        "id": 83,
+        "subid": 1,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the associated musical artist of the associated musical artist, that is an artist and a musical artist, of Scott LaFaro.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . <http:\/\/dbpedia.org\/resource\/Scott_LaFaro> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. }",
+        "id": 433,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the band of Robert Hart (musician) and band of Manfred Mann (musician).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Robert_Hart_(musician)> . ?result <http:\/\/dbpedia.org\/ontology\/bandMember> <http:\/\/dbpedia.org\/resource\/Manfred_Mann_(musician)> . }",
+        "id": 874,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the alter ego of The Shadow.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?result . }",
+        "id": 456,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration of the designer of Woolfe: The Red Hood Diaries.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/leader> ?v1 . <http:\/\/dbpedia.org\/resource\/Woolfe:_The_Red_Hood_Diaries> <http:\/\/dbpedia.org\/property\/designer> ?v1 . }",
+        "id": 216,
+        "subid": 11,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the commander in the force of the mayor, that is an office holder and a politician and a president, of 1933 Spanish general election and leader of Ministry of the Air (Spain).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ministry_of_the_Air_(Spain)> <http:\/\/dbpedia.org\/ontology\/leader> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/President>. ?v3 <http:\/\/dbpedia.org\/ontology\/commander> ?v0 . ?v3 <http:\/\/dbpedia.org\/ontology\/commander> ?result . <http:\/\/dbpedia.org\/resource\/1933_Spanish_general_election> <http:\/\/dbpedia.org\/property\/leader> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. }",
+        "id": 715,
+        "subid": 37,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 7,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the manager of the player in the member, that is a soccer player, of England women's national football team.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/manager> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/team> ?v1 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer>. ?v0 <http:\/\/dbpedia.org\/ontology\/team> <http:\/\/dbpedia.org\/resource\/England_women's_national_football_team> . }",
+        "id": 102,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the office of the administration of Jagdeep Dhankhar and office of Ajoy Mukherjee.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/governor> <http:\/\/dbpedia.org\/resource\/Jagdeep_Dhankhar> . ?v1 <http:\/\/dbpedia.org\/property\/office> ?result . <http:\/\/dbpedia.org\/resource\/Ajoy_Mukherjee> <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 47,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the child, that is a royalty, of the parent, that is a royalty, of Alexandrine of Mecklenburg-Schwerin and child of Christian X of Denmark.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Alexandrine_of_Mecklenburg-Schwerin> <http:\/\/dbpedia.org\/ontology\/parent> ?v0 . ?v1 <http:\/\/dbpedia.org\/property\/father> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Christian_X_of_Denmark> . }",
+        "id": 417,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the native, that is an office holder, of Edinburgh.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Edinburgh> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 579,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the person decedent at Massachusetts.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Massachusetts> . }",
+        "id": 573,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the award of Ana Mar\u00eda S\u00e1nchez de R\u00edos.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ana_Mar\u00eda_S\u00e1nchez_de_R\u00edos> <http:\/\/dbpedia.org\/property\/awards> ?result . }",
+        "id": 18,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the person decedent at Massachusetts and person decedent at Quincy, Massachusetts.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Quincy,_Massachusetts> . ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Massachusetts> . }",
+        "id": 573,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the father of the child of Princess Charlotte of Saxe-Hildburghausen.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Princess_Charlotte_of_Saxe-Hildburghausen> . ?v0 <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 495,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      }
+    ],
+    "signature": {
+      "instructions": "To generate a SPARQL query from a natural language question, first analyze the question to identify the key entities and relationships involved. Then, use this analysis to construct a reasoning process that outlines how to retrieve the relevant information from DBpedia. Finally, translate this reasoning into a SPARQL query that can be executed on the DBpedia database to obtain the desired results.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

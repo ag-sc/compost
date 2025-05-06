@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To convert a natural language question into a SPARQL query using DBpedia:\n\n1. **Identify Key Entities**: Determine the main subjects or objects mentioned in the question.\n2. **Determine Relevant Properties**: Identify the properties or relationships needed to connect these entities within DBpedia.\n3. **Construct the Query**:\n   - Use appropriate prefixes like `dbo:` for ontology and `dbr:` for resources.\n   - Formulate a SELECT statement specifying what data you need (e.g., `?deathDate`, `?person`).\n   - Include WHERE clauses to filter based on identified entities and properties.\n   - Utilize OPTIONAL and FILTER if needed for optional relationships or additional conditions.\n\n**Example Queries**:\n\n- **Question**: \"Give me the death of Pavel Vezhinov.\"\n  ```sparql\n  PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n  PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\n  SELECT ?deathDate WHERE {\n    VALUES ?vezhinov { \n      dbr:Pavel_Vezhinov \n    }\n    ?vezhinov dbo:deathDate ?deathDate .\n  }\n  ```\n\n- **Question**: \"Give me the native, that is an office holder, of Edinburgh.\"\n  ```sparql\n  PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n  PREFIX dbr: <http:\/\/dbpedia.org\/resource\/>\n\n  SELECT ?person ?office WHERE {\n    ?person dbo:birthPlace dbr:Edinburgh .\n    OPTIONAL { ?person dbo:officeHolder ?office . }\n    FILTER EXISTS { ?person a dbo:OfficeHolder }\n  }\n  ```\n\n- **Question**: \"Give me the spouse, that is a royalty, of Charles Martel of Anjou.\"\n  ```sparql\n  PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\n  PREFIX dbp: <http:\/\/dbpedia.org\/property\/>\n\n  SELECT ?spouse ?title WHERE {\n    ?person a dbo:Person ;\n            foaf:name \"Charles Martel of Anjou\"@en .\n    \n    ?person dbo:spouse ?spouse .\n\n    OPTIONAL { \n      ?spouse dbo:royalTitle ?title .\n    }\n  }\n  ```\n\n[[ ## assistant",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

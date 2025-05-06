@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an expert in constructing SPARQL queries based on given examples and questions. Your task is to analyze the provided 'shots' which consist of example queries and their corresponding natural language questions. Then, use these insights to construct a new SPARQL query that answers the given question. Ensure your query accurately reflects the relationships and conditions specified in the question.\n\n### Example:\n**Shots:**\n- Question: Give me the actor of Being Mrs Elliot and person born as Ayo Makun.\n  Query: `SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Being_Mrs_Elliot> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ayo Makun\"@en . }`\n\n- Question: Give me the actor of Being Mrs Elliot and person born in 1971.\n  Query: `SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Being_Mrs_Elliot> <http:\/\/dbpedia.org\/ontology\/starring> ?result . ?result <http:\/\/dbpedia.org\/ontology\/birthYear> \"1971\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gYear> . }`\n\n**Question:**\nGive me the actor of the claim to fame, that is a film, of Lepacious Bose and person born in the birth year of Deanne Bray.\n\n### Your Task:\nConstruct a SPARQL query based on the given question using insights from the 'shots'.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

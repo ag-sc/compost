@@ -1,0 +1,12 @@
+bootstrapfewshot,openai/gpt-4o-mini-2024-07-18,chainofthought,,
+bootstrapfewshot,openai/gpt-4o-mini-2024-07-18,,,
+bootstrapfewshotrandomsearch,openai/gpt-4o-mini-2024-07-18,chainofthought,,
+bootstrapfewshotrandomsearch,openai/gpt-4o-mini-2024-07-18,,,
+labeledfewshot,openai/gpt-4o-mini-2024-07-18,chainofthought,,
+labeledfewshot,openai/gpt-4o-mini-2024-07-18,,,
+mipro,openai/gpt-4o-mini-2024-07-18,chainofthought,heavy,False
+mipro,openai/gpt-4o-mini-2024-07-18,chainofthought,light,False
+mipro,openai/gpt-4o-mini-2024-07-18,chainofthought,medium,False
+mipro,openai/gpt-4o-mini-2024-07-18,,heavy,False
+mipro,openai/gpt-4o-mini-2024-07-18,,light,False
+mipro,openai/gpt-4o-mini-2024-07-18,,medium,False

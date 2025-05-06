@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Craft an advanced SPARQL query based on a provided question by following these steps:  \n1. **Understand Context:** Carefully read the entire question to fully grasp its context, intent, and any implicit requirements.\n2. **Extract Key Components:** Identify all key elements such as entities (subjects), relationships (predicates), objects, filters, variables, optional clauses, constraints like dates or quantities, and potential aggregates needed for the query.\n3. **Map Question to SPARQL Structure:** Develop a query that mirrors the question\u2019s structure by utilizing appropriate SPARQL constructs:\n   - Use `SELECT` for returning specific variables.\n   - Utilize `WHERE` clauses to specify pattern matching of triples.\n   - Apply `FILTER` functions to refine results based on conditions mentioned in the question.\n   - Incorporate `OPTIONAL`, `UNION`, or other clauses when necessary for handling optional data, alternative patterns, etc.\n4. **Optimize Query Logic:** Ensure that your query is optimized for efficiency, aiming for concise representation without losing essential details.\n5. **Validate Completeness and Precision:** Verify that the SPARQL query aligns precisely with all aspects of the question to produce accurate results when executed against a dataset.\n\nBy following these detailed steps, you will generate an effective and precise SPARQL query that captures every nuance of the question.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

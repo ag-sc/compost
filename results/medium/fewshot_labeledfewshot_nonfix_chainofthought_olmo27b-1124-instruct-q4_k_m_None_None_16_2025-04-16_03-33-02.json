@@ -1,0 +1,273 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "question": "Give me the award, that is a country, of Adelbert Cronkhite.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Adelbert_Cronkhite> <http:\/\/dbpedia.org\/property\/awards> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. }",
+        "id": 158,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the author, that is a politician and an office holder, of the work of John Quincy Adams?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v1 <http:\/\/dbpedia.org\/property\/author> ?result . ?v1 <http:\/\/dbpedia.org\/property\/author> <http:\/\/dbpedia.org\/resource\/John_Quincy_Adams> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 573,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of the child, that is a royalty, of Louis the German and spouse of Louis the German.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Louis_the_German> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v1 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Louis_the_German> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 773,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person decedent at Quincy, Massachusetts and parent of the author, that is a politician and an office holder, of the work of John Quincy Adams.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v0 <http:\/\/dbpedia.org\/property\/author> <http:\/\/dbpedia.org\/resource\/John_Quincy_Adams> . ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Quincy,_Massachusetts> . ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/dbpedia.org\/property\/author> ?v1 . }",
+        "id": 573,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of Albert Kamehameha.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Albert_Kamehameha> . }",
+        "id": 917,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birthplace of the alumnus of University of Pennsylvania.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/almaMater> <http:\/\/dbpedia.org\/resource\/University_of_Pennsylvania> . ?v0 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 606,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the band of the writer, that is an artist and a musical artist, of the work, that is a work, of Horace Andy.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?v0 <http:\/\/dbpedia.org\/property\/writer> <http:\/\/dbpedia.org\/resource\/Horace_Andy> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. ?result <http:\/\/dbpedia.org\/ontology\/bandMember> ?v1 . ?v0 <http:\/\/dbpedia.org\/property\/writer> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }",
+        "id": 874,
+        "subid": 13,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 6,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the person born as Ayo Makun and person born in the birth year of Deanne Bray.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Deanne_Bray> <http:\/\/dbpedia.org\/ontology\/birthYear> ?v2 . ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ayo Makun\"@en . ?result <http:\/\/dbpedia.org\/ontology\/birthYear> ?v2 . }",
+        "id": 36,
+        "subid": 17,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the father of Emperor Go-Toba and predecessor of the child of Emperor Takakura and spouse of Taira no Tokuko.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Taira_no_Tokuko> . ?v3 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Emperor_Takakura> . ?result <http:\/\/dbpedia.org\/ontology\/successor> ?v3 . <http:\/\/dbpedia.org\/resource\/Emperor_Go-Toba> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 791,
+        "subid": 29,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in the region, that is a country, of Central European Time.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/timeZone> <http:\/\/dbpedia.org\/resource\/Central_European_Time> . ?result <http:\/\/dbpedia.org\/ontology\/country> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. }",
+        "id": 987,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in the region, that is a country, of the time zone, that is a sports event, in Canicosa de la Sierra and birth place of Moamer Kasumovi\u0107.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/timeZone> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/country> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/Canicosa_de_la_Sierra> <http:\/\/dbpedia.org\/ontology\/timeZone> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsEvent>. <http:\/\/dbpedia.org\/resource\/Moamer_Kasumovi\u0107> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 987,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the father, that is a royalty, of the parent, that is a royalty, of Beyhan Sultan (daughter of Mustafa III) and father of Mahmud II.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Beyhan_Sultan_(daughter_of_Mustafa_III)> <http:\/\/dbpedia.org\/ontology\/parent> ?v3 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v0 <http:\/\/dbpedia.org\/ontology\/child> ?result . ?v3 <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Mahmud_II> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 926,
+        "subid": 36,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of Anne V. Coates and director of Entertaining Mr Sloane (film).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Entertaining_Mr_Sloane_(film)> <http:\/\/dbpedia.org\/ontology\/director> ?result . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Anne_V._Coates> . }",
+        "id": 507,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of Archduchess Barbara of Austria and successor of the child of the parent of Ercole II d'Este, Duke of Ferrara.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/father> ?v1 . ?result <http:\/\/dbpedia.org\/ontology\/spouse> <http:\/\/dbpedia.org\/resource\/Archduchess_Barbara_of_Austria> . ?v0 <http:\/\/dbpedia.org\/ontology\/successor> ?result . <http:\/\/dbpedia.org\/resource\/Ercole_II_d'Este,_Duke_of_Ferrara> <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . }",
+        "id": 465,
+        "subid": 31,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the administration, that is American, of the award of \u017divko Klju\u010de.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/governor> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. <http:\/\/dbpedia.org\/resource\/\u017divko_Klju\u010de> <http:\/\/dbpedia.org\/property\/awards> ?v0 . }",
+        "id": 130,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the child, that is a royalty, of Frederick Francis III, Grand Duke of Mecklenburg-Schwerin?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Frederick_Francis_III,_Grand_Duke_of_Mecklenburg-Schwerin> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }",
+        "id": 417,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

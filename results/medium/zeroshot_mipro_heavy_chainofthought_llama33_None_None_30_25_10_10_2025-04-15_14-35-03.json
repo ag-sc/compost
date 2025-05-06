@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To address the given task effectively, it's essential to break down the process into manageable steps that ensure clarity and precision in generating the SPARQL query based on the input question. Here\u2019s a structured approach:\n\n1. **Understanding the Question**: Carefully read and comprehend the question being asked. Identify key elements such as the subject (e.g., person, place, object), the relationship or property of interest (e.g., birth date, profession, parent), and any specific conditions or filters (e.g., royalty, office holder).\n\n2. **Mapping to DBpedia Ontology**: Familiarize yourself with the DBpedia ontology to understand how different concepts and relationships are represented. Key prefixes include `dbo` for DBpedia ontology and `dbr` for DBpedia resources. For example, `dbo:birthDate` represents the birth date of an individual, and `dbo:parent` represents a parental relationship.\n\n3. **Constructing the SPARQL Query**: \n   - **SELECT Clause**: Determine what information you want to retrieve. This could be a specific property (e.g., `?birthDate`) or a resource (e.g., `?person`).\n   - **WHERE Clause**: Define the conditions for the resources you are querying. This includes specifying the type of resource (e.g., `dbo:Writer`, `dbo:Royalty`) and any relevant properties or relationships.\n   - **FILTERS**: Apply filters as necessary to narrow down results based on language (`LANGMATCHES`), specific values, or other conditions.\n\n4. **Executing the Query**: Once you have constructed your SPARQL query, you can execute it against the DBpedia endpoint to retrieve the desired information.\n\n5. **Example Application**:\n   - For a question like \"Who is the professional in Writer?\", after understanding that we're looking for notable writers, the SPARQL query might look like the example provided earlier, focusing on resources of type `dbo:Writer`.\n   - For more complex lineage questions, such as finding the father of a child who is a royalty and whose parent is also a royalty and an office holder, descendant of Emperor Antoku, the query requires navigating parental relationships and filtering by specific types and properties.\n\nBy following these steps and tailoring your SPARQL queries to the specifics of the question at hand, you can effectively retrieve relevant information from DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

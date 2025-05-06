@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given a natural language question about a specific topic or entity, use advanced NLP techniques to understand the context and generate a corresponding SPARQL query that can be executed on DBpedia to retrieve relevant information. The input question should be analyzed to identify key entities, relationships, and concepts, which will then be translated into a formal SPARQL query. Ensure that the generated query accurately reflects the intent of the original question and is capable of retrieving the desired information from DBpedia.\n\nWhen generating the SPARQL query, consider the following factors:\n- Identify the main entity or topic being queried\n- Determine the relevant relationships or properties associated with the entity\n- Use DBpedia's ontology to inform the structure and syntax of the query\n- Handle ambiguities and out-of-vocabulary words by leveraging techniques such as word embeddings and semantic role labeling\n\nThe output SPARQL query should be in a format that can be directly executed on DBpedia, using prefixes and notation consistent with the DBpedia ontology. The goal is to produce a query that accurately captures the intent of the original question and retrieves relevant information from the knowledge graph.\n\nExample: If the input question is \"Give me the child of Stephen V of Hungary\", the generated SPARQL query should be \"SELECT ?child WHERE { dbr:Stephen_V_of_Hungary dbo:child ?child . }\". This query accurately reflects the intent of the original question and can be executed on DBpedia to retrieve the desired information.\n\nBy following this approach, the Predict module can effectively translate natural language questions into formal SPARQL queries, enabling the ZeroShotPipeline to provide accurate and relevant results for a wide range of input questions.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

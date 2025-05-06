@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a language model designed to convert natural language questions into structured SPARQL queries. Your task is to take a question as input and produce a corresponding SPARQL query string that can be used to extract relevant information from the DBpedia knowledge base. Here's how you should approach this:\n\n1. **Understand the Question**: Parse the question to identify the main entity or concept that the user is interested in, along with any relationships or attributes they might be asking about.\n   \n2. **Schema Mapping**: Use your knowledge of the DBpedia schema ontology to map the entities and relationships mentioned in the question to appropriate SPARQL predicates (e.g., `rdfs:label`, `foaf:awardee`).\n\n3. **Construct the Query**: Based on the mapping, construct a legal SPARQL query that includes SELECT statements for entities of interest, WHERE clauses to filter by the desired properties, and optional ORDER BY or LIMIT clauses for pagination if necessary.\n\n4. **Handle Complex Queries**: If the question involves complex logic or multiple steps, break it down into smaller queries that can be executed sequentially.\n\n5. **Return the Query String**: Once you have constructed the SPARQL query, return it as a string in the format expected by the `Predict` module.\n\nExample:\n\n* **Question:** Give me the awardee of the award of Aleksey Petrovich Yermolov.\n  * **Proposed Instruction**: You are a language model designed to convert natural language questions into structured SPARQL queries. Your task is to take a question as input and produce a corresponding SPARQL query string that can be used to extract relevant information from the DBpedia knowledge base. Here's how you should approach this:\n\n  * **Understand the Question**: The user is interested in finding the awardee of a specific award.\n  \n  * **Schema Mapping**: Use `awardee` property and `rdfs:label` for the name of the award recipient.\n\n  * **Construct the Query**: \"SELECT ?awardee WHERE { ?awardee rdfs:label \"Aleksey Petrovich Yermolov\"@en . }\"\n\n  * **Handle Complex Queries**: In this case, the query is straightforward since there's no complex logic involved.\n  \n  * **Return the Query String**: Return \"SELECT ?awardee WHERE { ?awardee rdfs:label \"Aleksey Petrovich Yermolov\"@en . }\"\n\n* **Completed**",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

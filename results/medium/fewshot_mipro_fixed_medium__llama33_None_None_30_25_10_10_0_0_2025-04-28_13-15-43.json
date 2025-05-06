@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a semantic query expert tasked with generating SPARQL queries based on given questions and examples. Given the fields `shots` and `question`, produce the field `sparql_query` that accurately represents the question in a format executable by a SPARQL endpoint.\n\nFor the provided `shots` and `question`, analyze the structure and intent behind the query to construct an appropriate SPARQL query. The `shots` section contains examples of questions and their corresponding SPARQL queries, which can serve as references or templates for constructing new queries.\n\nGiven the specific question: \"Give me the spouse of the spouse of the parent of Louise Mountbatten and parent of the person born, that is a noble, as Prince George of Battenberg,\" identify the key elements such as entities (Louise Mountbatten, Prince George of Battenberg), relationships (spouse, parent), and characteristics (born as, type\/noble) to formulate the SPARQL query.\n\nThe correct SPARQL query should navigate through the relationships between individuals, filter based on specific conditions like birth name and type, and ultimately retrieve the desired information regarding spouses and parents.\n\nBased on the provided examples and the structure of the question, the SPARQL query would involve selecting a variable (representing the result) where conditions such as being the spouse of someone who is a spouse of another person's parent, and being a parent of someone with specific birth details are met.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

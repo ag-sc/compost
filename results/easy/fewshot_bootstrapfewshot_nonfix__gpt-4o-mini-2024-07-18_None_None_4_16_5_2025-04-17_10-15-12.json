@@ -1,0 +1,229 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the professional in  and actor of Rustlers' Rhapsody.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> ?v0 . <http:\/\/dbpedia.org\/resource\/Rustlers'_Rhapsody> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the movie, that is a work and a film, with Iliza Shlesinger.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/starring> <http:\/\/dbpedia.org\/resource\/Iliza_Shlesinger> . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the predecessor of Myat Hpone Pyo and child of Saw Min Hla and spouse of the father, that is a royalty, of Myat Hpone Pyo.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/Myat_Hpone_Pyo> . ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Saw_Min_Hla> . ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v1 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Myat_Hpone_Pyo> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the birth name of the native, that is a musical artist, of Florida.",
+        "sparql_query": "SELECT ?birthName WHERE { ?native <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Florida> . ?native <http:\/\/dbpedia.org\/property\/birthName> ?birthName . ?native <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }"
+      },
+      {
+        "question": "Give me the death place of Carolyn Jones and death place of the actor of Aladdin (1958 film) and death place of Reed Howes.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Reed_Howes> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . <http:\/\/dbpedia.org\/resource\/Carolyn_Jones> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . <http:\/\/dbpedia.org\/resource\/Aladdin_(1958_film)> <http:\/\/dbpedia.org\/property\/starring> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . }",
+        "id": 492,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the actor of Judgment: The Trial of Julius and Ethel Rosenberg.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Judgment:_The_Trial_of_Julius_and_Ethel_Rosenberg> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }",
+        "id": 816,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the tenant of Madrid and office of the commander, that is an office holder and a politician, in the force, that is a military conflict and a societal event, of Manuel Pinto da Costa and office of the leader, that is a politician, of Conservative Republican Party (Spain).",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/commander> ?v5 . <http:\/\/dbpedia.org\/resource\/Conservative_Republican_Party_(Spain)> <http:\/\/dbpedia.org\/property\/leader> ?v3 . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Madrid> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v3 <http:\/\/dbpedia.org\/property\/office> ?result . ?v0 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Manuel_Pinto_da_Costa> . ?v5 <http:\/\/dbpedia.org\/property\/office> ?result . ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. }",
+        "id": 531,
+        "subid": 57,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 11,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the tenant of Madrid and office of the commander, that is an office holder and a politician, in Central African Republic Civil War.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Madrid> . <http:\/\/dbpedia.org\/resource\/Central_African_Republic_Civil_War> <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . ?v2 <http:\/\/dbpedia.org\/property\/office> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. }",
+        "id": 531,
+        "subid": 20,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as Harriette Arlene Lake and party member of Republican Party (United States).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/party> <http:\/\/dbpedia.org\/resource\/Republican_Party_(United_States)> . ?result <http:\/\/dbpedia.org\/property\/birthName> \"Harriette Arlene Lake\"@en . }",
+        "id": 293,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in the alter ego of the reference, that is a fictional character, to Kent Allard (print) and producer of the claim to fame, that is a work, of Cora Sue Collins.",
+        "sparql_query": "SELECT ?result WHERE { ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Work>. <http:\/\/dbpedia.org\/resource\/Cora_Sue_Collins> <http:\/\/dbpedia.org\/ontology\/knownFor> ?v4 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/FictionalCharacter>. ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . ?v2 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Kent Allard (print)\"@en . ?v2 <http:\/\/dbpedia.org\/property\/alterEgo> ?v1 . ?v4 <http:\/\/dbpedia.org\/ontology\/producer> ?result . }",
+        "id": 557,
+        "subid": 46,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 7,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the reference, that is a royalty and an office holder, to William I?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"William I\"@en . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 353,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person born as the birth name of the parent of Tisha Sterling and spouse of the actor of the product, that is a film, of Nat Levine.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/birthName> ?v3 . ?v0 <http:\/\/dbpedia.org\/ontology\/producer> <http:\/\/dbpedia.org\/resource\/Nat_Levine> . ?v0 <http:\/\/dbpedia.org\/property\/starring> ?v5 . ?v1 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Tisha_Sterling> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v5 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?result <http:\/\/dbpedia.org\/property\/birthName> ?v3 . }",
+        "id": 293,
+        "subid": 61,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 7,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child, that is a royalty, of Antoine, Duke of Lorraine.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Antoine,_Duke_of_Lorraine> . }",
+        "id": 633,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the tenant of the residence of Alberto Ruiz-Gallard\u00f3n and office of Miguel Maura.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/headquarter> ?v1 . <http:\/\/dbpedia.org\/resource\/Alberto_Ruiz-Gallard\u00f3n> <http:\/\/dbpedia.org\/property\/residence> ?v1 . <http:\/\/dbpedia.org\/resource\/Miguel_Maura> <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 531,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in the country of Daniel Elahi Gal\u00e1n and party of the person born, that is a politician, as Roy Leonardo Barreras Montealegre.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> ?v0 . ?v3 <http:\/\/dbpedia.org\/ontology\/party> ?result . <http:\/\/dbpedia.org\/resource\/Daniel_Elahi_Gal\u00e1n> <http:\/\/dbpedia.org\/ontology\/country> ?v0 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v3 <http:\/\/dbpedia.org\/property\/birthName> \"Roy Leonardo Barreras Montealegre\"@en . }",
+        "id": 23,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the professional in  and professional in the profession of Shatrughan Sinha and actor of the movie, that is a television show, with Richard E. Grant.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/property\/starring> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . ?v2 <http:\/\/dbpedia.org\/property\/starring> <http:\/\/dbpedia.org\/resource\/Richard_E._Grant> . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v4 . <http:\/\/dbpedia.org\/resource\/Shatrughan_Sinha> <http:\/\/dbpedia.org\/property\/occupation> ?v4 . }",
+        "id": 103,
+        "subid": 41,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

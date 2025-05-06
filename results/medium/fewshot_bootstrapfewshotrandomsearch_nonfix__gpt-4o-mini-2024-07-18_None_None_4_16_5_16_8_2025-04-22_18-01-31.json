@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the associated musical artist of Bill Evans and professional in the profession of Bob Marley and associated musical artist of Paul Chambers.",
+        "sparql_query": "SELECT ?result WHERE { \n  { <http:\/\/dbpedia.org\/resource\/Bill_Evans> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }\n  UNION \n  { <http:\/\/dbpedia.org\/resource\/Bob_Marley> <http:\/\/dbpedia.org\/property\/occupation> ?v1 . }\n  UNION \n  { <http:\/\/dbpedia.org\/resource\/Paul_Chambers> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }\n}"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the author of The Tailor and Ansty.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Tailor_and_Ansty> <http:\/\/dbpedia.org\/ontology\/author> ?result . }"
+      },
+      {
+        "question": "Give me the birth place of the actor of All for Free and entity in the region, that is a country, of Central European Time.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/country> ?v0 . ?v3 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?v0 <http:\/\/dbpedia.org\/property\/timeZone> <http:\/\/dbpedia.org\/resource\/Central_European_Time> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country>. <http:\/\/dbpedia.org\/resource\/All_for_Free> <http:\/\/dbpedia.org\/property\/starring> ?v3 . }",
+        "id": 987,
+        "subid": 38,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the landmark at elevation of 28 and birthplace of Carl Larsson and birthplace of Ulf Lundell.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ulf_Lundell> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . <http:\/\/dbpedia.org\/resource\/Carl_Larsson> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . ?result <http:\/\/dbpedia.org\/ontology\/elevation> \"28\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#integer> . }",
+        "id": 443,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the entity in the award of the associated musical artist, that is a band, of Rub\u00e9n Col\u00f3n Tarrats.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Band>. ?v0 <http:\/\/dbpedia.org\/property\/awards> ?v2 . ?result <http:\/\/dbpedia.org\/ontology\/country> ?v2 . <http:\/\/dbpedia.org\/resource\/Rub\u00e9n_Col\u00f3n_Tarrats> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v0 . }",
+        "id": 5,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the office of Ajoy Mukherjee.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Ajoy_Mukherjee> <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 47,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of Being Mrs Elliot and person born in 1971.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/birthYear> \"1971\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gYear> . <http:\/\/dbpedia.org\/resource\/Being_Mrs_Elliot> <http:\/\/dbpedia.org\/ontology\/starring> ?result . }",
+        "id": 36,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the parent of the child, that is a royalty, of the father, that is an office holder and a royalty, of Carloman of Bavaria and parent of Carloman of Bavaria.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Carloman_of_Bavaria> <http:\/\/dbpedia.org\/property\/father> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Carloman_of_Bavaria> . ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v1 <http:\/\/dbpedia.org\/property\/father> ?v0 . }",
+        "id": 773,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 7,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the spouse of Clemence of Austria.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Clemence_of_Austria> <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }",
+        "id": 192,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the player in Kazuaki Nagasawa and figure known as --10-19.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/nickname> \"--10-19\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#gMonthDay> . <http:\/\/dbpedia.org\/resource\/Kazuaki_Nagasawa> <http:\/\/dbpedia.org\/ontology\/team> ?result . }",
+        "id": 582,
+        "subid": 12,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Who is the professional, that is a musical artist and an artist, in the award of Michel Clapar\u00e8de?",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. <http:\/\/dbpedia.org\/resource\/Michel_Clapar\u00e8de> <http:\/\/dbpedia.org\/property\/awards> ?v0 . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?result <http:\/\/dbpedia.org\/property\/occupation> ?v0 . }",
+        "id": 978,
+        "subid": 9,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 4,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the office of Suvendu Adhikari.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Suvendu_Adhikari> <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 47,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in Southern Ukraine campaign.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Southern_Ukraine_campaign> <http:\/\/dbpedia.org\/ontology\/commander> ?result . }",
+        "id": 888,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the party of the governor of Dilma Rousseff.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/ontology\/party> ?result . <http:\/\/dbpedia.org\/resource\/Dilma_Rousseff> <http:\/\/dbpedia.org\/property\/governor> ?v0 . }",
+        "id": 83,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Who is the mayor, that is a politician and an office holder and Turkish, of the reference, that is an organisation and a political party and Turkish, to Millet \u0130ttifak\u0131?",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Millet \u0130ttifak\u0131\"@en . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/dbpedia.org\/property\/leader> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PoliticalParty>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/dbpedia.org\/ontology\/nationality> <http:\/\/dbpedia.org\/resource\/Turkey>. ?v0 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Turkey>. }",
+        "id": 976,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 8,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the military force of the force, that is a societal event and a military conflict, of Herbert Kitchener, 1st Earl Kitchener and military force of the war, that is an event and a military conflict and a societal event, of Frank Rhodes (British Army officer).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/battle> ?v2 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. <http:\/\/dbpedia.org\/resource\/Frank_Rhodes_(British_Army_officer)> <http:\/\/dbpedia.org\/ontology\/battle> ?v3 . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?result <http:\/\/dbpedia.org\/ontology\/battle> ?v3 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v2 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Herbert_Kitchener,_1st_Earl_Kitchener> . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. }",
+        "id": 124,
+        "subid": 38,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 9,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Given the fields `question`, produce the fields `sparql_query`.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

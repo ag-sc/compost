@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query from given examples (shots) and a specific question, follow these steps:\n\n1. **Analyze the Shots:**\n   - Examine each shot to understand its structure.\n   - Identify key elements such as subjects, predicates, objects, and any filters or conditions.\n\n2. **Understand the Question:**\n   - Break down the question to determine what information is requested.\n   - Identify relevant entities and their relationships.\n\n3. **Identify Patterns:**\n   - Look for recurring patterns in the shots that align with parts of the question.\n   - Note specific properties or types mentioned in both the shots and the question.\n\n4. **Construct the Query:**\n   - Use identified patterns to form a SPARQL query.\n   - Include all necessary components (subject, predicate, object) and apply any additional filters or conditions as needed.\n\n5. **Verify the Query:**\n   - Ensure the query accurately reflects the information requested in the question.\n   - Check for logical consistency and correctness of relationships and properties.\n\n6. **Output the SPARQL Query:**",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

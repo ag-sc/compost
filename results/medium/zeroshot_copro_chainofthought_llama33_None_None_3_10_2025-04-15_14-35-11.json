@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query based on the provided question, carefully analyze the question to identify key components such as the subject, predicate, and object. Then, translate these components into their corresponding SPARQL syntax elements, ensuring that variables are correctly declared and used. Finally, combine these elements into a cohesive and syntactically correct SPARQL query that can be executed on a knowledge graph or RDF dataset to retrieve the desired information.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#>",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

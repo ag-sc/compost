@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate a SPARQL query based on the provided question and shots, we'll follow these steps:\n\n1. Identify key elements in the question.\n2. Match these elements with patterns found in the provided shots.\n3. Construct a SPARQL query that combines the matched patterns.\n\nGiven the complexity of directly generating a SPARQL query from natural language without specific details on the structure of the data (e.g., RDF schema, ontology used), we will approach this by analyzing the components of the question and relating them to possible SPARQL query structures.\n\nThe question asks for: \"Give me the professional in the alter ego of the reference, that is a fictional character, to Lamont Cranston (radio, film and television) and spouse of the actor of Pacific Drive and band of Alan Doyle.\"\n\nKey elements:\n- Alter ego of a reference (Lamont Cranston)\n- Fictional character\n- Spouse of the actor of Pacific Drive\n- Band of Alan Doyle\n\nFrom the shots provided, we see patterns for querying:\n- The occupation (professional) in an alter ego.\n- The spouse of an actor in a specific show\/movie (Pacific Drive).\n- The band associated with a particular artist (Alan Doyle).\n\nHowever, without direct access to the database schema or more detailed examples that cover all aspects of this question, we can only speculate on the exact SPARQL query. \n\nGiven this, a hypothetical SPARQL query might look something like this:\n\n```sparql\nSELECT ?result \nWHERE { \n    # Assuming there's a property for alterEgo and it relates to occupation\n    ?reference <http:\/\/dbpedia.org\/property\/alterEgo> ?alterEgo.\n    ?alterEgo <http:\/\/dbpedia.org\/property\/occupation> ?result.\n    \n    # Filter for the specific reference (Lamont Cranston)\n    ?reference <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Lamont Cranston (radio, film and television)\"@en.\n    \n    # Assuming Pacific Drive has a property for its actors\n    ?pacificDrive <http:\/\/dbpedia.org\/property\/starring> ?actor.\n    ?actor <http:\/\/dbpedia.org\/ontology\/spouse> ?spouse.\n    # This part would ideally filter ?result to also be the spouse, but without knowing how 'professional' and 'spouse' relate in the data model, we can't accurately filter ?result further based on this condition alone.\n    \n    # For Alan Doyle's band\n    ?alanDoyle <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?band.\n    # Again, without knowing how these concepts interrelate in the database, directly linking ?result to ?band is speculative.\n}\n```\n\nThis query attempts to address parts of the question but lacks specificity due to the absence of detailed information about the relationships between entities like \"professional,\" \"spouse,\" and \"band\" within the context of DBpedia or a similar knowledge graph.\n\nThus, given the current instructions and examples, we must recognize the limitations in generating an accurate SPARQL query without more specific details on the data structure and relationships.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

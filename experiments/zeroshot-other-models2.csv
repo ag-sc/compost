@@ -1,0 +1,15 @@
+mipro,ollama_chat/olmo2:7b-1124-instruct-q4_K_M,,heavy
+mipro,ollama_chat/qwen2.5-coder,,light
+mipro,ollama_chat/olmo2:7b-1124-instruct-q4_K_M,,medium
+copro,ollama_chat/phi4,chainofthought,
+mipro,ollama_chat/qwen2.5-coder,chainofthought,medium
+mipro,ollama_chat/olmo2:7b-1124-instruct-q4_K_M,,light
+mipro,ollama_chat/qwen2.5-coder,,heavy
+plain,ollama_chat/phi4,,
+plain,ollama_chat/olmo2:7b-1124-instruct-q4_K_M,,
+plain,ollama_chat/olmo2:7b-1124-instruct-q4_K_M,chainofthought,
+mipro,ollama_chat/qwen2.5-coder,,medium
+mipro,ollama_chat/olmo2:7b-1124-instruct-q4_K_M,chainofthought,heavy
+plain,ollama_chat/qwen2.5-coder,chainofthought,
+mipro,ollama_chat/phi4,,heavy
+copro,ollama_chat/qwen2.5-coder,,

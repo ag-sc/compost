@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate the SPARQL query based on the given question, we need to identify the key elements in the question and translate them into the corresponding SPARQL syntax. The question asks for the player in the actor that is a soccer player and an athlete of \"All or Nothing: Manchester City,\" and also for the player in the person born on 1955-02-22, as well as the team of the person born on the birthday of Marcelo Sarmiento who is a soccer player and a soccer manager.\n\nGiven the question:\n\"Give me the player in the actor, that is a soccer player and an athlete, of All or Nothing: Manchester City and player in the person born, that is an athlete, on 1955-02-22 and team of the person born, that is a soccer player and a soccer manager, on the birthday of Marcelo Sarmiento.\"\n\nThe SPARQL query should select ?result where:\n- ?v2 is born on \"1955-02-22\" and is an athlete.\n- ?v5 is a soccer player and an athlete starring in \"All or Nothing: Manchester City\".\n- ?v1 is a soccer player and a soccer manager born on the same day as Marcelo Sarmiento.\n- Both ?v2 and ?v5 have their team as ?result, and ?result is also coached by ?v1.\n\nThe correct SPARQL query based on this analysis would be:\n\n```sparql\nSELECT ?result\nWHERE {\n  ?v2 <http:\/\/dbpedia.org\/ontology\/birthDate> \"1955-02-22\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> .\n  ?v2 <http:\/\/dbpedia.org\/ontology\/team> ?result .\n  ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete> .\n  ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer> .\n  ?v5 <http:\/\/dbpedia.org\/ontology\/team> ?result .\n  ?v5 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Athlete> .\n  <http:\/\/dbpedia.org\/resource\/All_or_Nothing:_Manchester_City> <http:\/\/dbpedia.org\/property\/starring> ?v5 .\n  ?v1 <http:\/\/dbpedia.org\/ontology\/birthDate> ?v0 .\n  <http:\/\/dbpedia.org\/resource\/Marcelo_Sarmiento> <http:\/\/dbpedia.org\/ontology\/birthDate> ?v0 .\n  ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerPlayer> .\n  ?result <http:\/\/dbpedia.org\/ontology\/coach> ?v1 .\n  ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager> .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

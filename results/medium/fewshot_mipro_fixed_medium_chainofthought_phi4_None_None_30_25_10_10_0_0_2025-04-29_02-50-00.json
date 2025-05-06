@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given the fields `shots`, `question`, produce the field `sparql_query`.\n\n1. **Entity in Northern Ireland**: \n   - Use the pattern from the first shot:\n     ```sparql\n     ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Northern_Ireland> .\n     ```\n\n2. **Entity in a region that is a country of Western European Time**:\n   - Combine patterns from the fifth shot:\n     ```sparql\n     ?result <http:\/\/dbpedia.org\/ontology\/country> ?v1 .\n     ?v1 <http:\/\/dbpedia.org\/property\/timeZone> <http:\/\/dbpedia.org\/resource\/Western_European_Time> .\n     ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Country> .\n     ```\n\n3. **Birthplace of Eric Cross (writer)**:\n   - Use the pattern from the sixth shot:\n     ```sparql\n     <http:\/\/dbpedia.org\/resource\/Eric_Cross_(writer)> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result .\n     ```\n\n4. **Combine all conditions** into a single query using `?result` to ensure all criteria are met simultaneously.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

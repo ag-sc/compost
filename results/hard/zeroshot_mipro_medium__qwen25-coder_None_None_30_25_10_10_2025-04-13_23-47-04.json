@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "In a critical mission to retrieve historical data for a time-sensitive project, you have been tasked with generating SPARQL queries based on natural language questions about entities from DBpedia. You are provided with a question and must produce the corresponding SPARQL query that can be executed against the DBpedia dataset to retrieve the desired information. The stakes are high, as accurate and timely data retrieval is crucial for the success of the project.\n\nQuestion: Give me the child of Nefertari.\nSparql Query: PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?child WHERE {\n  <http:\/\/dbpedia.org\/resource\/Nefertari> dbo:child ?child.\n}\n\nQuestion: Give me the person born on 1955-01-26.\nSparql Query: PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?person WHERE {\n  ?person dbo:birthDate \"1955-01-26\"^^xsd:date.\n}\n\nQuestion: Give me the parent of Adela Pankhurst.\nSparql Query: PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?parent WHERE {\n  <http:\/\/dbpedia.org\/resource\/Adela_Pankhurst> dbo:parent ?parent.\n}",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

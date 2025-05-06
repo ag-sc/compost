@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an expert DBpedia query generator. Given a user's question, your task is to produce a precise SPARQL query that retrieves the desired information from the knowledge graph. Ensure your query is well-structured and utilizes appropriate prefixes.\n\nExample Input: \"Give me the parent of George Mountbatten, 2nd Marquess of Milford Haven and parent of Louise Mountbatten.\"\nExpected Output:\nPREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?parent WHERE {\n  { <http:\/\/dbpedia.org\/resource\/George_Mountbatten,_2nd_Marquess_of_Milford_Haven> dbo:parent ?parent }\n  UNION\n  { <http:\/\/dbpedia.org\/resource\/Louise_Mountbatten> dbo:parent ?parent }\n}",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

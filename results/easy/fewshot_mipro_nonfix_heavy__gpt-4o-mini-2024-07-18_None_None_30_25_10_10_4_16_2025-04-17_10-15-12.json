@@ -1,0 +1,259 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the alter ego of The Shadow.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?result . }"
+      },
+      {
+        "question": "Give me the tenant of Spain and office of the leader of 2009 Galician regional election and tenant of the administration, that is Spanish, of Spanish Socialist Workers' Party.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Spain> . ?v1 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/Spain>. ?v2 <http:\/\/dbpedia.org\/property\/office> ?result . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> ?v1 . <http:\/\/dbpedia.org\/resource\/2009_Galician_regional_election> <http:\/\/dbpedia.org\/property\/leader> ?v2 . ?v1 <http:\/\/dbpedia.org\/property\/leaderParty> <http:\/\/dbpedia.org\/resource\/Spanish_Socialist_Workers'_Party> . }",
+        "id": 119,
+        "subid": 42,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 6,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the war, that is a television show and a societal event, of Jean Baptist, Comte d'Arco and successor of the commander, that is a politician and an office holder, in the force, that is an event and a military conflict, of Micha\u0142 Kazimierz Pac and reference to George Ducas.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?v2 <http:\/\/dbpedia.org\/ontology\/successor> ?result . <http:\/\/dbpedia.org\/resource\/Jean_Baptist,_Comte_d'Arco> <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . ?v3 <http:\/\/dbpedia.org\/ontology\/commander> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v1 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"George Ducas\"@en . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v3 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Micha\u0142_Kazimierz_Pac> . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. }",
+        "id": 159,
+        "subid": 53,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 12,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of Stephen V of Hungary and spouse of the father of the parent, that is a royalty, of Philip, Despot of Romania.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v3 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Philip,_Despot_of_Romania> . ?v1 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary> . }",
+        "id": 905,
+        "subid": 34,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the child of the child of the child of Alexander of W\u00fcrttemberg (1804-1881) and predecessor of Carl, Duke of W\u00fcrttemberg and child of the child, that is a royalty, of Archduke Charles Louis of Austria.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v5 . ?v0 <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Alexander_of_W\u00fcrttemberg_(1804-1881)> . ?v3 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Archduke_Charles_Louis_of_Austria> . ?result <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/Carl,_Duke_of_W\u00fcrttemberg> . ?v3 <http:\/\/dbpedia.org\/ontology\/child> ?result . ?v3 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v5 <http:\/\/dbpedia.org\/property\/father> ?v0 . }",
+        "id": 737,
+        "subid": 57,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 7,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the force of the awardee of the award of Quincy Adams Gillmore and entity in Charleston, South Carolina.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Charleston,_South_Carolina> . <http:\/\/dbpedia.org\/resource\/Quincy_Adams_Gillmore> <http:\/\/dbpedia.org\/property\/awards> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v3 . ?v3 <http:\/\/dbpedia.org\/property\/awards> ?v0 . }",
+        "id": 198,
+        "subid": 37,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the birth place of Yamaza Enjir\u014d.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Yamaza_Enjir\u014d> <http:\/\/dbpedia.org\/ontology\/birthPlace> ?result . }",
+        "id": 375,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the band member of the associated musical artist, that is a musical artist, of Bobby Shmurda and person born as Ackquille Jean Pollard.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ackquille Jean Pollard\"@en . <http:\/\/dbpedia.org\/resource\/Bobby_Shmurda> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v0 . ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }",
+        "id": 628,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 4,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in the war, that is a societal event and an event and a television show, of 2nd Dragoon Regiment (France) and child of the father of Cecilia Renata of Austria and father of Eleonore of Austria, Queen of Poland.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . <http:\/\/dbpedia.org\/resource\/2nd_Dragoon_Regiment_(France)> <http:\/\/dbpedia.org\/ontology\/battle> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. <http:\/\/dbpedia.org\/resource\/Cecilia_Renata_of_Austria> <http:\/\/dbpedia.org\/property\/father> ?v1 . ?v2 <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/TelevisionShow>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Event>. <http:\/\/dbpedia.org\/resource\/Eleonore_of_Austria,_Queen_of_Poland> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 347,
+        "subid": 42,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 8,
+        "num_nodes": 6,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent of the father of Dorothea of Lorraine and spouse of the parent, that is a royalty and a noble, of Francis I, Duke of Lorraine.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Noble>. <http:\/\/dbpedia.org\/resource\/Dorothea_of_Lorraine> <http:\/\/dbpedia.org\/property\/father> ?v3 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Francis_I,_Duke_of_Lorraine> <http:\/\/dbpedia.org\/ontology\/parent> ?v2 . ?v3 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v2 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . }",
+        "id": 633,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the manager, that is a sports manager and a soccer manager, of the reference, that is an organisation and a sports club and a sports team and a soccer club, to Hong Kong C.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsClub>. ?v0 <http:\/\/dbpedia.org\/ontology\/manager> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerClub>. ?v0 <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Hong Kong C\"@en . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsTeam>. }",
+        "id": 769,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 8,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the child of Archduchess Margarete Sophie of Austria and child of the child of Duke Philipp of W\u00fcrttemberg.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Archduchess_Margarete_Sophie_of_Austria> <http:\/\/dbpedia.org\/ontology\/child> ?result . ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v2 . ?v2 <http:\/\/dbpedia.org\/property\/father> <http:\/\/dbpedia.org\/resource\/Duke_Philipp_of_W\u00fcrttemberg> . }",
+        "id": 737,
+        "subid": 24,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the war of Amasa Tracy and force of Quincy Adams Gillmore and entity in Charleston, South Carolina.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Charleston,_South_Carolina> . ?result <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Quincy_Adams_Gillmore> . <http:\/\/dbpedia.org\/resource\/Amasa_Tracy> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 198,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the producer of A Star Is Born (1937 film) and professional in the alter ego of The Shadow and producer of The Adventures of Tom Sawyer (1938 film).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/The_Adventures_of_Tom_Sawyer_(1938_film)> <http:\/\/dbpedia.org\/ontology\/producer> ?result . <http:\/\/dbpedia.org\/resource\/A_Star_Is_Born_(1937_film)> <http:\/\/dbpedia.org\/ontology\/producer> ?result . <http:\/\/dbpedia.org\/resource\/The_Shadow> <http:\/\/dbpedia.org\/property\/alterEgo> ?v1 . ?result <http:\/\/dbpedia.org\/property\/occupation> ?v1 . }",
+        "id": 557,
+        "subid": 28,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in Singer and band of Bob Thompson (musician) and professional in .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . <http:\/\/dbpedia.org\/resource\/Bob_Thompson_(musician)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/dbpedia.org\/property\/occupation> \"Singer\"@en . }",
+        "id": 39,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the reference to Lamont Cranston (radio, film and television).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/xmlns.com\/foaf\/0.1\/name> \"Lamont Cranston (radio, film and television)\"@en . }",
+        "id": 943,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      }
+    ],
+    "signature": {
+      "instructions": "Imagine you are a researcher tasked with uncovering the intricate relationships between notable figures in history. You have a series of complex questions about these individuals that need to be answered through precise SPARQL queries. Your goal is to translate these natural language questions into accurate SPARQL queries that can retrieve the necessary information from DBpedia. Given the field `question`, produce the corresponding field `sparql_query` to ensure you can access the vital data for your research.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.12",
+      "dspy": "2.6.13",
+      "cloudpickle": "3.1"
+    }
+  }
+}

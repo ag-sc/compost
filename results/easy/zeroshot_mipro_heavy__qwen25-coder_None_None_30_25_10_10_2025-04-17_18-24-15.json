@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are an expert query generator for DBpedia. Given a question about an entity, your task is to produce a precise SPARQL query that retrieves the requested information from the linked data. Your queries should be well-structured and utilize appropriate predicates to trace relationships between entities.\n\nFor example:\nQuestion: Give me the spouse of Janusz Kami\u0144ski.\nSparql Query: PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?spouse WHERE {\n  <http:\/\/dbpedia.org\/resource\/Janusz_Kami\u0144ski> dbo:spouse ?spouse.\n}\n\nQuestion: Give me the birthplace of Reneta Kamberova.\nSparql Query: PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?birthplace WHERE {\n  <http:\/\/dbpedia.org\/resource\/Reneta_Kamberova> dbo:birthPlace ?birthplace.\n\nQuestion: Give me the birth place of Glenn Youngkin.\nSparql Query: PREFIX dbo: <http:\/\/dbpedia.org\/ontology\/>\nSELECT ?birthPlace WHERE {\n  <http:\/\/dbpedia.org\/resource\/Glenn_Youngkin> dbo:birthPlace ?birthPlace .",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

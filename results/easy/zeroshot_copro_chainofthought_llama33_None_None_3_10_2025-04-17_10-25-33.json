@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "To generate an optimal SPARQL query from a given question, meticulously analyze the question to pinpoint all crucial entities, relationships, constraints, and implied context. Determine the most suitable type of SPARQL query (SELECT, ASK, CONSTRUCT, or DESCRIBE) based on the information sought and the expected result format. Leverage standardized prefixes for vocabularies like RDF, RDFS, OWL, and others to enhance query readability and simplicity. Construct the query by specifying precise triple patterns that align with identified entities and relationships, utilizing variables strategically for parts intended as results. Ensure strict adherence to SPARQL syntax standards and consider performance optimization techniques, especially for large datasets. Validate the query against diverse sample data to guarantee accurate and comprehensive results. Additionally, consider incorporating filter conditions to handle data types and languages, if applicable, and utilize aggregation functions when dealing with complex queries that require grouping or calculating results.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "PREFIX rdf: <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#> PREFIX rdfs: <http:\/\/www.w3.org\/2000\/01\/rdf-schema#> PREFIX owl: <http:\/\/www.w3.org\/2002\/07\/owl#> PREFIX xsd: <http:\/\/www.w3.org\/2001\/XMLSchema#> SELECT DISTINCT ?result WHERE {",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Generate an SPARQL query that retrieves the required information based on the given natural language question. The response should include both a step-by-step reasoning explanation and the corresponding SPARQL query.\n\nExample:\nQuestion: Give me the party of Guillermo Endara.\nReasoning: To find the political party of Guillermo Endara, we need to query DBpedia for information related to his political affiliation. We will use the `dbo:party` property, which is likely to contain the political party associated with him.\nSparql Query: ```sparql\nSELECT ?party WHERE {\n  <http:\/\/dbpedia.org\/resource\/Guillermo_Endara> dbo:party ?party .\n}\n```",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given a natural language question as input in the `question` field, use your understanding of natural language processing and knowledge graph querying to generate a corresponding SPARQL query that can be executed on a database like DBpedia. The goal is to translate the nuances of the natural language question into a formal, structured query that accurately retrieves the relevant information from the database. Ensure that your generated SPARQL query is precise, taking into account the entities, relationships, and constraints mentioned in the question. The output should be provided in the `sparql_query` field, following the syntax and structure of SPARQL queries, including the use of prefixes for namespaces like `dbpedia` and `dbo`, and correctly formatting the query to select the desired information.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

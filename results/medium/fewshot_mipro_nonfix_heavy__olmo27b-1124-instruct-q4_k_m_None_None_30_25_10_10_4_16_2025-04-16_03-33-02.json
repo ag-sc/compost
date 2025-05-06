@@ -1,0 +1,249 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Who is the child of Abu Ahmad Abdul Hafiz?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Abu_Ahmad_Abdul_Hafiz> <http:\/\/dbpedia.org\/ontology\/child> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the successor of the child, that is a royalty, of Louis the Pious.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Louis_the_Pious> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/successor> ?result . }"
+      },
+      {
+        "question": "Give me the force, that is a societal event and a military conflict, of Herbert Kitchener, 1st Earl Kitchener.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?result <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Herbert_Kitchener,_1st_Earl_Kitchener> . }",
+        "id": 124,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the commander in Mahdist War and military force of the force, that is a societal event and a military conflict, of Herbert Kitchener, 1st Earl Kitchener.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/commander> <http:\/\/dbpedia.org\/resource\/Herbert_Kitchener,_1st_Earl_Kitchener> . <http:\/\/dbpedia.org\/resource\/Mahdist_War> <http:\/\/dbpedia.org\/ontology\/commander> ?result . ?result <http:\/\/dbpedia.org\/ontology\/battle> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MilitaryConflict>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SocietalEvent>. }",
+        "id": 124,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the person decedent at Quincy, Massachusetts and parent of the author, that is a politician and an office holder, of the work of John Quincy Adams.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v0 <http:\/\/dbpedia.org\/property\/author> <http:\/\/dbpedia.org\/resource\/John_Quincy_Adams> . ?result <http:\/\/dbpedia.org\/ontology\/deathPlace> <http:\/\/dbpedia.org\/resource\/Quincy,_Massachusetts> . ?v1 <http:\/\/dbpedia.org\/ontology\/parent> ?result . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/dbpedia.org\/property\/author> ?v1 . }",
+        "id": 573,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 6,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the party of the successor, that is a prime minister and an office holder and a politician, of the person deceased, that is an office holder and a politician, on 1945-09-15.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v2 <http:\/\/dbpedia.org\/ontology\/successor> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v2 <http:\/\/dbpedia.org\/ontology\/deathDate> \"1945-09-15\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?v0 <http:\/\/dbpedia.org\/ontology\/party> ?result . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Politician>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/PrimeMinister>. }",
+        "id": 158,
+        "subid": 14,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 8,
+        "num_nodes": 4,
+        "depth": 3,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the alma mater of the awardee of Medal of the Order \"For Merit to the Fatherland\".",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Medal_of_the_Order_%22For_Merit_to_the_Fatherland%22> . ?v1 <http:\/\/dbpedia.org\/ontology\/almaMater> ?result . }",
+        "id": 353,
+        "subid": 5,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Who is the band, that is an artist and a musical artist, of \u0160ako Polumenta?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/\u0160ako_Polumenta> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }",
+        "id": 987,
+        "subid": 4,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 3,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the death place of Patrick Moore and entity in United Kingdom and entity in England.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Patrick_Moore> <http:\/\/dbpedia.org\/ontology\/deathPlace> ?result . ?result <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_Kingdom> . ?result <http:\/\/dbpedia.org\/ontology\/location> <http:\/\/dbpedia.org\/resource\/England> . }",
+        "id": 445,
+        "subid": 18,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 1,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the parent, that is a royalty, of Beyhan Sultan (daughter of Mustafa III).",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. <http:\/\/dbpedia.org\/resource\/Beyhan_Sultan_(daughter_of_Mustafa_III)> <http:\/\/dbpedia.org\/ontology\/parent> ?result . }",
+        "id": 926,
+        "subid": 7,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 2,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of the claim to fame, that is a film, of Lepacious Bose.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Lepacious_Bose> <http:\/\/dbpedia.org\/ontology\/knownFor> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v1 <http:\/\/dbpedia.org\/ontology\/starring> ?result . }",
+        "id": 36,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 3,
+        "num_nodes": 3,
+        "depth": 2,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the religion of Newfoundland Colony.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Newfoundland_Colony> <http:\/\/dbpedia.org\/ontology\/religion> ?result . }",
+        "id": 453,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 2,
+        "subgraphs": 9
+      },
+      {
+        "question": "Give me the father of William I of W\u00fcrttemberg.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/William_I_of_W\u00fcrttemberg> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 495,
+        "subid": 3,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the profession of Guy Ferland.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Guy_Ferland> <http:\/\/dbpedia.org\/property\/occupation> ?result . }",
+        "id": 507,
+        "subid": 8,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office of Mustafa \u015eentop and office of Naci Bostanc\u0131.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Mustafa_\u015eentop> <http:\/\/dbpedia.org\/property\/office> ?result . <http:\/\/dbpedia.org\/resource\/Naci_Bostanc\u0131> <http:\/\/dbpedia.org\/property\/office> ?result . }",
+        "id": 976,
+        "subid": 10,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the professional in .",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/occupation> \"\"@en . }",
+        "id": 129,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Imagine you're a detective working on a cold case where a crucial piece of information about a missing person is mentioned in an obscure historical document referenced in DBpedia. The document mentions a military event linked to the birthplace of the missing person's ancestor. You have a limited time to find this information before the trail goes cold.\n\n**Objective:** Utilize the FewShotPipeline to query DBpedia and identify the birthplace of the ancestor mentioned in the historical document, which will help locate the missing person.\n\n**Instructions:**\n\n1. **Input:** Provide the question: \"Find the birthplace of the ancestor mentioned in the event linked to the Winter Offensive of 1939-1940.\"\n\n2. **Expected Output:**\n   - **sparql_query:** The generated SPARQL query should efficiently retrieve the necessary information from DBpedia.\n   - **reasoning (if applicable):** If additional reasoning steps are taken during query generation, include them here.\n\n3. **Execution:** Run the `FewShotPipeline` with the provided question to execute the SPARQL query and extract the birthplace of the ancestor.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

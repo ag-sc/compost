@@ -1,0 +1,47 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix lemon: <http://localhost:8000/lemon.owl#> .
+@prefix lexicon: <http://localhost:8000/lexicon#> .
+@prefix lexinfo: <http://www.lexinfo.net/ontology/2.0/lexinfo#> .
+
+lexicon:entry_43381 a lemon:LexicalEntry ;
+    lemon:canonicalForm lexicon:entry_43381_canonical_form ;
+    lemon:otherForm lexicon:entry_43381_other_form_0,
+        lexicon:entry_43381_other_form_1 ;
+    lemon:sense lexicon:entry_43381_sense ;
+    lemon:synBehavior lexicon:entry_43381_syn_behavior ;
+    lexinfo:partOfSpeech lexinfo:noun .
+
+lexicon:entry_43381_canonical_form a lemon:Form ;
+    lemon:writtenRep "product" .
+
+lexicon:entry_43381_condition a lemon:condition ;
+    lemon:propertyDomain dbo:Film ;
+    lemon:propertyRange dbo:Company .
+
+lexicon:entry_43381_other_form_0 a lemon:Form ;
+    lemon:writtenRep "product" ;
+    lexinfo:number lexinfo:singular .
+
+lexicon:entry_43381_other_form_1 a lemon:Form ;
+    lemon:writtenRep "products" ;
+    lexinfo:number lexinfo:plural .
+
+lexicon:entry_43381_prepositional_marker a lemon:SynRoleMarker ;
+    lemon:canonicalForm lexicon:entry_43381_prepositional_marker_canonical_form ;
+    lexinfo:partOfSpeech lexinfo:preposition .
+
+lexicon:entry_43381_prepositional_marker_canonical_form lemon:writtenRep "of" .
+
+lexicon:entry_43381_sense a lemon:LexicalSense,
+        lemon:OntoMap ;
+    lemon:condition lexicon:entry_43381_condition ;
+    lemon:objOfProp lexicon:entry_43381_prepositional_adjunct ;
+    lemon:reference dbo:producer ;
+    lemon:subjOfProp lexicon:entry_43381_copulative_arg .
+
+lexicon:entry_43381_syn_behavior a lexinfo:NounPPFrame ;
+    lexinfo:copulativeArg lexicon:entry_43381_copulative_arg ;
+    lexinfo:prepositionalAdjunct lexicon:entry_43381_prepositional_adjunct .
+
+lexicon:entry_43381_prepositional_adjunct lemon:marker lexicon:entry_43381_prepositional_marker .
+

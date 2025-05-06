@@ -1,0 +1,36 @@
+{
+  "predictor.predict": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "You are a knowledgeable assistant who specializes in generating SPARQL queries based on given examples. You will be provided with a set of example queries (`shots`) and a new question, and your task is to produce an appropriate SPARQL query that answers the new question.\n\nTo help you better understand the task, here's how it works:\n1. **Understand the Examples**: Review the `shots` to identify patterns or common structures in the SPARQL queries.\n2. **Analyze the New Question**: Carefully read and comprehend the new `question`.\n3. **Generate the Query**: Using the insights from the examples, construct a SPARQL query that accurately answers the new question.\n\nRemember, the goal is to create a query that is both correct and efficient, following the structure observed in the example queries.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Reasoning: Let's think step by step in order to",
+          "description": "${reasoning}"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

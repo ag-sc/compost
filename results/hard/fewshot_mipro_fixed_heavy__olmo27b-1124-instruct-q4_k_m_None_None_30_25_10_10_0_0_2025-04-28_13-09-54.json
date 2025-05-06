@@ -1,0 +1,32 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Imagine you are a historian working on a comprehensive study of the political landscape in Italy during the early 21st century. Your research requires detailed information about the leadership of Forza Italia from 2013 onwards, alongside the resting place of Laura Mancinelli, a prominent figure in Italian politics and culture. However, the sources you have are incomplete and scattered across various databases.\n\nYou need to quickly retrieve this information to meet an upcoming deadline for your research publication. The ability to efficiently query these databases using structured queries is crucial. You must use a language model to generate precise SQL-like queries that can be directly fed into your database management system to retrieve the required data swiftly and accurately.\n\nGiven the following inputs:\n\n- `shots`: A list of clues each hinting at a specific piece of information you need (e.g., \"Give me the administration of Forza Italia (2013).\").\n- `question`: The overarching question you need answered (e.g., \"Give me the administration of Forza Italia (2013) and death place of Laura Mancinelli.\").\n\nYour task is to generate a SQL-like query that can be used in a database to retrieve the exact information specified in the shots and question. This generated query should be syntactically correct and logically sound to ensure the data retrieval process is seamless and efficient.",
+      "fields": [
+        {
+          "prefix": "Shots:",
+          "description": "example question sparql query pairs"
+        },
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "question": "Give me the band member of the associated musical artist, that is an organisation, of the associated musical artist, that is a band and an organisation, of Nate Newton (musician).",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Nate_Newton_(musician)> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?v0 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Band>. ?v1 <http:\/\/dbpedia.org\/ontology\/bandMember> ?result . }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the manager, that is a sports manager and a soccer manager, of Hong Kong C Team.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/Hong_Kong_C_Team> <http:\/\/dbpedia.org\/ontology\/manager> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SportsManager>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/SoccerManager>. }"
+      },
+      {
+        "augmented": true,
+        "question": "Who is the associated musical artist, that is an artist, of R.E.M.?",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/R.E.M.> <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. }"
+      },
+      {
+        "augmented": true,
+        "question": "Give me the parent of Mary Elphinstone, Lady Elphinstone and parent of the child of Claude Bowes-Lyon, 14th Earl of Strathmore and Kinghorne.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/ontology\/parent> ?result . <http:\/\/dbpedia.org\/resource\/Mary_Elphinstone,_Lady_Elphinstone> <http:\/\/dbpedia.org\/property\/father> ?result . <http:\/\/dbpedia.org\/resource\/Claude_Bowes-Lyon,_14th_Earl_of_Strathmore_and_Kinghorne> <http:\/\/dbpedia.org\/ontology\/child> ?v3 . }"
+      },
+      {
+        "question": "Give me the entity in Russian Empire.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Russian_Empire> . }",
+        "id": 386,
+        "subid": 0,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 1,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the child of the child, that is a royalty, of the predecessor of Stephen V of Hungary and spouse of the father of the parent, that is a royalty, of Philip, Despot of Romania.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v4 <http:\/\/dbpedia.org\/property\/father> ?v2 . ?v2 <http:\/\/dbpedia.org\/ontology\/spouse> ?result . ?v0 <http:\/\/dbpedia.org\/property\/father> ?v5 . ?v4 <http:\/\/dbpedia.org\/ontology\/child> <http:\/\/dbpedia.org\/resource\/Philip,_Despot_of_Romania> . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v4 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?v5 <http:\/\/dbpedia.org\/ontology\/successor> <http:\/\/dbpedia.org\/resource\/Stephen_V_of_Hungary> . }",
+        "id": 905,
+        "subid": 60,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 8,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the alma mater, that is a university and an organisation and an educational institution, of Luiza Erundina.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Organisation>. ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/University>. <http:\/\/dbpedia.org\/resource\/Luiza_Erundina> <http:\/\/dbpedia.org\/ontology\/almaMater> ?result . ?result <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/EducationalInstitution>. }",
+        "id": 258,
+        "subid": 2,
+        "split": "train",
+        "num_edges": 1,
+        "num_edges_full": 4,
+        "num_nodes": 2,
+        "depth": 1,
+        "breadth": 1,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the child of Dawit I and father of the father, that is a royalty and an office holder, of Na'od.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/father> ?result . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> <http:\/\/dbpedia.org\/resource\/Dawit_I> . <http:\/\/dbpedia.org\/resource\/Na'od> <http:\/\/dbpedia.org\/property\/father> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/OfficeHolder>. }",
+        "id": 943,
+        "subid": 22,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 5,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the father of Eleonore of Austria, Queen of Poland and child of the father of the child, that is a royalty, of Maria Anna of Bavaria (born 1574).",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/father> ?v1 . <http:\/\/dbpedia.org\/resource\/Maria_Anna_of_Bavaria_(born_1574)> <http:\/\/dbpedia.org\/ontology\/child> ?v0 . ?v0 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Royalty>. ?result <http:\/\/dbpedia.org\/ontology\/parent> ?v1 . <http:\/\/dbpedia.org\/resource\/Eleonore_of_Austria,_Queen_of_Poland> <http:\/\/dbpedia.org\/property\/father> ?result . }",
+        "id": 347,
+        "subid": 39,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 3,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the office of the leader of 2009 Galician regional election and tenant of Spain.",
+        "sparql_query": "SELECT ?result WHERE { ?v0 <http:\/\/dbpedia.org\/property\/office> ?result . ?result <http:\/\/dbpedia.org\/ontology\/headquarter> <http:\/\/dbpedia.org\/resource\/Spain> . <http:\/\/dbpedia.org\/resource\/2009_Galician_regional_election> <http:\/\/dbpedia.org\/property\/leader> ?v0 . }",
+        "id": 119,
+        "subid": 19,
+        "split": "train",
+        "num_edges": 3,
+        "num_edges_full": 3,
+        "num_nodes": 4,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the actor of the show, that is a movie, with Afeez Oyetoro and associated musical artist of the person born as Cynthia Ikponmwenosa Morgan.",
+        "sparql_query": "SELECT ?result WHERE { ?v2 <http:\/\/dbpedia.org\/ontology\/starring> <http:\/\/dbpedia.org\/resource\/Afeez_Oyetoro> . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Film>. ?v2 <http:\/\/dbpedia.org\/property\/starring> ?result . ?v3 <http:\/\/dbpedia.org\/property\/birthName> \"Cynthia Ikponmwenosa Morgan\"@en . ?v3 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?result . }",
+        "id": 143,
+        "subid": 16,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 5,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 2,
+        "base_depth": 3,
+        "base_breadth": 2,
+        "subgraphs": 20
+      },
+      {
+        "question": "Give me the native of Florida and person born as Ackquille Jean Pollard and band member of the associated musical artist, that is a musical artist, of the member, that is an artist and a musical artist, of GS9.",
+        "sparql_query": "SELECT ?result WHERE { <http:\/\/dbpedia.org\/resource\/GS9> <http:\/\/dbpedia.org\/ontology\/bandMember> ?v2 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v1 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/MusicalArtist>. ?v2 <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Artist>. ?result <http:\/\/dbpedia.org\/property\/birthName> \"Ackquille Jean Pollard\"@en . ?result <http:\/\/dbpedia.org\/ontology\/birthPlace> <http:\/\/dbpedia.org\/resource\/Florida> . ?result <http:\/\/dbpedia.org\/ontology\/associatedMusicalArtist> ?v1 . }",
+        "id": 628,
+        "subid": 40,
+        "split": "train",
+        "num_edges": 5,
+        "num_edges_full": 8,
+        "num_nodes": 6,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the force of the awardee of Gillmore Medal and war of Amasa Tracy and entity in the birthplace, that is a settlement and American, of the person deceased on 1850-08-05.",
+        "sparql_query": "SELECT ?result WHERE { ?v1 <http:\/\/dbpedia.org\/ontology\/deathDate> \"1850-08-05\"^^<http:\/\/www.w3.org\/2001\/XMLSchema#date> . ?result <http:\/\/dbpedia.org\/ontology\/commander> ?v5 . ?v5 <http:\/\/dbpedia.org\/property\/awards> <http:\/\/dbpedia.org\/resource\/Gillmore_Medal> . ?v2 <http:\/\/dbpedia.org\/ontology\/country> <http:\/\/dbpedia.org\/resource\/United_States>. ?v2 <http:\/\/www.w3.org\/1999\/02\/22-rdf-syntax-ns#type> <http:\/\/dbpedia.org\/ontology\/Settlement>. ?result <http:\/\/dbpedia.org\/ontology\/place> ?v2 . ?v1 <http:\/\/dbpedia.org\/ontology\/birthPlace> ?v2 . <http:\/\/dbpedia.org\/resource\/Amasa_Tracy> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 198,
+        "subid": 58,
+        "split": "train",
+        "num_edges": 6,
+        "num_edges_full": 8,
+        "num_nodes": 7,
+        "depth": 3,
+        "breadth": 3,
+        "base_depth": 3,
+        "base_breadth": 3,
+        "subgraphs": 71
+      },
+      {
+        "question": "Give me the entity in Athens and war of Napoleon Zervas.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Athens> . <http:\/\/dbpedia.org\/resource\/Napoleon_Zervas> <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 412,
+        "subid": 6,
+        "split": "train",
+        "num_edges": 2,
+        "num_edges_full": 2,
+        "num_nodes": 3,
+        "depth": 1,
+        "breadth": 2,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the war of Hashiba Hidekatsu and entity in Japan and war of the person born as Koichir\u014d.",
+        "sparql_query": "SELECT ?result WHERE { ?v3 <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?v3 <http:\/\/dbpedia.org\/property\/birthName> \"Koichir\u014d\"@en . <http:\/\/dbpedia.org\/resource\/Hashiba_Hidekatsu> <http:\/\/dbpedia.org\/ontology\/battle> ?result . ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Japan> . }",
+        "id": 375,
+        "subid": 20,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      },
+      {
+        "question": "Give me the entity in Japan and war of Toyotomi Hidenaga and war of the child of Toyotomi Hideyoshi.",
+        "sparql_query": "SELECT ?result WHERE { ?result <http:\/\/dbpedia.org\/ontology\/place> <http:\/\/dbpedia.org\/resource\/Japan> . <http:\/\/dbpedia.org\/resource\/Toyotomi_Hidenaga> <http:\/\/dbpedia.org\/ontology\/battle> ?result . <http:\/\/dbpedia.org\/resource\/Toyotomi_Hideyoshi> <http:\/\/dbpedia.org\/ontology\/child> ?v1 . ?v1 <http:\/\/dbpedia.org\/ontology\/battle> ?result . }",
+        "id": 375,
+        "subid": 21,
+        "split": "train",
+        "num_edges": 4,
+        "num_edges_full": 4,
+        "num_nodes": 5,
+        "depth": 2,
+        "breadth": 3,
+        "base_depth": 2,
+        "base_breadth": 3,
+        "subgraphs": 28
+      }
+    ],
+    "signature": {
+      "instructions": "Given a question, generate the corresponding SPARQL query to retrieve relevant information from DBpedia.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

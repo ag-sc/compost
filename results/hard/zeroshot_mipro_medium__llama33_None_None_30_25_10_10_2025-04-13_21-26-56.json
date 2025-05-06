@@ -1,0 +1,28 @@
+{
+  "predictor": {
+    "traces": [],
+    "train": [],
+    "demos": [],
+    "signature": {
+      "instructions": "Given a question about an entity or relationship, generate a SPARQL query that can be used to retrieve the relevant information from DBpedia. The query should utilize DBpedia ontology terms and be structured to effectively retrieve the desired data. Consider the complexity of the query, the types of entities and relationships involved, and the variability in question structure to produce a robust and accurate SPARQL query.",
+      "fields": [
+        {
+          "prefix": "Question:",
+          "description": "question about something"
+        },
+        {
+          "prefix": "Sparql Query:",
+          "description": "sparql query for DBpedia"
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.10",
+      "dspy": "2.6.12",
+      "cloudpickle": "3.1"
+    }
+  }
+}

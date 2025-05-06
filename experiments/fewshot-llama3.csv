@@ -1,0 +1,3 @@
+mipro,ollama_chat/llama3.3,chainofthought,heavy,False
+bootstrapfewshot,ollama_chat/llama3.3,,,
+bootstrapfewshotrandomsearch,ollama_chat/llama3.3,chainofthought,,
