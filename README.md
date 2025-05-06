@@ -36,13 +36,18 @@ python some/python/file.py
   * zeroshot.py - Zero-Shot experiments using DSPy
   * evaluation.py - Evaluation script for evaluating DSPy programs as well as fine-tuned models on CompoST dataset
 * src/llm/utils.py - Utility functions, like setting up DSPy for the experiments
+* experiments/ - CSV files specifying the parameters for the experiments presented in the paper
+* results/ - DSPy optimization results as well as evaluation results for the experiments presented in the paper
+* filtered_dbpedia_data_2022_12.tar.zst - Filtered DBpedia snapshot from 2022-12 to only include properties that can be verbalized by our approach
 * requirements.txt - Python requirements of this project
 
 ## Replication Steps
 
 ### Dataset Generation
 
-For generating the dataset, we used a filtered DBpedia snapshot from 2022-12 to only include properties that can be verbalized by our approach. The RDF data can be found in filtered_dbpedia_data_2022_12.tar.zst. 
+For generating the dataset, we used a filtered DBpedia snapshot from 2022-12 to only include properties that can be verbalized by our approach. The RDF data can be found in filtered_dbpedia_data_2022_12.tar.zst. A corresponding local DBpedia endpoint is expected to be available via [http://localhost:8890/sparql](http://localhost:8890/sparql).
+
+The "max" dataset in the code corresponds to the "hard" dataset in the paper.
 
 1. Find basic patterns:
 ```bash
@@ -58,3 +63,51 @@ python src/llm/compositionality/dataset_generation.py --subgraphs --split --samp
 ```
 
 ### Experiments
+
+A full local DBpedia endpoint is expected to be available via [http://localhost:8890/sparql](http://localhost:8890/sparql). The snapshot used for the paper can be found here: [https://databus.dbpedia.org/dbpedia/collections/dbpedia-snapshot-2022-12](https://databus.dbpedia.org/dbpedia/collections/dbpedia-snapshot-2022-12)
+
+1. Start an Ollama server and download the models needed for the experiments:
+```bash
+ollama serve
+ollama pull llama3.3
+ollama pull phi4
+ollama pull olmo2:7b-1124-instruct-q4_K_M
+ollama pull qwen2.5-coder
+```
+
+2. Run the DSPy optimizations:
+```bash
+# Choose dataset for experiments
+export TRAINDS=src/lemon/resources/compositionality_subgraph_easy_10_fixed.json
+export TRAINDS=src/lemon/resources/compositionality_subgraph_medium_10_fixed.json
+export TRAINDS=src/lemon/resources/compositionality_subgraph_max_10_fixed.json
+
+#For OpenAI GPT experiments, remove the "--api http://127.0.0.1:11434"
+python src/llm/compositionality/zeroshot.py --endpoint "http://localhost:8890/sparql" --subgraphs --rootpath ./ --trainpath $TRAINDS --api http://127.0.0.1:11434 --autoexpcsv $EXPERIMENTCSV # choose .csv from experiments folder
+python src/llm/compositionality/fewshot.py --endpoint "http://localhost:8890/sparql" --subgraphs --rootpath ./ --trainpath $TRAINDS --api http://127.0.0.1:11434 --autoexpcsv $EXPERIMENTCSV # choose .csv from experiments folder
+```
+
+3. Run evaluation for all experiments:
+```bash
+python src/llm/compositionality/evaluation.py --endpoint "http://localhost:8890/sparql" --api http://127.0.0.1:11434 --evaltest --testpath $TRAINDS --subgraphs --autofind-rootpath ./ --autofind --autofind-inclexist --autofind-frac 1.0 --autofind-id 0
+```
+
+4. Fine-tune OpenAI models using the .jsonl files in `src/lemon/resources`
+
+5. Run evaluation for fine-tuned models:
+```bash
+export MODELNAME=ft:<model_name> # replace with your model name
+python src/llm/compositionality/evaluation.py --endpoint "http://localhost:8890/sparql" --progpath ./$MODELNAME --model "$MODELNAME" --evaltest --subgraphs --testpath $TRAINDS
+```
+
+6. Fine-tune other models:
+```bash
+python /homes/daschmidt/neodudes/src/llm/compositionality/hyperparameters.py --batchsize 1 --studyname "Compositionality OLMo" --optunafile "comp_optuna_olmo.log" --endpoint "http://localhost:8890/sparql" --instruct --subgraphs --model "allenai/OLMo-2-1124-7B-Instruct" --trainpath $TRAINDS --valpath $TRAINDS --testpath $TRAINDS
+python /homes/daschmidt/neodudes/src/llm/compositionality/hyperparameters.py --batchsize 1 --studyname "Compositionality Qwen" --optunafile "comp_optuna_qwen.log" --endpoint "http://localhost:8890/sparql" --instruct --subgraphs --model "Qwen/Qwen2.5-Coder-7B-Instruct"  --trainpath $TRAINDS --valpath $TRAINDS --testpath $TRAINDS
+```
+
+7. The fine-tuning process already returns evaluation scores (calculated as 1.0 - F1 score, i.e., a score of 0.8 corresponds to a F1 score of 0.2). However, to see the actual evaluation results per question, one can also evaluate fine-tuned models as follows:
+```bash
+export MODELPATH=./<model_name>.ckpt # replace with your model name
+python src/llm/compositionality/evaluation.py --ftmodel $MODELPATH --trainpath $TRAINDS
+```
