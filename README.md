@@ -90,6 +90,8 @@ python src/llm/compositionality/fewshot.py --endpoint "http://localhost:8890/spa
 3. Run evaluation for all experiments:
 ```bash
 python src/llm/compositionality/evaluation.py --endpoint "http://localhost:8890/sparql" --api http://127.0.0.1:11434 --evaltest --testpath $TRAINDS --subgraphs --autofind-rootpath ./ --autofind --autofind-inclexist --autofind-frac 1.0 --autofind-id 0
+# For each evaluation csv file:
+python src/llm/compositionality/evaluation.py --endpoint "http://localhost:8890/sparql" --reeval $EVALFILE --outpath $EVALFILE_evaluated.csv
 ```
 
 4. Fine-tune OpenAI models using the .jsonl files in `src/lemon/resources`
