@@ -104,8 +104,8 @@ python src/llm/compositionality/evaluation.py --endpoint "http://localhost:8890/
 
 6. Fine-tune other models:
 ```bash
-python /homes/daschmidt/neodudes/src/llm/compositionality/hyperparameters.py --batchsize 1 --studyname "Compositionality OLMo" --optunafile "comp_optuna_olmo.log" --endpoint "http://localhost:8890/sparql" --instruct --subgraphs --model "allenai/OLMo-2-1124-7B-Instruct" --trainpath $TRAINDS --valpath $TRAINDS --testpath $TRAINDS
-python /homes/daschmidt/neodudes/src/llm/compositionality/hyperparameters.py --batchsize 1 --studyname "Compositionality Qwen" --optunafile "comp_optuna_qwen.log" --endpoint "http://localhost:8890/sparql" --instruct --subgraphs --model "Qwen/Qwen2.5-Coder-7B-Instruct"  --trainpath $TRAINDS --valpath $TRAINDS --testpath $TRAINDS
+python src/llm/compositionality/hyperparameters.py --batchsize 1 --studyname "Compositionality OLMo" --optunafile "comp_optuna_olmo.log" --endpoint "http://localhost:8890/sparql" --instruct --subgraphs --model "allenai/OLMo-2-1124-7B-Instruct" --trainpath $TRAINDS --valpath $TRAINDS --testpath $TRAINDS
+python src/llm/compositionality/hyperparameters.py --batchsize 1 --studyname "Compositionality Qwen" --optunafile "comp_optuna_qwen.log" --endpoint "http://localhost:8890/sparql" --instruct --subgraphs --model "Qwen/Qwen2.5-Coder-7B-Instruct"  --trainpath $TRAINDS --valpath $TRAINDS --testpath $TRAINDS
 ```
 
 7. The fine-tuning process already returns evaluation scores (calculated as 1.0 - F1 score, i.e., a score of 0.8 corresponds to a F1 score of 0.2). However, to see the actual evaluation results per question, one can also evaluate fine-tuned models as follows:
