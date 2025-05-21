@@ -2,7 +2,7 @@
 
 ## Setup
 
-We suggest using Python 3.11 to run this artifact, older versions have not been tested. The following instructions should work for most mayor Linux distributions.
+We suggest using Python 3.11 to run this artifact, older versions have not been tested. The following instructions should work for most major Linux distributions.
 
 Start by setting up a virtual environment and installing the required packages. For this, run the following at the top level of a cloned version of this repository:
 
