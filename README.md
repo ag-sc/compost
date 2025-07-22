@@ -1,5 +1,19 @@
 # Artifact "CompoST: A Benchmark for Analyzing the Ability of LLMs To Compositionally Interpret Questions in a QALD Setting"
 
+DOI: TBA
+
+Zenodo: TBA
+
+## Authors
+
+- David Maria Schmidt [0000-0001-7728-2884](https://orcid.org/0000-0001-7728-2884)
+- Raoul Schubert [0000-0001-7728-2884](https://orcid.org/0009-0009-7743-5401)
+- Philipp Cimiano [0000-0002-4771-441X](https://orcid.org/0000-0002-4771-441X)
+
+## Dataset
+
+The dataset files are named "compositionality_subgraph_...", including the difficulty level, and can be found in [src/lemon/resources](https://github.com/ag-sc/compost/tree/main/src/lemon/resources). The *.jsonl files are in the OpenAI format and can be used, e.g., for fine-tuning. The *_fixed.json files contain all data of the respective difficulty level. The keys 'train', 'val', and 'test' contain the regular tasks while 'fixed_shots' contains the self-contained benchmark items (under 'train' and 'test') with examples providing enough information to deduce the answer to the respective question. 'powersetgraphs' contains information about how the various items correspond to each other using their IDs. For more information please refer to [src/llm/compositionality/dataset.py](https://github.com/ag-sc/compost/blob/main/src/llm/compositionality/dataset.py).
+
 ## Setup
 
 We suggest using Python 3.11 to run this artifact, older versions have not been tested. The following instructions should work for most major Linux distributions.
