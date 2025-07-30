@@ -2,6 +2,8 @@
 
 DOI: TBA
 
+Preprint: [https://doi.org/10.48550/arXiv.2507.21257](https://doi.org/10.48550/arXiv.2507.21257)
+
 Zenodo: [10.5281/zenodo.16312287](https://doi.org/10.5281/zenodo.16312287)
 
 ## Authors
