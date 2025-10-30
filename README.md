@@ -1,8 +1,8 @@
 # Artifact "CompoST: A Benchmark for Analyzing the Ability of LLMs To Compositionally Interpret Questions in a QALD Setting" (ISWC 2025)
 
-[![DOI](https://zenodo.org/badge/978609078.svg)](https://doi.org/10.5281/zenodo.16312287)
+[![Artifact DOI](https://zenodo.org/badge/978609078.svg)](https://doi.org/10.5281/zenodo.16312287)
 
-DOI: TBA
+Paper DOI: [10.1007/978-3-032-09527-5_1](https://doi.org/10.1007/978-3-032-09527-5_1)
 
 Preprint: [10.48550/arXiv.2507.21257](https://doi.org/10.48550/arXiv.2507.21257)
 
