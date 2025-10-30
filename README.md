@@ -131,3 +131,33 @@ python src/llm/compositionality/hyperparameters.py --batchsize 1 --studyname "Co
 export MODELPATH=./<model_name>.ckpt # replace with your model name
 python src/llm/compositionality/evaluation.py --ftmodel $MODELPATH --trainpath $TRAINDS
 ```
+## Citation
+
+Please consider citing our work if you find the provided resources useful:
+
+```bibtex
+@InProceedings{schmidt-etal-2025-compost,
+author="Schmidt, David Maria
+and Schubert, Raoul
+and Cimiano, Philipp",
+editor="Garijo, Daniel
+and Kirrane, Sabrina
+and Salatino, Angelo
+and Shimizu, Cogan
+and Acosta, Maribel
+and Nuzzolese, Andrea Giovanni
+and Ferrada, Sebasti{\'a}n
+and Soulard, Thibaut
+and Kozaki, Kouji
+and Takeda, Hideaki
+and Gentile, Anna Lisa",
+title="CompoST: A Benchmark for Analyzing the Ability of LLMs to Compositionally Interpret Questions in a QALD Setting",
+booktitle="The Semantic Web -- ISWC 2025",
+year="2026",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="3--22",
+abstract="Language interpretation is a compositional process, in which the meaning of more complex linguistic structures is inferred from the meaning of their parts. Large language models possess remarkable language interpretation capabilities and have been successfully applied to interpret questions by mapping them to SPARQL queries. An open question is how systematic this interpretation process is. Toward this question, in this paper, we propose a benchmark for investigating to what extent the abilities of LLMs to interpret questions are actually compositional. For this, we generate three datasets of varying difficulty based on graph patterns in DBpedia, relying on Lemon lexica for verbalization. Our datasets are created in a very controlled fashion in order to test the ability of LLMs to interpret structurally complex questions, given that they have seen the atomic building blocks. This allows us to evaluate to what degree LLMs are able to interpret complex questions for which they ``understand'' the atomic parts. We conduct experiments with models of different sizes using both various prompt and few-shot optimization techniques as well as fine-tuning. Our results show that performance in terms of macro {\$}{\$}F{\_}1{\$}{\$}F1degrades from 0.45 over 0.26 down to 0.09 with increasing deviation from the samples optimized on. Even when all necessary information was provided to the model in the input, the {\$}{\$}F{\_}1{\$}{\$}F1scores do not exceed 0.57 for the dataset of lowest complexity. We thus conclude that LLMs struggle to systematically and compositionally interpret questions and map them into SPARQL queries.",
+isbn="978-3-032-09527-5"
+}
+```
