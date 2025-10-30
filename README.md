@@ -136,7 +136,7 @@ python src/llm/compositionality/evaluation.py --ftmodel $MODELPATH --trainpath $
 Please consider citing our work if you find the provided resources useful:
 
 ```bibtex
-@InProceedings{schmidt-etal-2025-compost,
+@InProceedings{schmidt-etal-2026-compost,
 author="Schmidt, David Maria
 and Schubert, Raoul
 and Cimiano, Philipp",
